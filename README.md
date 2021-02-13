@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Escape room
 nav_order: 1
 ---
 # Bachelorproject 3ELICTes/gs: Escape room
