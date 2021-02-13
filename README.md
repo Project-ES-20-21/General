@@ -1,7 +1,3 @@
----
-layout: default
-nav_order: 1
----
 # Bachelorproject 3ELICTes/gs: Escape room
 
 Dit is de algemene beschrijving van de escape room. De documentatie en afspraken worden bijgehouden in de [docs folder](/docs/index.md).
