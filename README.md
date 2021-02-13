@@ -44,7 +44,7 @@ Echter is niet iedereen zo enthousiast. Een groep anti vaxxers heeft het labo ge
 
 #### Fase 2: Communicatie herstellen
 
-Een goed vaccin moet ook getest worden. Dit klinisch onderzoek wordt gedaan een groep van onderzoekers, zij zijn het kloppende hart van dit labo. Door de sabotage is hier ook de communicatie weg gevallen. Ontvang de geheime boodschap en breng deze over naar het testteam zodat het klinsch onderzoek kan verder gaan.
+Een goed vaccin moet ook getest worden. Dit klinisch onderzoek wordt gedaan een groep van onderzoekers, zij zijn het kloppende hart van dit labo. Door de sabotage is hier ook de communicatie weg gevallen. Ontvang de geheime boodschap en breng deze over naar het testteam zodat het klinisch onderzoek kan verder gaan.
 
 #### Fase 3:
 
