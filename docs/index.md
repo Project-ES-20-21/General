@@ -3,7 +3,7 @@
 ## Onderdelen
 
 - [Algemeen framework](framework.md)
-- [Alohamora](alohamora.md)
+- [Alohomora](alohomora.md)
 - [Fitnesstracker](fitnesstracker.md)
 - [Morsecode](morse.md)
 - [5G](5g.md)
