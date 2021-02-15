@@ -59,7 +59,7 @@ Een goed vaccin moet ook getest worden. Dit klinisch onderzoek wordt gedaan een 
 
 ## Useful links
 
-- [Algemeen verhaal (docs)](https://docs-.google.com/document/d/1nqI-Fae9yPfaeAiZALzwLIhWo5K9UasbyvZQgVbRSb0/edit?usp=sharing)
+- [Algemeen verhaal (docs)](https://docs.google.com/document/d/1nqI-Fae9yPfaeAiZALzwLIhWo5K9UasbyvZQgVbRSb0/edit)
 - [Markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - VS code plugins
   - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) (automatische inhoud enz.)
