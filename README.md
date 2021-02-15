@@ -3,33 +3,29 @@
 Dit is de algemene beschrijving van de escape room. De documentatie en afspraken worden bijgehouden in de [docs folder](./docs/).
 
 ## Inhoud
+ 
+- [Bachelorproject 3ELICTes/gs: Escape room](#bachelorproject-3elictesgs-escape-room)
+  - [Inhoud](#inhoud)
+  - [Concept](#concept)
+    - [Flow chart](#flow-chart)
+    - [Verhaallijn](#verhaallijn)
+      - [Fase 1: Inleiding](#fase-1-inleiding)
+      - [Fase 2: Communicatie herstellen](#fase-2-communicatie-herstellen)
+      - [Fase 3:](#fase-3)
+      - [Fase 4:](#fase-4)
+      - [Fase 5:](#fase-5)
+  - [Useful links](#useful-links)
+  - [Onderdelen](#onderdelen)
+    - [Fitnesstracker](#fitnesstracker)
+    - [Morsecode](#morsecode)
+    - [5G](#5g)
+    - [Vaccintester](#vaccintester)
+    - [Alohamora](#alohamora)
+    - [‘T is beter op anderhalve meter](#t-is-beter-op-anderhalve-meter)
+    - [Ontsmetting](#ontsmetting)
+  - [FAQ's](#faqs)
+    - [Wat als een puzzel niet werkt?](#wat-als-een-puzzel-niet-werkt)
 
-<details>
-  <summary>Klik om uit te vouwen</summary>
-  
-  - [Bachelorproject 3ELICTes/gs: Escape room](#bachelorproject-3elictesgs-escape-room)
-    - [Inhoud](#inhoud)
-    - [Concept](#concept)
-      - [Flow chart](#flow-chart)
-      - [Verhaallijn](#verhaallijn)
-        - [Fase 1: Inleiding](#fase-1-inleiding)
-        - [Fase 2: Communicatie herstellen](#fase-2-communicatie-herstellen)
-        - [Fase 3:](#fase-3)
-        - [Fase 4:](#fase-4)
-        - [Fase 5:](#fase-5)
-    - [Useful links](#useful-links)
-    - [Onderdelen](#onderdelen)
-      - [Fitnesstracker](#fitnesstracker)
-      - [Morsecode](#morsecode)
-      - [5G](#5g)
-      - [Vaccintester](#vaccintester)
-      - [Alohamora](#alohamora)
-      - [‘T is beter op anderhalve meter](#t-is-beter-op-anderhalve-meter)
-      - [Ontsmetting](#ontsmetting)
-    - [FAQ's](#faqs)
-      - [Wat als een puzzel niet werkt?](#wat-als-een-puzzel-niet-werkt)
-      
-</details>
 
 ## Concept
 
