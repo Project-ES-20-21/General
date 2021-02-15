@@ -4,7 +4,7 @@ Dit is de algemene beschrijving van de escape room. De documentatie en afspraken
 
 ## Inhoud
 
-<index>
+<datails>
   <summary>Klik om uit te vouwen</summary>
   
 - [Bachelorproject 3ELICTes/gs: Escape room](#bachelorproject-3elictesgs-escape-room)
@@ -29,7 +29,7 @@ Dit is de algemene beschrijving van de escape room. De documentatie en afspraken
   - [FAQ's](#faqs)
     - [Wat als een puzzel niet werkt?](#wat-als-een-puzzel-niet-werkt)
 
-</index>
+</datails>
 
 ## Concept
 
