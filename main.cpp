@@ -74,7 +74,7 @@ void callback(char *topic, byte *message, unsigned int length)
 
   // If a message is received on the topic esp32/control, you check if the message is either "start" or "stop" (or "reset").
   // Changes the state according to the message
-  if (String(topic) == "esp32/control")
+  if (String(topic) == "esp32/alohomora/control")
   {
     Serial.print("Changing state to ");
     if (messageTemp == "start")
