@@ -94,10 +94,10 @@ Om die kleurensequentie in te geven wordt er gebruik gemaakt van drie knoppen di
 
 Met de cijfers die gevonden werden in de vorige proeven (eventueel kan de volgorde met een puzzel achterhaald worden), kan nu een bakje met een digitaal cijferslot geopend worden. In dit bakje zit dan de sleutel om te ontsnappen uit de kamer. Hoera vrijheid!
 
-### ‘T is beter op anderhalve meter
+### ‘t Is beter op anderhalve meter
 
 De onderzoekers moeten voorkomen dat ze zelf ten prooi vallen van het virus. Ze moeten dus veilig werken door steeds 1,5 meter afstand van elkaar te houden. Dit wordt geïmplementeerd door aan elke onderzoeker een mobiele node mee te geven die continu controleert of de onderzoekers niet te dicht bij elkaar komen te staan.
-Wanneer dit systeem een te dichte afstand detecteert, zal er een duidelijk alarmsignaal afgaan en zullen alle onderzoekers zich moeten gaan ontsmetten. Alle opdrachten worden direct gepauzeerd totdat elke onderzoeker zijn/haar handen heeft ontsmet. Daarna kan er verder worden gewerkt.
+Wanneer dit systeem een te dichte afstand detecteert, zal er een duidelijk alarmsignaal afgaan en zullen alle onderzoekers zich moeten gaan ontsmetten. Alle opdrachten worden direct gepauzeerd totdat elke onderzoeker zijn/haar handen heeft ontsmet. Daarna kan er verder worden gewerkt. 
 
 ### Ontsmetting
 
