@@ -65,6 +65,10 @@ Een goed vaccin moet ook getest worden. Dit klinisch onderzoek wordt gedaan een 
 
 ### Fitnesstracker
 
+We plaatsen accelerometer aan een kettlebell en deze zal dan gebruikt worden om de oefeningen te tracken. Ergens in de kamer zal een boek of poster voorzien worden met nummers op met daarbij een reeks van bijhorende oefeningen. Hieruit zullen de spelers kunnen afleiden welke serie van oefeningen ze moeten uitvoeren. 
+Als de spelers een juiste oefening uitvoeren zal de batterij opgeladen worden en zal dit een stijging van het balkje op de display veroorzaken. Als het balkje voor de eerste keer helemaal vol is, zullen we een getal laten vrijgeven van het digitaal cijferslot. Als de spelers een incorrecte beweging uitvoeren zou het balkje niet mogen groeien.
+Als de spelers te dicht bij elkaar komen zal de broker een signaal uitsturen. We zullen dit dan straffen door ons batterij leeg te maken of te verminderen. Doorheen het spel zal er energie verbruikt worden en zal het balkje dus krimpen. Als de batterij helemaal leeg is zal er minder/geen licht zijn.
+
 ### Morsecode
 
 In een telefoon zal er een morse code afspelen. Deze morse code zal beginnen met een hoge toon die aangeeft wat het begin is. Aan de andere kant van de kamer moet deze code worden nageklopt.
