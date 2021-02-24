@@ -9,12 +9,12 @@ Om het overzicht te bewaren is het wel handig als de channels van de vorm "esp32
 # Controle signalen
 Werkwijze momenteel:
 1 controle topic waar elke ESP op moet subscriben: esp32/-proef-/control (-proef- met naam vervangen)
-op deze topic zijn momenteel 5 codes mogelijk waar elke ESP dan een iplementatie voor moet voorzien:
+op deze topic zijn momenteel 5 codes mogelijk waar elke ESP dan een implementatie voor moet voorzien:
 - '0' RESET
 - '1' STOP (afstand)
 - '2' START (ontsmetten)
 - '3' POWEROFF (stop voor fitness)
 - '4' POWERON (start voor fitness)
-
+- 
 Op deze manier kan fitnesstracker alles stoppen en starten, vanop de broker kan alles gereset worden indien nodig, en voor afstand houden en ontsmetten is er dan nog een speciale situatie voorzien die ook fitness onderbreekt. Verdere uitbreiding hier is zeker mogelijk.
 
