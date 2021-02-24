@@ -9,7 +9,7 @@ Om het overzicht te bewaren is het wel handig als de channels van de vorm "esp32
 # Controle signalen
 Werkwijze momenteel:
 1 controle topic waar elke ESP op moet subscriben: esp32/-proef-/control (-proef- met naam vervangen)
-op deze topic zijn momenteel slechts 3 codes mogelijk waar elke ESP dan een iplementatie voor moet voorzien:
+op deze topic zijn momenteel 5 codes mogelijk waar elke ESP dan een iplementatie voor moet voorzien:
 - '0' RESET
 - '1' STOP (afstand)
 - '2' START (ontsmetten)
