@@ -32,14 +32,14 @@ github_username: jekyll
 aux_links:
   "Project ES/GS 2020-2021 op GitHub":
     - "//github.com/Project-ES-20-21/"
-    
+
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
 ga_tracking: G-HM7E4D1KWL
 
 # Build settings
 theme: minima
-remote_theme:pmarsceil/just-the-docs
+remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-feed
 # Exclude from processing.
