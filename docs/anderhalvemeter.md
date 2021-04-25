@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Anderhalvemeter
-parent: Documentatie
+parent: Onderdelen
 nav_order: 7
 ---
 

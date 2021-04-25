@@ -1,7 +1,10 @@
 ---
 layout: default
-title: Documentatie
+title: Onderdelen
 has_children: true
+nav_order: 2
 ---
 
-# Documentatie
+# Onderdelen
+
+

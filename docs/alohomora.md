@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Alohomora
-parent: Documentatie
+parent: Onderdelen
 nav_order: 6
 ---
 

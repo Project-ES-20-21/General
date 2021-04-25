@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Vaccintester
-parent: Documentatie
+parent: Onderdelen
 nav_order: 5
 ---
 

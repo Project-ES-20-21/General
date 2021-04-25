@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Fitnesstracker
-parent: Documentatie
+parent: Onderdelen
 nav_order: 2
 ---
 

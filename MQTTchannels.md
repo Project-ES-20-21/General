@@ -1,3 +1,11 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+nav_order: 4
+---
+
 # Gebruikte channels op de broker
 enkele channels zijn voorbehouden voor gebruik voor de algemene aansturing: <br />
 esp32/+/control <br />
