@@ -12,8 +12,10 @@ has_children: true
  
 - [Algemeen](#algemeen)
 - [Blokschema](#Blokschema)
- -[Auto](#auto) 
 - [Communicatie](#Communicatie)
+ -[afstandsbediening -> auto](#afstandsbediening -> auto)
+ -[auto -> ledbar](#auto -> ledbar)
+ -[broker -> ledbar](#broker -> ledbar) 
 - [Error Handling](#Error-Handling)
  
 
@@ -24,7 +26,12 @@ Als de auto wordt opgenomen (dit wordt bepaald aan de hand van een afstandssenso
 De digit die nodig is voor het slot (Alohamora) zal kunnen afgeleid worden aan de hand van een kaart die in de ruimte aanwezig is: de coördinaten van de stralingslocatie op deze kaart zal overeenkomen met het juiste cijfer.
 
 ## Blokschema
-![blok schema](Blokschema.png)
-### Auto
+![blok schema](blokschema.png)
 ## Communicatie
+### auto -> ledbar
+Tussen de Auto en de ledbar wordt er in 1 richting gecommuniceerd via esp now. De rssi waarde wordt van de auto naar de ledbar gestuurd als integer.
+### afstandsbediening -> auto
+De afstandsbediening is verbonden communiceert over 433Mhz met een ontvanger aangesloten aan de auto.
+### #broker -> ledbar
+De ledbar vraagt enkele signalen op om te weten wat de toestand is van de globale puzzel. Dit gebeurt via Mqtt en de afgesproken [richtlijnen](https://project-es-20-21.github.io/General/MQTTchannels.html) hierrond.
 ## Error Handling
