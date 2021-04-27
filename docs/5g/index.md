@@ -24,7 +24,7 @@ Als de auto wordt opgenomen (dit wordt bepaald aan de hand van een afstandssenso
 De digit die nodig is voor het slot (Alohamora) zal kunnen afgeleid worden aan de hand van een kaart die in de ruimte aanwezig is: de coördinaten van de stralingslocatie op deze kaart zal overeenkomen met het juiste cijfer.
 
 ## Blokschema
-![blok schema](Blank diagram (1).png)
+![blok schema](Blokschema.png)
 ### Auto
 ## Communicatie
 ## Error Handling
