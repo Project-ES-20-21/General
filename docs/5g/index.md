@@ -20,6 +20,6 @@ has_children: true
 ## Algemeen
  idem als hoofdpagina
 ## Blokschema
-## Auto
+### Auto
 ## Communicatie
 ## Error Handling
