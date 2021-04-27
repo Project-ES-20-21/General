@@ -10,7 +10,7 @@ nav_order: 2
   - [Afstandsbediening](#Afstandsbediening)
   - [De deur](#De-deur)
   - [Voeding](#Voeding)
-  - [Anti tamper](#Anti tamper)
+  - [Anti tamper](#Anti-tamper)
   - [Motoren](#Motoren)
 
 #Auto
