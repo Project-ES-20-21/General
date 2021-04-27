@@ -15,7 +15,7 @@ nav_order: 2
 
 # Auto
 ## Afstandsbediening
-Voor het besturen van de auto wordt er gebruik gemaakt van een afstandsbediening en ontvanger dat communiceert over 433Mhz.  [afbeelding]
+Voor het besturen van de auto wordt er gebruik gemaakt van een afstandsbediening en ontvanger dat communiceert over 433Mhz.
 Het besturen van de auto gebeurt random. Dus een knop moet niet specifiek gekoppeld worden aan een bepaald signaal. We maken gebruik van 4 pinnen van de ontvanger voor het bepalen of er een knop wordt ingedrukt en welke. De interrupt op de ontvanger is zo ingesteld dat deze hoog is en blijft zodra 1 knop wordt ingedrukt. De ontvanger voorziet een interrupt signaal en een signaal per drukknop. Zoals eerder gezegd kan als de interrupt zodanig wordt ingesteld. 1 Van de signalen voor de drukknoppen weggelaten worden. Omdat we via uitsluitsel weten dat heet de 4de is.
 ## De deur
 De verborgen compartiment in de auto kan geopend worden door het indrukken van een drukknop als de rssi waarde een bepaalde grens onderscheid. Het geraamte van de auto waarin deze deur voorzien is gelazer cut. Het open van de deur gebeur met behulp van een solenoid van 12V. Deze wordt geschakeld via een relais van 5V. Het aansturen van de relais gebeurt via een optocoupler dit heeft als voordeel dat wanneer de relais een puls genereert bij het terugschakelen deze de esp niet kan beschadigen.  
