@@ -8,7 +8,18 @@ has_children: true
 
 # 5G = Corona
 
-Algemeen Doel
-Blokschema
-Communicatie
-Error Handling
+## Inhoud
+ 
+- [Algemeen](#algemeen)
+- [Blokschema](#Blokschema)
+  -[Auto](#auto) 
+- [Communicatie](#Communicatie)
+- [Error Handling](#Error-Handling)
+ 
+
+## Algemeen
+ idem als hoofdpagina
+## Blokschema
+## Auto
+## Communicatie
+## Error Handling
