@@ -10,12 +10,12 @@ has_children: true
 
 ## Inhoud
  
-- [Algemeen](#algemeen)
+- [Algemeen](#Algemeen)
 - [Blokschema](#Blokschema)
 - [Communicatie](#Communicatie)
-  - [afstandsbediening -> auto](#afstandsbediening->auto)
-  - [auto -> ledbar](#auto->ledbar)
-  - [broker -> ledbar](#broker->ledbar) 
+  - [afstandsbediening -> auto](#afstandsbediening -> auto)
+  - [auto -> ledbar](#auto -> ledbar)
+  - [broker -> ledbar](#broker -> ledbar) 
 - [Error Handling](#Error-Handling)
  
 
