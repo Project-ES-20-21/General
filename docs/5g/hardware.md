@@ -24,8 +24,8 @@ De auto wordt gevoed door een LiPo batterij van 12V met 2400mAh. Deze spanning w
 ## Anti tamper
 Omdat we willen vermijden dat de auto kan opgenomen worden en zo verplaatst worden naar de juiste locatie. Maken we gebruik van een afstand sensor deze meet constant de afstand onder de auto. Wanneer deze afwijkt zal er een buzzer beginnen piepen tot de auto wordt neergezet. Eenmaal neergezet zal de buzzer nog even verder gaan als tijdstraf. De buzzer is een active buzzer dus moet geschakeld worden met een dc spanning van 5V. Omdat dit een verbruiker is en geen stuursignaal maken we gebruik van een N-mosfet voor het schakelen. 
 ## Motoren
-De motoren (FIT0441)  hebben een ingebouwde sturing en kunnen gestuurd worden via een PWM signaal en een stuursignaal dat hoog of laag is afhankelijk van de gewenste richting. We maken gebruik van mecanum wielen deze zijn in staat om in alle richtingen te rijden. Zoals weergegeven op onderstaande afbeelding. [afbeelding]
-Omdat we dit niet nodig hebben en beperkt zijn tot 4knoppen van de afstandsbediening. Graag hebben we ook dat de wielen kunnen bestuurt worden met zo weinig mogelijk pinnen. Indien we kiezen voor A en E en hun inverse hebben de wielen link en recht steeds dezelfde richting en hebben alle wielen steeds dezelfde snelheid. Dit maakt dat we alle wielen kunnen besturen met 3 signalen. 
+De motoren (FIT0441)  hebben een ingebouwde sturing en kunnen gestuurd worden via een PWM signaal en een stuursignaal dat hoog of laag is afhankelijk van de gewenste richting. We maken gebruik van mecanum wielen deze zijn in staat om in alle richtingen te rijden. Zoals weergegeven op onderstaande afbeelding. 
+Omdat we dit niet nodig hebben en beperkt zijn tot 4 knoppen van de afstandsbediening. Graag hebben we ook dat de wielen kunnen bestuurt worden met zo weinig mogelijk pinnen. Indien we kiezen voor A en E en hun inverse hebben de wielen link en recht steeds dezelfde richting en hebben alle wielen steeds dezelfde snelheid. Dit maakt dat we alle wielen kunnen besturen met 3 signalen. 
 Het PWM signaal kan gegeneerd met ledcWrite deze laat ons toe om de frequentie en duty-cycle aan te passen.
 
 
