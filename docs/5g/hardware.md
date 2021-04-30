@@ -12,6 +12,7 @@ nav_order: 2
   - [Voeding](#Voeding)
   - [Anti tamper](#Anti-tamper)
   - [Motoren](#Motoren)
+  - [PCB ontwerp](#PCB-ontwerp)
 
 # Auto
 ## Afstandsbediening
@@ -27,6 +28,8 @@ Omdat we willen vermijden dat de auto kan opgenomen worden en zo verplaatst word
 De motoren (FIT0441)  hebben een ingebouwde sturing en kunnen gestuurd worden via een PWM signaal en een stuursignaal dat hoog of laag is afhankelijk van de gewenste richting. We maken gebruik van mecanum wielen deze zijn in staat om in alle richtingen te rijden. Zoals weergegeven op onderstaande afbeelding. 
 Omdat we dit niet nodig hebben en beperkt zijn tot 4 knoppen van de afstandsbediening. Graag hebben we ook dat de wielen kunnen bestuurt worden met zo weinig mogelijk pinnen. Indien we kiezen voor A en E en hun inverse hebben de wielen link en recht steeds dezelfde richting en hebben alle wielen steeds dezelfde snelheid. Dit maakt dat we alle wielen kunnen besturen met 3 signalen. 
 Het PWM signaal kan gegeneerd met ledcWrite deze laat ons toe om de frequentie en duty-cycle aan te passen.
+## PCB ontwerp
+[[https://github.com/5Gstraling/autopcb/blob/master/autopcbupperbottem.png|alt=octocat]]
 
 
 
