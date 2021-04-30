@@ -29,7 +29,8 @@ De motoren (FIT0441)  hebben een ingebouwde sturing en kunnen gestuurd worden vi
 Omdat we dit niet nodig hebben en beperkt zijn tot 4 knoppen van de afstandsbediening. Graag hebben we ook dat de wielen kunnen bestuurt worden met zo weinig mogelijk pinnen. Indien we kiezen voor A en E en hun inverse hebben de wielen link en recht steeds dezelfde richting en hebben alle wielen steeds dezelfde snelheid. Dit maakt dat we alle wielen kunnen besturen met 3 signalen. 
 Het PWM signaal kan gegeneerd met ledcWrite deze laat ons toe om de frequentie en duty-cycle aan te passen.
 ## PCB ontwerp
-![autopcbupper](https://github.com/5Gstraling/autopcb/blob/master/autopcbupperbottem.png)
+![autopcbupper](https://github.com/5Gstraling/autopcb/blob/master/autopcbupper.png)
+![autopcbbottom](https://github.com/5Gstraling/autopcb/blob/master/autopcbupperbottem.png)
 
 
 
