@@ -33,5 +33,5 @@ Tussen de Auto en de ledbar wordt er in 1 richting gecommuniceerd via esp now. D
 ### afstandsbediening -> auto
 De afstandsbediening is verbonden communiceert over 433Mhz met een ontvanger aangesloten aan de auto.
 ### broker -> ledbar
-De ledbar vraagt enkele signalen op om te weten wat de toestand is van de globale puzzel. Dit gebeurt via Mqtt en de afgesproken [richtlijnen](https://project-es-20-21.github.io/General/MQTTchannels.html) hierrond.
+De ledbar vraagt enkele signalen op om te weten wat de toestand is van de globale puzzel. Dit gebeurt via Mqtt volgens de afgesproken [richtlijnen](https://project-es-20-21.github.io/General/MQTTchannels.html) hierrond.
 ## Error Handling
