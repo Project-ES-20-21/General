@@ -13,6 +13,9 @@ nav_order: 2
   - [Anti tamper](#Anti-tamper)
   - [Motoren](#Motoren)
   - [PCB ontwerp](#PCB-ontwerp)
+  - [Omhulsel](#Omhulsel)
+ -[Led-bar](#Led-bar)
+ -[Stralingslocatie](#Stralingslocatie)
 
 # Auto
 ## Afstandsbediening
@@ -31,6 +34,12 @@ Het PWM signaal kan gegeneerd met ledcWrite deze laat ons toe om de frequentie e
 ## PCB ontwerp
 ![autopcbupper](https://github.com/5Gstraling/autopcb/blob/master/autopcbupper.png)
 ![autopcbbottom](https://github.com/5Gstraling/autopcb/blob/master/autopcbupperbottem.png)
+Het volledige project (Kicad) is terug te vinden [hier](https://github.com/5Gstraling/autopcb).
+## Omhulsel
+[Afbeelding]
+Het volledige project () is terug te vinden [hier]().
+# Led-bar
+De lebar wordt gevoed door een powerbank. Dit omdat de lebar 8 leds heeft van 20mA en zo het stroomverbruik een stuk hoger ligt dan bij de stralingslocatie. Van Hardware is hier niets speciaal gebruikt enkel de al vermelde leds en natuurlijk hun voorschakelweerstand. Het is wel op te merken dat niet alle kleuren kunnen gebruikt worden van leds aangezien de esp32 maar een spanning op de gpi pinnen kan aanleggen van 3.3V. En bij sommige kleuren ligt de drempelspanning hoger. 
 
-
-
+# Stralingslocatie
+De stralingslocatie is een vereenvoudigde versie van de lebar( zonder alle aansluitingen voorzien voor de leds). De stralingslocatie wordt gevoed door 4 AA batterijen. Aangezien de esp32 enkel gebruikt wordt voor een wifi signaal uit te zenden is het stroomverbruik niet zo groot en volstaan batterijen. 
