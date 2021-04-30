@@ -31,8 +31,8 @@ Het PWM signaal kan gegeneerd met ledcWrite deze laat ons toe om de frequentie e
 ## PCB ontwerp
 [[https://github.com/5Gstraling/autopcb/blob/master/autopcbupperbottem.png|alt=autopcbupperbottem]]
 
-[https://github.com/5Gstraling/autopcb/blob/9f7d7501a10c0eb0d64ec277350dc7865d4b0c0c/autopcbupper.png]
-
+[[https://github.com/5Gstraling/autopcb/blob/9f7d7501a10c0eb0d64ec277350dc7865d4b0c0c/autopcbupper.png]]
+![autopcbupperbottem](https://github.com/5Gstraling/autopcb/blob/master/autopcbupperbottem.png)
 
 
 
