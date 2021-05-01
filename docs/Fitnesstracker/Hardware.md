@@ -2,7 +2,7 @@
 layout: default
 title: Hardware
 parent: Fitnesstracker
-nav_order: 3
+nav_order: 2
 ---
 # Hardware
 
