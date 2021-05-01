@@ -8,8 +8,8 @@ nav_order: 1
 
 # Inhoud 
 - [Opmerkingen](#Opmerkingen)
-  -[Communicatie](#Communicatie)
-  -[Afstandsensor](#Afstandsensor)
+  - [Communicatie](#Communicatie)
+  - [Afstandsensor](#Afstandsensor)
 - [Code](#Code)
   - [Stralingslocatie](#Stralingslocatie)
   - [Ledbar](#Ledbar)
