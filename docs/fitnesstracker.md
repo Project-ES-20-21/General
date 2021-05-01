@@ -7,7 +7,7 @@ nav_order: 2
 
 # Fitnesstracker
 
-##inhoud
+## Inhoud
 
 - [Algemeen](#Algemeen)
 - [Blokschema](#Blokschema)
