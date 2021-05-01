@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Fitnesstracker
-parent: Onderdelen
+title: Hardware
+parent: Fitnesstracker
 nav_order: 2
 ---
 # Hardware
