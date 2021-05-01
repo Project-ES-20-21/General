@@ -8,8 +8,8 @@ nav_order: 2
 # Hardware
 
 ## Inhoud
-- [Kettlebell] (#Kettlebell)
-- [LCD] (#LCD)
+- [Kettlebell](#Kettlebell)
+- [LCD](#LCD)
 ## Kettlebell
 De hardware van dit deel van de puzzel bestaat uit twee delen. 
 Het eerste deel bestaat uit een gewicht waarmee de fitness oefeningen worden uitgevoerd. 
