@@ -36,3 +36,4 @@ Alle communicatie verloopt via de broker. De gebruikte channels zijn:
 - "esp32/fitness/request" wordt gebruikt om een cijfer van de oefeningenreeks op te vragen.
 ## Opstelling
 Voor fitnesstracker wordt er best een plaats voorzien waarbij de spelers voldoende ruimte hebben om de oefeningen uit te voeren. De LCD zou idealiter in zicht moeten zijn terwijl men de oefening uitvoert. De poster kan men hangen in zicht van de spelers of buiten het zicht als men het iets moeilijker wil maken. 
+## Error handling
