@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Hardware
+title: Software
 parent: Fitnesstracker
 grand_parent: Onderdelen
 nav_order: 2
