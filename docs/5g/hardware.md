@@ -5,7 +5,7 @@ parent: 5G
 grand_parent: Onderdelen
 nav_order: 2
 ---
-
+# Inhoud
 - [Auto](#Auto)
   - [Afstandsbediening](#Afstandsbediening)
   - [De deur](#De-deur)
@@ -14,6 +14,7 @@ nav_order: 2
   - [Motoren](#Motoren)
   - [PCB ontwerp](#PCB-ontwerp)
   - [Omhulsel](#Omhulsel)
+  - [Motor pcb](#Motor-pcb)
  -[Led-bar](#Led-bar)
  -[Stralingslocatie](#Stralingslocatie)
 
@@ -38,6 +39,10 @@ Het volledige project (Kicad) is terug te vinden [hier](https://github.com/5Gstr
 ## Omhulsel
 [Afbeelding]
 Het volledige project () is terug te vinden [hier]().
+# Motor pcb
+Voor het aankopelen motoren maken we gebruik van een extra pcb zodat de 5 kabels per motor niet rechtstreeks op het pcb van de auto worden aangekoppled. De keuze voor dit extra pcb is mede zodat er zoweinig mogelijk kabel gebruikt moet worden. En de voeding van de motoren die elk een een maximale stroom van 0,7A kunnen trekken. Is er voor gekozen om dit appart te doen. Ook mede doordat in de breadoard fase dit zo voorzien was op de campus. 
+![motor pcb boven](https://github.com/5Gstraling/MotorPCB/blob/master/MotorPCBZonderLevelShifterupper.png)
+![motor pcb onder](https://github.com/5Gstraling/MotorPCB/blob/master/MotorPCBZonderLevelShifterbottem.png)
 # Led-bar
 De lebar wordt gevoed door een powerbank. Dit omdat de lebar 8 leds heeft van 20mA en zo het stroomverbruik een stuk hoger ligt dan bij de stralingslocatie. Van Hardware is hier niets speciaal gebruikt enkel de al vermelde leds en natuurlijk hun voorschakelweerstand. Het is wel op te merken dat niet alle kleuren kunnen gebruikt worden van leds aangezien de esp32 maar een spanning op de gpi pinnen kan aanleggen van 3.3V. En bij sommige kleuren ligt de drempelspanning hoger. 
 
