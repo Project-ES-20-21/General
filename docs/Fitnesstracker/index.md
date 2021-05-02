@@ -40,5 +40,5 @@ Voor fitnesstracker wordt er best een plaats voorzien waarbij de spelers voldoen
 ## Error handling
 - Een mogelijke fout is dat een juiste beweging niet goed gekeurd wordt. Aan dit probleem valt niet veel te doen. De enige oplossing is de reeks opnieuw beginnen en de        oefeningen nog duidelijker proberen uitvoeren.
 - Een ander mogelijk probleem kan zijn dat het LCD scherm niet oplicht. Dit zal dan hoogstwaarschijnlijk te wijten zijn aan het feit dat de powerbank plat is of slecht contact maakt met het scherm. 
-- Een gelijkaardig probleem kan optreden bij de kettlebell. Wanneer deze niet meer wil beginnen met meten (de buzzer piept niet als er op de knop gedrukt wordt), dan kan dat erop wijze dat de lipo batterij plat is. 
+- Een gelijkaardig probleem kan optreden bij de kettlebell. Wanneer deze niet meer wil beginnen met meten (de buzzer piept niet als er op de knop gedrukt wordt), dan kan dat erop wijzen dat de lipo batterij plat is. 
 
