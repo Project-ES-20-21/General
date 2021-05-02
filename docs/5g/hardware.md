@@ -42,9 +42,16 @@ Het volledige project () is terug te vinden [hier]().
 # Motor pcb
 Voor het aankopelen motoren maken we gebruik van een extra pcb zodat de 5 kabels per motor niet rechtstreeks op het pcb van de auto worden aangekoppled. De keuze voor dit extra pcb is mede zodat er zoweinig mogelijk kabel gebruikt moet worden. En de voeding van de motoren die elk een een maximale stroom van 0,7A kunnen trekken. Is er voor gekozen om dit appart te doen. Ook mede doordat in de breadoard fase dit zo voorzien was op de campus. 
 ![](https://github.com/5Gstraling/MotorPCB/blob/master/MotorPCBZonderLevelShifterupper.png?raw=true)
-![](https://github.com/5Gstraling/MotorPCB/blob/d217900752ed768871f1e4db15b7453399e672d0/MotorPCBZonderLevelShifterbottem.png?raw=true)
+![](https://github.com/5Gstraling/MotorPCB/blob/master/MotorPCBZonderLevelShifterbottem.png?raw=true)
+Het volledige project (Kicad) is terug te vinden [hier](https://github.com/5Gstraling/MotorPCB).
 # Led-bar
-De lebar wordt gevoed door een powerbank. Dit omdat de lebar 8 leds heeft van 20mA en zo het stroomverbruik een stuk hoger ligt dan bij de stralingslocatie. Van Hardware is hier niets speciaal gebruikt enkel de al vermelde leds en natuurlijk hun voorschakelweerstand. Het is wel op te merken dat niet alle kleuren kunnen gebruikt worden van leds aangezien de esp32 maar een spanning op de gpi pinnen kan aanleggen van 3.3V. En bij sommige kleuren ligt de drempelspanning hoger. 
+De lebar wordt gevoed door een powerbank. Dit omdat de lebar 8 leds heeft van 20mA en zo het stroomverbruik een stuk hoger ligt dan bij de stralingslocatie. Van Hardware is hier niets speciaal gebruikt enkel de al vermelde leds en natuurlijk hun voorschakelweerstand. Het is wel op te merken dat niet alle kleuren kunnen gebruikt worden van leds aangezien de esp32 maar een spanning op de gpi pinnen kan aanleggen van 3.3V. En bij sommige kleuren ligt de drempelspanning hoger.
+![](https://github.com/5Gstraling/5G---LEDbar/blob/master/LEDbar/LEDbarPCBupper.png?raw=true)
+![](https://github.com/5Gstraling/5G---LEDbar/blob/master/LEDbar/LEDbarPCBbottem.png?raw=true)
+Het volledige project (Kicad) is terug te vinden [hier](https://github.com/5Gstraling/5G---LEDbar).
 
 # Stralingslocatie
 De stralingslocatie is een vereenvoudigde versie van de lebar( zonder alle aansluitingen voorzien voor de leds). De stralingslocatie wordt gevoed door 4 AA batterijen. Aangezien de esp32 enkel gebruikt wordt voor een wifi signaal uit te zenden is het stroomverbruik niet zo groot en volstaan batterijen. 
+![](https://github.com/5Gstraling/5G---Stralingslocatie/blob/master/Stralingslocatie/StralingslocatiePCBupper.png?raw=true)
+![](https://github.com/5Gstraling/5G---Stralingslocatie/blob/master/Stralingslocatie/StralingslocatiePCBbottem.png?raw=true)
+Het volledige project (Kicad) is terug te vinden [hier](https://github.com/5Gstraling/5G---Stralingslocatie).
