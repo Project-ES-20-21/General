@@ -37,3 +37,4 @@ De ledbar vraagt enkele signalen op om te weten wat de toestand is van de global
 ## Error Handling
 - Voor dat u dat veel handelingen onderneemt kunt u het best eerst alle verbindingen eens nakijken. Slecht contact aan de motoren of pcb vormen de grootste problemen.
 - Indien er problemen zijn met de rssi waarden door te sturen kan dit komen doordat het kanaal verkeerd is ingesteld van de stralingslocatie. Dit kunt u nakijken met een app zoals wifi-analyzer. Meer uitleg vind u terug [hier](https://project-es-20-21.github.io/General/docs/5g/software.html#Opmerkingen).
+- Een mogelijke verbetering voor deze puzzel zou zijn dat er gerbuik gemaakt wordt van motoren met een hoger koppel. De motoren die voorzien hadden waren hebben 2.4kg*cm. Deze motoren hadden soms het nadeel dat ze niet steeds voldoende grip/koppel hadden waardoor de auto niet even goed rijde steeds.
