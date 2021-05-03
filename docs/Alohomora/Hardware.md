@@ -26,7 +26,9 @@ Om een code te kunnen ingeven die toegang verleent tot de kluis, wordt er gebrui
 ## PCB ontwerp
 
 ## 3D tekening
-
+![3D-tekening](afdekplaatje_deur.stl)
+![3D-tekening](deur_nieuw.stl)
+![3D-tekening](doos_kluis.stl)
 # Timer
 Deze timer begint af te tellen vanaf wanneer het spel officieel start. 
 Het geeft de spelers mee hoeveel tijd ze nog over hebben om de code te kraken en zo te ontsnappen uit de escape room. 
@@ -41,3 +43,6 @@ Om de tijd weer te geven wordt er gebruik gemaakt van een 4-digit 7-segment disp
 ## PCB ontwerp
 
 ## 3D tekening
+![3D-tekening](Timer_doosje.stl)
+![3D-tekening](Timerdeksel.stl)
+
