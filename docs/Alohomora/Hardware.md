@@ -29,9 +29,15 @@ De voeding van ons systeem wordt geleverd door een 11.1V lipo batterij. Deze lev
 ## PCB ontwerp
 
 ## 3D tekening
-![3D-tekening](afdekplaatje_deur.stl)
-![3D-tekening](deur_nieuw.stl)
-![3D-tekening](doos_kluis.stl)
+Oorspronkelijk was het idee om de behuizing van de kluis te laten 3D printen. Door de omvang was het echter een beter plan om deze toch te laten lasercutten.
+![Deur deksel](afdekplaatje_deur.stl)
+![Deur Frame](deur_nieuw.stl)
+![Kluis Behuizing](doos_kluis.stl)
+![3D-assembly](Assembly_kluis_github.stl)
+
+![Lasercut](binnenste.svg)
+![Lasercut](doos_kluis.svg)
+
 # Timer
 Deze timer begint af te tellen vanaf wanneer het spel officieel start. 
 Het geeft de spelers mee hoeveel tijd ze nog over hebben om de code te kraken en zo te ontsnappen uit de escape room. 
@@ -42,10 +48,18 @@ Het geeft de spelers mee hoeveel tijd ze nog over hebben om de code te kraken en
 Om de tijd weer te geven wordt er gebruik gemaakt van een 4-digit 7-segment dispay. Via de broker wordt het start signaal gegeven om het spel te starten en vanaf dan zal de timer beginnen met aftellen. Doordat het spel exact 60 minuten duurt, hebben we met 4 digits genoeg om de spelers tot op de seconde hun resterende tijd te laten weten.
 
 ## Circuit
+We weergeven alvast een vereenvoudigt schema van onze timer. Hierin vindt je de belangrijkste componenten in terug die we gebruiken om deze te laten werken.
+We gebruiken een powerbank die 5V levert als voeding. Doordat het timer display zelf 5V als voeding gebruikt, kan deze hier rechtstreeks op worden aangesloten. Bij het ontwerpen van een PCB voor de esp32 moet men echter nog rekening houden met een conversie van 5V naar 3.3V wat in ons schema zelf ook gebeurd.
+![Timer circuit](image-removebg-preview.png)
 
 ## PCB ontwerp
 
 ## 3D tekening
 ![3D-tekening](Timer_doosje.stl)
 ![3D-tekening](Timerdeksel.stl)
+![3D-assembly](Assembly_timer_github.stl)
+
+![Lasercut](Timer.svg)
+
+
 
