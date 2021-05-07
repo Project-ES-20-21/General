@@ -1,6 +1,8 @@
+---
 layout: default
 title: Software
 parent: Ontsmetting
+grand_parent: Onderdelen
 nav_order: 1
 ---
 

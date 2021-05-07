@@ -1,6 +1,8 @@
+---
 layout: default
 title: Hardware
 parent: Ontsmetting
+grand_parent: Onderdelen
 nav_order: 2
 ---
 
