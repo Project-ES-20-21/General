@@ -33,7 +33,7 @@ Alle communicatie verloopt via de broker. De gebruikte channels zijn:
 - "esp32/fitness/OKmessage" wordt gebruikt om van de kettlebell naar de LCD te laten weten of de oefening juist is of niet.
 - "esp32/fitness/LCDmessage" stuurt door in welke toestand de esp aan de kettlebell zich bevindt.
 - "esp32/fitness/telefoon" zal gebruikt worden om aan morse te laten weten dat de telefoon mag afgaan.
-- "esp32/Alohomora/code/1/" zal gebruikt worden om het eerste cijfer van het cijferslot door te sturen.
+- "esp32/Alohomora/code1" zal gebruikt worden om het eerste cijfer van het cijferslot door te sturen.
 - "esp32/fitness/request" wordt gebruikt om een cijfer van de oefeningenreeks op te vragen.
 ## Opstelling
 Voor fitnesstracker wordt er best een plaats voorzien waarbij de spelers voldoende ruimte hebben om de oefeningen uit te voeren. De LCD zou idealiter in zicht moeten zijn terwijl men de oefening uitvoert. De poster kan men hangen in zicht van de spelers of buiten het zicht als men het iets moeilijker wil maken. Als extra kan er een matje voorzien worden waarop de kettlebell kan rusten zodat de vloer niet beschadigd geraakt.
