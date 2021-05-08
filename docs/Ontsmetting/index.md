@@ -14,10 +14,10 @@ Wanneer de onderzoekers te dicht bij elkaar gekomen zijn, is er een risico op be
 Via een slimme ontsmettingsdispenser moet er bijgehouden worden wie reeds ontsmet is en wie niet. Op deze manier kan het onderzoek (puzzels) op een veilige manier verlopen. Dit wordt gedaan via een nfc badge die de besmette onderzoekers moeten scannen om ontsmettingsalcohol te verkijgen. Hierdoor kan men met zekerheid zeggen dat de juist personen ontsmet zijn. De dispenser werkt volledig zonder fysiek contact aangezien deze via een afstandssensor kan bedient worden.
 
 
-##### Blokschema:
+##### Blokschema
 
 In onderstaand blokschema is het algemeen verloop van de opstelling geschetst.
-![Algemen flowchart](ontsmettingsflowchart.png)
+![Algemene flowchart](ontsmettingsflowchart.png)
 
 ## Onderdelen
 
