@@ -41,6 +41,24 @@ Hierbij worden volgende IO pin nummers mee gegeven:
 ### Functies
 Het gebruik van de Adafruit bibliotheek zal het afbeelden van vormen en figuren sterk vergemakkelijken. Er verschillende functies in de Scherm klasse, die verantwoordelijk zijn voor het tekenen/afbeelden van bepaalde "scenes". 
 
+#### Paint functies
+De paint functies zullen verschillende dingen afbeelden op het scherm. Vaak zijn er bijhorende argumenten mogelijk om bijvoorbeeld de locatie of het aantal te specifiëren.
+
+##### paintCross(int positie)
+Hiermee kan men de indicator voor een personen op een kruisje zetten. Dit betekend dat de persoon niet ontsmet is. Het positie argument zal de plaats bepalen waar het icoon afgebeeld wordt. De positie is een int van 0 tot en met 3. De plaatsing is als volgt:<br>
+>>![volgorde paint](volgorde_paint.png)
+
+##### paintCheck(int positie)
+Todo
+##### paintGevaar(int positie)
+Todo
+##### clear()
+Todo
+##### validTag()
+Todo
+##### clearTag()
+Todo
+
 
 ## Login
 ## Monitor
