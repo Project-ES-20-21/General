@@ -19,7 +19,7 @@ De files van ons volledige PCB ontwerp binnen Kicad kunnen via volgende link gev
 
 ## Schema PCB
 
-![](https://github.com/Ontsmettinator3000/main/blob/main/docs/Printing%20Print%20schema.pn.pngraw=true)
+![](https://github.com/Ontsmettinator3000/main/blob/main/docs/Printing%20Print%20schema.pn.png?raw=true)
 
 # Componenten
 ## Voeding
