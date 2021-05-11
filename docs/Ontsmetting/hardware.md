@@ -9,17 +9,25 @@ nav_order: 2
 
 
 # PCB
+De files van ons volledige PCB ontwerp binnen Kicad kunnen via volgende link gevonden worden:
+![](https://github.com/Ontsmettinator3000/PCB)
 
+## 3D render PCB
 
 ![](https://github.com/Ontsmettinator3000/main/blob/main/docs/PCB_3DviewBOTTOM.png?raw=true)
 ![](https://github.com/Ontsmettinator3000/main/blob/main/docs/PCB_3DviewTOP.png?raw=true)
-## Voeding
 
+## Schema PCB
+
+![](https://github.com/Ontsmettinator3000/main/blob/main/docs/schemaproject.pdfraw=true)
+
+# Componenten
+## Voeding
 De PCB wordt gevoed door een powerbank verbonden via een micro-usb poort. Hierdoor krijgt de PCB een 5 volt spanningsniveau waarmee de versterker en pomp gevoed worden. De ESP-32, het lcd-scherm, de infrarood sensor en de NFC-module worden gevoed door 3.3 volt. Hierdoor werd een AMS1117-3.3 LDO gebruikt die het 5 volt niveau naar 3.3 volt verlaagt. We kozen voor een powerbank als voeding omdat deze het gewenste 5volt niveau geeft. Een powerbank heeft ook een grote capaciteit waardoor deze niet vaak opgeladen moet worden. Verder is deze ook gebruiksvriendelijk in het opladen en makkelijk te vervangen.
 
 ## Programmer
 
-Om de ESP32 microcontroller te programmeren is een program header aanwezig. Via een een USB naar Serial UART-bridge kan verbinding gemaakt worden. 
+Om de ESP32 microcontroller te programmeren is een program header aanwezig die verbonden is met de TX en RX poorten van de ESP32. Deze zijn respectievelijk de transmitter en receiver bij seriële communicatie. Via een een USB naar Serial UART-bridge kan verbinding gemaakt worden. Het gebruik van seriele connectie werd gekozen boven het programmeren via micro usb omdat het programma de mogelijkheid heeft om OTA geprogrammeerd te worden. De aanwezigheid van een complexere verbinding via micro usb waar de usb naar seriele omzetting op de PCB zou moeten gebeuren was dus te complex om maar één keer te gebruiken.
 
 ## NFC sensor
 
@@ -35,11 +43,11 @@ Als hands-free sensor om ontsmetting te dispensen wordt gebruik gemaakt van een 
 
 ## LCD scherm
 
-Om visuele instructies te geven aan de gebruiker wordt gebruik gemaakt van een TFT-LCD scherm. Deze werkt via SPI, hier wordt een full duplex verbinding gemaakt. Er worden bij SPI vier verbindingen gebruikt. MOSI stuurt data van master naar slave terwijl MISO het omgekeerde doet. CS, chip select, bepaalt met welke slave gecommuniceerd wordt. Tenslotte is er ook nog een seriele klok nodig. 
+Om visuele instructies te geven aan de gebruiker wordt gebruik gemaakt van een TFT-LCD scherm. Deze werkt via SPI, hier wordt een full duplex verbinding gemaakt. Er worden bij SPI vier verbindingen gebruikt. MOSI stuurt data van master naar slave terwijl MISO het omgekeerde doet. CS, chip select, bepaalt met welke slave gecommuniceerd wordt. Tenslotte is er ook nog een seriele klok nodig. Er is ook een enable ingang die gebruikt wordt om het scherm uit te schakelen wanneer het niet nodig is om er iets op te zien. Dit zorgt voor een kleiner verbruik.
 
 ## Versterker
 
-Om het audiosignaal af te spelen is een PAM8403 versterker aanwezig op de PCB. Dit is een filterloze klasse D versterker die een analoog signaal afkomstig van de ESP-32 versterkt en omzet naar PWM. Een klasse D versterker maakt gebruik van de schakelende werking van transistoren of MOSFETs. Binnen duurdere klasse D versterkers wordt gebruik gemaakt van een laagdoorlaatfilter om de hoge frequenties van het PWM signaal terug weg te filteren. Goedkopere versterkers zoals de PAM8403 werken echter zonder LDF en rekenen op de inductantie van de speaker om de hoogfrequente componenten weg te halen.
+Om het audiosignaal af te spelen is een PAM8403 versterker aanwezig op de PCB. Dit is een filterloze klasse D versterker die een analoog signaal afkomstig van de ESP-32 versterkt en omzet naar PWM. Een klasse D versterker maakt gebruik van de schakelende werking van transistoren of MOSFETs. Binnen duurdere klasse D versterkers wordt gebruik gemaakt van een laagdoorlaatfilter om de hoge frequenties van het PWM signaal terug weg te filteren. Goedkopere versterkers zoals de PAM8403 werken echter zonder LDF en rekenen op de inductantie van de speaker om de hoogfrequente componenten weg te halen. Aan de chip zijn 2 ingangspoorten aanwezig waarbij elk 2 uitgangspoorten horen, slechts één van deze in- en uigangskoppels werd gebruikt. Ook bevat deze een mute en shutdown poort. Deze zijn active low. De shutdown pin wordt gebruikt om de speaker uit te schakelen wanneer deze niet gebruikt moet worden, dit vermindert de ruis.
 
 In het finale ontwerp was helaas een ground loop aanwezig waardoor het versterkercircuit geen correcte audiofragmenten af kon spelen. Omdat de massa onregelmatig was had de versterker geen correct referentieniveau en kon er enkel een ruis afgespeeld worden. Klasse D versterkers zijn extra hier gevoelig voor wanneer deze schakelen en een deel van de schakeling groot genoeg is om als antenne te dienen. Het scheiden van de power ground en analoge ground zou hier een oplossing kunnen bieden maar deze scheiden zou de PCB vernietigd hebben. De ground loop in de schakeling kon niet opgelost worden ondanks het weghalen van vele vias, toevoegen van extra ontkoppelcapaciteiten en vervangen van alle onderdelen. Als alternatief werd er gebruik gemaakt van een externe bestaande versterkerschakeling. De capaciteiten op dit bord kunnen het massaniveau genoeg stabiliseren waardoor het audiofragment correct kan worden afgespeeld.
 
