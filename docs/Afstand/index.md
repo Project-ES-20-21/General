@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Anderhalvemeter
+parent: Onderdelen
 has_children: true
 nav_order: 7
 ---
