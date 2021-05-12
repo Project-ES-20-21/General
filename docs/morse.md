@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Morse
-parent: Onderdelen
+parent: Morse
 nav_order: 3
 ---
 
