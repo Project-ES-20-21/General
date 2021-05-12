@@ -12,9 +12,7 @@ nav_order: 1
   - [Timer](#Timer)
   - [Touchscreen](#Touchscreen)
 - [Code](#Code)
-  - [Stralingslocatie](#Stralingslocatie)
-  - [LED-bar](#LED-bar)
-  - [Auto](#Auto) 
+
 # Opmerkingen
 ## Broker
 
@@ -23,6 +21,3 @@ De timer code kunnen we eenvoudig terugbrengen tot volgende code.
 ![Timer-Flowchart](Timer_Code_Flowchart.png)
 
 # Code
-## Stralingslocatie
-## LED-bar
-## Auto
