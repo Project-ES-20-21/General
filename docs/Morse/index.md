@@ -1,3 +1,11 @@
+---
+layout: default
+title: Morse
+parent: Onderdelen
+nav_order: 8
+has_children: true
+---
+
 # Morse
 
 ## Doel en verhaal
