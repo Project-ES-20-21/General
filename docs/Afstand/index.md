@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Anderhalvemeter
-parent: Afstand
+has_children: true
 nav_order: 7
 ---
 
