@@ -18,6 +18,7 @@ nav_order: 1
 ## Timer
 De timer code kunnen we eenvoudig terugbrengen tot volgende flowchart.
 ![Timer-Flowchart](Timer_Code_Flowchart.png)
+De gebruikte code is [hier](https://github.com/Project-ES-20-21/Timer/blob/main/src/main.cpp) terug te vinden
 
 ## Touchscreen
 De touchscreen code kunnen we eenvoudig terugbrengen tot volgende code.
