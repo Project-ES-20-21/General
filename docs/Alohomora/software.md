@@ -23,4 +23,4 @@ De gebruikte code is [hier](https://github.com/Project-ES-20-21/Timer/blob/main/
 ## Touchscreen
 De touchscreen code kunnen we eenvoudig terugbrengen tot volgende code.
 ![Touchscreen-Flowchart](Touchscreen_schema.png)
-# Code
+De gebruikte code is [hier](https://github.com/Project-ES-20-21/Alohomora/blob/main/src/main.cpp) terug te vinden
