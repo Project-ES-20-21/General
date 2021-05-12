@@ -97,7 +97,7 @@ Om die kleurensequentie in te geven wordt er gebruik gemaakt van drie knoppen di
 
 ### Alohamora
 
-Met de cijfers die gevonden werden in de vorige proeven (eventueel kan de volgorde met een puzzel achterhaald worden), kan nu een bakje met een digitaal cijferslot geopend worden. In dit bakje zit dan de sleutel om te ontsnappen uit de kamer. Hoera vrijheid!
+In alle voorgaande proeven zijn er in totaal 4 cijfers verkregen, deze vormen in de volgorde waarin ze gevonden zijn een code. Wanneer we deze cijfers in volgorde ingeven op de touchscreen kan een bakje geopend worden. In dit bakje zit de sleutel om te ontsnappen uit de kamer. Hoera vrijheid!
 
 ### ‘t Is beter op anderhalve meter
 
@@ -115,4 +115,4 @@ Wanneer elke individuele onderzoeker zijn handen ontsmet heeft is het weer veili
 
 ### Wat als een puzzel niet werkt?
 
-Door communicatie met de broker kan er ten allen tijde handmatig naar de volgende puzzel gegaan worden, op die manier kan geforceerd worden dat een puzzel klaar is ook al is deze defect. De missende digits zullen toch nog doorgegeven worden, bij voorkeur met de aanwezige elektronica en waar nodig met een tip.
+Aan de hand van een user interface (gemaakt met behulp van Node-RED) kan op een lokale webpagina, elke proef apart of alle proeven samen, bestuurd worden via MQTT berichten. Via een smartphone kan dus bijvoorbeeld alles gemanipuleerd worden. Zo kunnen bijvoorbeeld missende digits alsnog doorgegeven worden, elk deel kan gereset worden,... Bij voorkeur is de escape room volledig op te lossen met de aanwezige elektronica en waar nodig met een tip.
