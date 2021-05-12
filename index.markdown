@@ -111,6 +111,23 @@ Via een slimme ontsmettingsdispenser moet er dus bijgehouden worden of alle onde
 
 Wanneer elke individuele onderzoeker zijn handen ontsmet heeft is het weer veilig om verder te werken waardoor de andere puzzels terug hervat kunnen worden.
 
+## Centraal systeem
+
+### Hardware
+
+Als centraal deel van ons systeem hebben we een broker/server en een router. Als broker/server gebruiken we een Raspberry Pi 2 met een aantal programma's, meer uitleg hierover is te vinden onder het onderdeel [framework](https://project-es-20-21.github.io/General/docs/framework.html). 
+Als router mochten we gebruik maken van een router van het merk NETGEAR, waar we verder niks aan hebben aangepast. 
+
+### Software
+
+Ook hierover wordt er verder uitgewijd onder het onderdeel [framework](https://project-es-20-21.github.io/General/docs/framework.html).
+
+-hier komt nog een flowchart en een verwijzing naar de gebruikte code-
+
+### Communicatie
+
+De communicatie verloopt steeds via MQTT, behalve dan enkele interne communicaties. Elke proef communiceert met de andere proeven waar nodig, de broker is dus slechts een tussenstation maar implementeert zelf (bijna) geen functionaliteit. Dit heeft als voordeel dat ook de broker makkelijk vervangen of uitgebreid kan worden, zonder de hele werking van de escape room in gevaar te brengen.
+
 ## FAQ's
 
 ### Wat als een puzzel niet werkt?
