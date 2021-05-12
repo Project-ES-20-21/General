@@ -14,7 +14,6 @@ nav_order: 1
 - [Code](#Code)
 
 # Opmerkingen
-## Broker
 
 ## Timer
 De timer code kunnen we eenvoudig terugbrengen tot volgende flowchart.
