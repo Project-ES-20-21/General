@@ -89,6 +89,33 @@ String tags[4] = {"0X12 0X34 0X56 0XC78 0X00 0X00 0X00",
 De int `length` zal het aantal tags bijhouden om achteraf makkelijk alle tags te kunnen overlopen. De array van Strings `tags[]` zal de id's van de tags bijhouden. Men kan hierbij het aantal tags aanpassen. Het nummer van de tag (en bijhorend id) zal bepaald worden door de index van id. Indien de id van een bepaalde tag als eerste in de array staat, zal deze dus id 0 krijgen.
 
 Het is belangrijk dat elke id uit 7 hexadecimale delen bestaat, gescheiden door een spatie. Indien de tag een korter id gebruikt, wordt dit aangevuld met 0X00. Ook moet zowel de X als de letters van de getalwaarde (A tot F) van het hexadecimale getal steeds in hoofdletter geschreven worden.
+
+### Functies
+De login klasse maakt gebruik van verschillende functie om de personen te registeren en bij te houden.
+##### setId(String ids)
+Deze functie zal de mee gegeven id's (nummers) registreren als besmet. De nummers zijn zoals hierboven vermeldt, gekoppeld aan een bijhorende tagId. De mee gegeven String wordt als volgt opgemaakt: 
+```c
+"123" //personen 1, 2 en 3 zijn dus besmet
+```
+Hierbij wordt elke individueel karakter van de string beschouwd als een tag nummer. Let op dat deze String enkel cijfers bevat. Er zijn dus maximaal 10 (0 - 9) nummers mogelijk.
+##### validate(String id)
+###### returns: `boolean`
+Om de de gescande tags te testen op eventuele besmetting, kan men deze functie gebruiken. Via bovengenoemde functie `setId(String ids)` kan men de besmette tagnummers registreren. Deze functie zal het meegegeven tagId opzoeken en aan de hand van de resulaten een boolean terug geven. Indien deze persoon niet geregistreerd werd, zal deze `false` returnen en `true` indien dit wel gebeurde. Let op, deze id zal niet als ontsmet gezien worden na het uitvoeren van de functie. Indien deze functionaliteit gewenst is, kan men gebruik maken van `login(String id)`.
+
+##### login(String id)
+###### returns: `boolean`
+
+##### getUserCount()
+###### returns: `int`
+
+
+
+##### reset()
+
+
+
+
+
 ## Monitor
 ## MQTT
 ## NFC
