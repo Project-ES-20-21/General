@@ -20,9 +20,9 @@ In onderstaande figuur is de flowchart van software om data te verzamelen gegeve
 ### Model trainen
 In onderstaande figuur is de flowchart van software om een model te trainen gegeven. Voor de google colab met de python code zie deze [link]
 (https://colab.research.google.com/drive/1n9D9fKCJZdnTZDBaNA14b6IgqPN8YrN2).
-<p align="center">
+
 ![modelTrainen](modelTrainen.png )
- </p>
+ 
 
 ## Kettlebell
 In onderstaande figuur is de flowchart van software van de Kettlebell gegeven. Voor de volledig code zie deze [link](https://github.com/FitnessTrackerpuzzle/CodeKettlebellmetMQTT-finaal-).
