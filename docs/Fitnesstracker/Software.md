@@ -21,7 +21,6 @@ In onderstaande figuur is de flowchart van software om data te verzamelen gegeve
 In onderstaande figuur is de flowchart van software om een model te trainen gegeven. Voor de google colab met de python code zie deze [link](https://colab.research.google.com/drive/1n9D9fKCJZdnTZDBaNA14b6IgqPN8YrN2).
 
 <img align="center" src="modelTrainen.png">
-![modelTrainen](modelTrainen.png )
  
 
 ## Kettlebell
