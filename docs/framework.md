@@ -50,7 +50,7 @@ Op deze manier kan fitnesstracker alles stoppen en starten, vanop de broker kan 
 
 # GUI
 Om makkelijk in te kunnen grijpen wanneer iets fout loopt hebben we een intuïtieve user interface opgesteld met Node-RED.  
-Deze GUI kan gevonden worden door te verbinden met de NETGEAR68 router in de escaperoom en te surfen naar <192.168.1.2:1880/ui> .
+Deze GUI kan gevonden worden door te verbinden met de NETGEAR68 router in de escaperoom en te surfen naar <http://192.168.1.2:1880/ui> .
 Je zou dan een pagina moeten zien die lijkt op deze pagina:
 
 ![GUI_pagina](GUI.PNG)
