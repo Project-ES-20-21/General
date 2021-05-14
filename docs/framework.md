@@ -55,7 +55,7 @@ Je zou dan een pagina moeten zien die lijkt op deze pagina:
 
 ![GUI_pagina](GUI.PNG)
 
-Door linksboven te klikken zou er een dropdown menu moeten verschijnen, hier kan je de proef in kwestie aanklikken om naar het controlepaneel voor de proef in kwestie te gaan.
+Door linksboven te klikken zou er een dropdown menu moeten verschijnen, hier kan je een proef aanklikken om naar het controlepaneel voor de proef in kwestie te gaan.
 Elke proef ondersteunt over het algemeen dezelfde commandos, zoals ze zijn aangegeven op de knoppen, maar er zal ook voor elke proef bepaalde info terug te vinden zijn. Zo zal bij 'Alohomora' ook alle doorgestuurde code digits af te lezen zijn en een knop voorzien zijn om de kluis te openen.  
 Achter elk controlepaneel zit een *flow*, deze zien er uit als volgt:
 
