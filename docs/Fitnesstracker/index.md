@@ -7,7 +7,7 @@ has_children: true
 ---
 
 # Fitnesstracker
-
+![AllesSamen](Allessamen.jpg)
 ## Inhoud
 
 - [Algemeen](#Algemeen)
