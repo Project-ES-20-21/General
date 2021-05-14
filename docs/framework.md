@@ -6,7 +6,7 @@ nav_order: 1
 ---
 
 # Framework
-Als MQTT broker werd ons een Raspberry Pi (v2) aangeboden. Om alle communicatie met het MQTT protocol vlot te laten verlopen moest wel nog een framework gekozen worden om op de Raspberry Pi te installeren. We lichten onze keuzes omtrent het framework voor dit project even bij.
+<div align="center">Als MQTT broker werd ons een Raspberry Pi (v2) aangeboden. Om alle communicatie met het MQTT protocol vlot te laten verlopen moest wel nog een framework gekozen worden om op de Raspberry Pi te installeren. We lichten onze keuzes omtrent het framework voor dit project even bij.</div>
 
 ## Mosquitto
 Voor ons project hebben we als basis gekozen voor **Eclipse Mosquitto™**.
