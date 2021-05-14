@@ -46,7 +46,7 @@ Echter is niet iedereen zo enthousiast. Een groep anti vaxxers heeft het labo ge
 
 Een goed vaccin moet ook getest worden. Dit klinisch onderzoek wordt gedaan een groep van onderzoekers, zij zijn het kloppende hart van dit labo. Door de sabotage is hier ook de communicatie weg gevallen. Ontvang de geheime boodschap en breng deze over naar het testteam zodat het klinisch onderzoek kan verder gaan.
 
-Na het succesvol ontcijferen van de boodschap kan het team van onderzoekers. De boodschap beginnen verwerken daarvoor moeten ze opzoek gaan naar een sterk genoeg signaal voor de gegevens de uploaden. De uploadmodule zit in een bestelwagen maar door de vele jaren heen is heeft de besturing een eigen karakter ontwikkeld. Kunnen de onderzoekers een sterk genoeg signaal vinden en de kaart met de sleutel voor het vaccin bemachtigen.
+De wetenschappers proberen de anti vaxxers te stoppen door één van hun geruchten te ontkrachten namelijk “ 5G veroorzaakt Corona”. Om de mensen terug aan hun zijde te krijgen sturen de wetenschappers een onbemande missie naar het punt met het meeste straling. De anti vaxxers proberen de wetenschappers te stoppen door de besturing te hacken. Als de wetenschappers de missie voltooid hebben krijgen ze hulp uit onverwachte hoek. Die hun een sleutel geeft die hun kan helpen bij het ontwikkelen van een vaccin.
 
 
 ## Useful links
