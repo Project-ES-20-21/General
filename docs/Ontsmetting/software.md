@@ -100,29 +100,23 @@ Deze functie zal de mee gegeven id's (nummers) registreren als besmet. De nummer
 Hierbij wordt elke individueel karakter van de string beschouwd als een tag nummer. Let op dat deze String enkel cijfers bevat. Er zijn dus maximaal 10 (0 - 9) nummers mogelijk.
 ##### validate(String id)
 ###### returns: `boolean`
-Om de de gescande tags te testen op eventuele besmetting, kan men deze functie gebruiken. Via bovengenoemde functie [`setId(String ids)`](#setidstring-ids) kan men de besmette tagnummers registreren. Deze functie zal het meegegeven tagId opzoeken en aan de hand van de resulaten een boolean terug geven. Indien deze persoon niet geregistreerd werd, zal deze `false` returnen en `true` indien dit wel gebeurde. Let op, deze id zal niet als ontsmet gezien worden na het uitvoeren van de functie. Indien deze functionaliteit gewenst is, kan men gebruik maken van [`login(String id)`](#loginstring-id).
+Om de de gescande tags te testen op eventuele besmetting, kan men deze functie gebruiken. Via bovengenoemde functie `setId(String ids)` kan men de besmette tagnummers registreren. Deze functie zal het meegegeven tagId opzoeken en aan de hand van de resulaten een boolean terug geven. Indien deze persoon niet geregistreerd werd, zal deze `false` returnen en `true` indien dit wel gebeurde. Let op, deze id zal niet als ontsmet gezien worden na het uitvoeren van de functie. Indien deze functionaliteit gewenst is, kan men gebruik maken van `login(String id)`.
 
 ##### login(String id)
 ###### returns: `boolean`
-Bij het checken van bepaalde tag id's, kan het handig zijn om direct ook te registreren dat deze persoon ontsmet is. Dit is mogelijk met deze functie. Als argument wordt een String met een bepaald tag id gevraagd. Indien deze in de lijst met besmette id's aanwezig is, zal deze uit de lijst geschrapt worden en `true` gereturnd worden. Indien deze tag niet gekend is, zal `false` terug gegeven worden. Deze functie zal gebruik maken van [`validate(String id)`](#validatestring-id) voor het opzoeken van de tag.
 
 ##### getUserCount()
 ###### returns: `int`
-Deze functie zal het aantal besmette speler terug geven.
+
+
 
 ##### reset()
-Hierdoor zullen alle geregistreerde besmette spelers gewist worden uit de lijst.
+
+
+
+
 
 ## Monitor
-Het debuggen van een microcontroller is vaak moeilijk. Men kan berichten uitschrijven via de Seriële monitor. Echter is de seriële monitor niet altijd beschikbaar. Hiervoor is steeds een bekabelde USB verbinding nodig. Deze klasse zal dit probleem oplossen. Via een statische methode, kan je zowel langs seriële monitor als mqtt de berichten uitlezen. In tegenstelling tot andere klassen, hoeft er geen object gemaakt te worden. Dit zal ervoor zorgen dat we geen parallelle objecten aanmaken of de code complexer maken door pointers naar een Monitor object te bij te houden.
-
-### Functies
-De monitor maakt slecht gebruik van twee functies. Deze moeten statisch zijn om aanmaken van een object te vermijden. Deze functies worden, na het includeren van de juiste header file, op volgende manier aangesproken:
-```cpp
-Monitor::println("Hello world!");
-```
-
-Indien men extra functionaliteit wil toevoegen, kan in de `println()` methode altijd extra dingen toegevoegd worden. Zo is het mogelijk gebruik te maken van een scherm om de berichten te laten zien. Dit bleek in het geval van de Ontsmettinator niet handig te zijn.
 ## MQTT
 ## NFC
 ## Speaker

@@ -3,7 +3,7 @@ layout: default
 title: Hardware
 parent: Alohomora
 grand_parent: Onderdelen
-nav_order: 1
+nav_order: 2
 ---
 # Inhoud
 - [Kluis](#Kluis)
@@ -19,13 +19,12 @@ nav_order: 1
     
 # Kluis
 ## Touchscreen
-{: .v-align-middle }
-![Touchscreen](touchscreen-removebg-preview.png)  
-De code die leidt tot het openen van de kluis zal moeten worden ingegeven via een touchscreen die ingebouwd is in de kluis zelf. 
-De touchscreen die we gebruiken is de TFT SPI 240x320 touchscreen LCD, deze wordt normaal gebruikt als een arduino uno shield. Wij hebben in ons PCB ontwerp dus als het ware de aansluitingen van een arduino nagebootst om zo de touchscreen te verbinden met de ESP32.
+![Touchscreen](touchscreen-removebg-preview.png)
+De code die leidt tot het openen van de kluis zal moeten worden ingegeven via een touchscreen dat ingebouwd is in de kluis zelf. 
+Het touchscreen dat we gebruiken is de TFT SPI 240x320 touchscreen LCD, dat normaal gebruikt wordt als een arduino uno shield. Wij hebben er echter op ons PCB ontwerp echter voor gezorgd dat het touchscreen op onze PCB werkt en zo verbinding maakt met de esp32.
 
 ## Circuit
-De voeding van ons systeem wordt geleverd door een 11.1V lipo batterij. Deze levert een hoog genoege spanning en stroom om de solenoïde aan te sturen die de kluisdeur zal openen. Wanneer een toestand wordt bekomen die leidt tot het openen van de kluis, zal de esp32 een signaal van 3.3V op één van zijn pinnen plaatsen. Dit hoog signaal wordt gebruikt als ingang van een relais. Door het hoog worden van de pin zal een normaal open schakelaar in het relais gesloten worden. Hierdoor komt de solenoide onder de spanning van 11.1V terecht en zal deze worden ingeduwd voor een bepaalde ingeprogrammeerde tijd. Het overige gedeelte van de spanning zullen we naar beneden converteren doormiddel van een stepdown converter. Zo werkt de ESP32 slechts op 3.3V.
+De voeding van ons systeem wordt geleverd door een 11.1V lipo batterij. Deze levert een hoog genoege spanning en stroom om de solenoïde aan te sturen die de kluisdeur zal openen. Wanneer een toestand wordt bekomen die leidt tot het openen van de kluis, zal de esp32 een signaal van 3.3V op één van zijn pinnen plaatsen. Dit hoog signaal wordt gebruikt als ingang van een relais. Door het hoog worden van de pin zal een normaal open schakelaar in het relais gesloten worden. Hierdoor komt de solenoide onder de spanning van 11.1V terecht en zal deze worden ingeduwd voor een bepaalde ingeprogrammeerde tijd. Het overige gedeelte van de spanning zullen we naar beneden converteren doormiddel van een stepdown converter. Zo werkt de esp32 slechts op 3.3V.
 
 ## PCB ontwerp
 
@@ -50,7 +49,7 @@ Om de tijd weer te geven wordt er gebruik gemaakt van een 4-digit 7-segment disp
 
 ## Circuit
 We weergeven alvast een vereenvoudigt schema van onze timer. Hierin vindt je de belangrijkste componenten in terug die we gebruiken om deze te laten werken.
-We gebruiken een powerbank die 5V levert als voeding. Doordat het timer display zelf 5V als voeding gebruikt, kan deze hier rechtstreeks op worden aangesloten. Bij het ontwerpen van een PCB voor de ESP32 moet men echter nog rekening houden met een conversie van 5V naar 3.3V wat in ons schema zelf ook gebeurd.
+We gebruiken een powerbank die 5V levert als voeding. Doordat het timer display zelf 5V als voeding gebruikt, kan deze hier rechtstreeks op worden aangesloten. Bij het ontwerpen van een PCB voor de esp32 moet men echter nog rekening houden met een conversie van 5V naar 3.3V wat in ons schema zelf ook gebeurd.
 ![Timer circuit](image-removebg-preview.png)
 
 ## PCB ontwerp

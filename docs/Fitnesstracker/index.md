@@ -36,7 +36,7 @@ Alle communicatie verloopt via de broker. De gebruikte channels zijn:
 - "esp32/Alohomora/code1" zal gebruikt worden om het eerste cijfer van het cijferslot door te sturen.
 - "esp32/fitness/request" wordt gebruikt om een cijfer van de oefeningenreeks op te vragen.
 ## Opstelling
-Voor fitnesstracker wordt er best een plaats voorzien waarbij de spelers voldoende ruimte hebben om de oefeningen uit te voeren. De LCD zou idealiter in zicht moeten zijn terwijl men de oefening uitvoert. De poster kan men hangen in zicht van de spelers of buiten het zicht als men het iets moeilijker wil maken. Als extra kan er een matje voorzien worden waarop de kettlebell kan rusten zodat de vloer niet beschadigd geraakt. De poster is terug te vinden op deze [link](https://github.com/FitnessTrackerpuzzle/Poster.git).
+Voor fitnesstracker wordt er best een plaats voorzien waarbij de spelers voldoende ruimte hebben om de oefeningen uit te voeren. De LCD zou idealiter in zicht moeten zijn terwijl men de oefening uitvoert. De poster kan men hangen in zicht van de spelers of buiten het zicht als men het iets moeilijker wil maken. Als extra kan er een matje voorzien worden waarop de kettlebell kan rusten zodat de vloer niet beschadigd geraakt.
 ## Error handling
 - Een mogelijke fout is dat een juiste beweging niet goed gekeurd wordt. Aan dit probleem valt niet veel te doen. De enige oplossing is de reeks opnieuw beginnen en de        oefeningen nog duidelijker proberen uitvoeren.
 - Een ander mogelijk probleem kan zijn dat het LCD scherm niet oplicht. Dit zal dan hoogstwaarschijnlijk te wijten zijn aan het feit dat de powerbank plat is of slecht contact maakt met het scherm. 
