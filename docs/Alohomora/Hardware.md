@@ -19,7 +19,7 @@ nav_order: 1
     
 # Kluis
 ## Touchscreen
-{: .v-align-baseline }
+{: .v-align-middle }
 ![Touchscreen](touchscreen-removebg-preview.png)  
 De code die leidt tot het openen van de kluis zal moeten worden ingegeven via een touchscreen die ingebouwd is in de kluis zelf. 
 De touchscreen die we gebruiken is de TFT SPI 240x320 touchscreen LCD, deze wordt normaal gebruikt als een arduino uno shield. Wij hebben in ons PCB ontwerp dus als het ware de aansluitingen van een arduino nagebootst om zo de touchscreen te verbinden met de ESP32.
