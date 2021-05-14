@@ -13,7 +13,7 @@ nav_order: 2
     - [3D tekening](#3D-tekening)
 - [Timer](#Timer)
     - [Display](#Display)
-    - [Circuit](#Circuit)
+    - [Voeding](#Voeding)
     - [PCB ontwerp](#PCB-ontwerp)
     - [3D tekening](#3D-tekening)
     
