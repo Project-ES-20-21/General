@@ -6,10 +6,10 @@ grand_parent: Onderdelen
 nav_order: 2
 ---
 
-## Hardware
-### Speaker
+# Hardware
+## Speaker
 
-### Micro
+## Micro
 Op de PCB-plaat voorzien we een aansluiting voor een externe display, een externe microfoon en een externe button. Deze 3 elementen worden via pinheaders aangesloten. Om de ESP te programmeren, wordt een extra pinheader voorzien. Aangezien de ESP32 maar 1 keer geprogrammeerd moet worden, is dit de meest efficiënte manier. 
 
 De ESP32 zal gevoed worden met een powerbank van 5V. Deze 5V is nodig om de display aan te sturen. Via de LDO zal 5V omgezet worden naar 3.3V. De program header, de microfoon en de ESP32 worden aangesloten aan de 3.3V.
