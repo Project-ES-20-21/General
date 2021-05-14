@@ -34,14 +34,15 @@ De ESP32 wordt gevoed met 3.3V die we bekomen met een LDO die de >5V omzet naar 
 ![PCB-Ontwerp-b](pcb_schermv2_back.png)
 
 ## 3D tekening
-Oorspronkelijk was het idee om de behuizing van de kluis te laten 3D printen. Door de omvang was het echter een beter plan om deze toch te laten lasercutten.
+Oorspronkelijk was het idee om de behuizing van de kluis te laten 3D printen. Door de omvang was het echter een beter plan om deze toch te laten lasercutten. Hierbij de 3D modellen die gebruikt zijn voor de lasercut:
 
 <script src="https://embed.github.com/view/3d/Project-ES-20-21/General/gh-pages/docs/Alohomora/afdekplaatje_deur.stl"></script>
 
-![Deur deksel](afdekplaatje_deur.stl)
-![Deur Frame](deur_nieuw.stl)
-![Kluis Behuizing](doos_kluis.stl)
-![3D-assembly](Assembly_kluis_github.stl)
+<script src="https://embed.github.com/view/3d/Project-ES-20-21/General/gh-pages/docs/Alohomora/deur_nieuw.stl"></script>
+
+<script src="https://embed.github.com/view/3d/Project-ES-20-21/General/gh-pages/docs/Alohomora/doos_kluis.stl"></script>
+
+<script src="https://embed.github.com/view/3d/Project-ES-20-21/General/gh-pages/docs/Alohomora/Assembly_kluis_github.stl"></script>
 
 ![Lasercut](binnenste.svg)
 ![Lasercut](doos_kluis.svg)
