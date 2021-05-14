@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Framework
 parent: Onderdelen
 nav_order: 1
