@@ -40,3 +40,6 @@ De plaats van onze onderdelen is niet echt van belang, aangezien het kleine bewe
 Mogelijke errors zijn debouncing van de button. In principe is dit geen probleem als de speler niet al te snel na het indrukken begint te fluiten. Ook zal het LCD-scherm blijven staan wanneer de juiste code wordt nagefloten. Het bouncen van de button heeft daarom geen effect op de zichtbaarheid van het Alohomoracijfer en de tip voor de volgende puzzel.
 
 Een andere factor die fout kan veroorzaken is het achtergrondgeluid. Om dit tegen te gaan, werkten we met een button die ingedrukt moet worden tijdens het fluiten. Zo weet de microfoon dat het ontvangen geluid gefluit zal zijn. Als het relatief stil is op de achtergrond, heeft de microfoon geen moeite om achtergrondgeluid te onderscheiden van het gefluit. Enkel wanneer er veel geluid is op de achtergrond, kan het zijn de microfoon foute signalen ontvangt.
+
+## Bronnen
+https://randomnerdtutorials.com/esp32-adc-analog-read-arduino-ide/
