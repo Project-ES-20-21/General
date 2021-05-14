@@ -38,6 +38,9 @@ Door dit gedrag van de ESP32 is er wel geen manier om het slot vanop afstand te 
 
 ### Blokschema
 ![Blokschema](Kluis_Algemeen.png)
+![Blokschema](capture.png)
+
+Voor een schaalbare afbeelding van ditzelfde schema klik [hier](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Alohomora/pcb_schermv2.svg).
 
 ### Communicatie
 Alle communicatie verloopt via de broker. De touchlock ontvangt in principe alleen maar data en verzendt zelf slechts 1 keer naar een kanaal van de timer, behalve dan voor debug doeleinden zal meer gebruik worden gemaakt van publish functies. De gebruikte channels zijn:
