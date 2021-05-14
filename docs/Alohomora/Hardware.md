@@ -5,7 +5,6 @@ parent: Alohomora
 grand_parent: Onderdelen
 nav_order: 2
 ---
-<script src="https://viewer.altium.com/client/static/js/embed.js"></script>
 # Inhoud
 - [Kluis](#Kluis)
     - [Touchscreen](#Touchscreen)
