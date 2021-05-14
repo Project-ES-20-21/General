@@ -49,9 +49,10 @@ Wanneer de touchlock de juiste code ontvangt die leidt tot het openen van de klu
 - esp32/timer/control: message = stop
 
 ### Opstelling
-Aangezien de touchlock de sleutel bevat die de uitweg biedt uit de escape room is het logisch om de opstelling zo dicht mogelijk bij de deur te plaatsen. Door het feit dat we in het voorziene lokaal niets aan de muur mogen bevestigen zorgen we er wel best voor dat het geheel tegen een muur staat, alles zou stevig genoeg moeten zijn maar er is niet uitvoerig getest op schudden en kantelen en dit zou anders voor problemen kunnen zorgen. 
+Aangezien de touchlock de sleutel bevat die de uitweg biedt uit de escape room is het logisch om de opstelling zo dicht mogelijk bij de deur te plaatsen. Door het feit dat we in het voorziene lokaal niets aan de muur mogen bevestigen zorgen we er wel best voor dat het geheel tegen een muur staat, alles zou stevig genoeg moeten zijn maar er is niet uitvoerig getest op schudden en kantelen en dit zou voor problemen kunnen zorgen. 
 
 ### Error handling
+Wanneer de code niet gevonden is of fout lijkt te zijn, is de eerste optie steeds om de nood code '0000' in te voeren. Deze zou altijd moeten werken.
 Wanneer de kluis niet zou werken als men verwacht, is een eerste stap steeds om te controleren of de kabels nog goed zijn aangesloten in het circuit.
 
 Een volgende stap is het controleren of de esp32 kan verbinden met de broker. Dit doen we op verschillende manieren:
@@ -66,7 +67,7 @@ We gaan dan het circuit na met behulp van een multimeter en controleren of hier 
 
 ## Timer
 ### Algemeen
-De timer heeft als functie de spelers duidelijk te maken hoeveel tijd hen nog resteert om te ontsnappen uit de escaperoom. Ze vinden deze ergens op een duidelijke plaats in de kamer en zullen zelf moeten ondervinden dat ze binnen de tijd aangeduidt door de timer moeten ontsnappen. De timer is opgebouwd uit een klein doosje waaruit een zeven segment display kan gevonden worden. Vanaf het spel in werking treed, zal deze beginnen aftellen vanaf een ingestelde tijd (standaard 60 minuten). Wanneer de kluis binnen de tijd kan worden geopend zal de timer stoppen met aftellen en kunnen de spelers controleren hoelang ze er juist over hebben gedaan om te ontsnappen. Wanneer de tijd echter om is, zijn ze er niet ingeslaagd om de puzzel op tijd op te lossen en zal de timer via MQTT de kluis openen zodat de spelers de kamer kunnen verlaten er wordt voor de duidelijkheid "GAME OVER" op het display weergegeven.
+De timer heeft als functie de spelers duidelijk te maken hoeveel tijd hen nog resteert om te ontsnappen uit de escaperoom. Ze vinden deze ergens op een duidelijke plaats in de kamer en zullen zelf moeten ondervinden dat ze binnen de tijd aangeduid door de timer moeten ontsnappen. De timer is opgebouwd uit een klein doosje waarop een zeven segment display te zien is. Vanaf het spel in werking treed, zal deze beginnen aftellen vanaf een ingestelde tijd (standaard 60 minuten). Wanneer de kluis binnen de tijd kan worden geopend zal de timer stoppen met aftellen en kunnen de spelers controleren hoelang ze er juist over hebben gedaan om te ontsnappen. Wanneer de tijd om is, zijn ze er niet ingeslaagd om de puzzel op tijd op te lossen en zal de timer via MQTT de kluis openen zodat de spelers de kamer kunnen verlaten er wordt voor de duidelijkheid "GAME OVER" op het display weergegeven.
 
 ### Blokschema
 ![Blokschema](Timer_Algemeen.png)
@@ -84,14 +85,15 @@ We hebben er verder ook voor gezorgd dat we de timer via de GUI van de broker ze
 Verder is het ook mogelijk om via de GUI de controle mogelijkheden te simuleren op het kanaal esp32/timer/control.
 
 ### Opstelling
-De timer zit ingewerkt in een houten frame die overal in dekamer kan worden geplaatst. Een niet onbelangrijke vereiste is wel dat de timer goed zichtbaar is voor de spelers zodat ze duidelijk weten dat de escaperoom tijdsgebonden is, en er zo toch een zekere stressfactor aanwezig is.
+De timer zit ingewerkt in een houten frame die overal in de kamer kan worden geplaatst. Een niet onbelangrijke vereiste is wel dat de timer goed zichtbaar is voor de spelers zodat ze duidelijk weten dat de escaperoom tijdsgebonden is, en er zo toch een zekere stressfactor aanwezig is.
 
 ### Error handling
-Veel fouten zijn we zelf nog niet tegenkomen bij de werking van de timer, dit doordat het relatief eenvoudig is opgebouwd.
+Veel fouten zijn we zelf nog niet tegenkomen bij de werking van de timer, dit doordat deze relatief eenvoudig is opgebouwd.
 Indien er toch fouten zouden oplopen, kan men letten op de volgende zaken.
+
 Wanneer de timer niet meer aftelt wanneer dit toch de bedoeling is kan men:
-- Nakijken of de timer verbonden is met de broker. Dit kan door gebruik te maken van de GUI.
-Indien het segment display niet meer oplicht:
+- Nakijken of de timer verbonden is met de broker. Indien deze verbonden is handmatig de timer starten. Dit kan door gebruik te maken van de GUI.
+Indien de display niet meer oplicht:
 - Controleren of de powerbank het circuit nog voedt.
 - Nakijken of de PCB naar behoren werkt (geen oververhitting, geen componenten die missen,..)
 
