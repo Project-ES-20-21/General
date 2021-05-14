@@ -20,7 +20,7 @@ Dit is de algemene beschrijving van de escape room. De documentatie en afspraken
       - [Fase 1: Inleiding](#fase-1-inleiding)
       - [Fase 2: Communicatie herstellen](#fase-2-communicatie-herstellen)
       - [Fase 3:](#fase-3)
-      - [Fase 4:](#fase-4)
+      - [Fase 4: uploaden van de data](#fase-4-uploaden-van-de-data)
       - [Fase 5:](#fase-5)
   - [Useful links](#useful-links)
   - [Onderdelen](#onderdelen)
@@ -57,7 +57,8 @@ Een goed vaccin moet ook getest worden. Dit klinisch onderzoek wordt gedaan een 
 
 #### Fase 3:
 
-#### Fase 4:
+#### Fase 4: uploaden van de data
+Na het succesvol ontcijferen van de boodschap kan het team van onderzoekers. De boodschap beginnen verwerken daarvoor moeten ze opzoek gaan naar een sterk genoeg signaal voor de gegevens de uploaden. De uploadmodule zit in een bestelwagen maar door de vele jaren heen is heeft de besturing een eigen karakter ontwikkeld. Kunnen de onderzoekers een sterk genoeg signaal vinden en de kaart met de sleutel voor het vaccin bemachtigen.
 
 #### Fase 5:
 
