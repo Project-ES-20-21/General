@@ -1,3 +1,5 @@
+
+<script src="https://viewer.altium.com/client/static/js/embed.js"></script>
 ---
 layout: default
 title: Hardware
