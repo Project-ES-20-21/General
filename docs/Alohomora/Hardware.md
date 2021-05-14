@@ -38,9 +38,12 @@ Oorspronkelijk was het idee om de behuizing van de kluis te laten 3D printen. Do
 
 <script src="https://embed.github.com/view/3d/Project-ES-20-21/General/gh-pages/docs/Alohomora/afdekplaatje_deur.stl"></script>
 
+
 <script src="https://embed.github.com/view/3d/Project-ES-20-21/General/gh-pages/docs/Alohomora/deur_nieuw.stl"></script>
 
+
 <script src="https://embed.github.com/view/3d/Project-ES-20-21/General/gh-pages/docs/Alohomora/doos_kluis.stl"></script>
+
 
 <script src="https://embed.github.com/view/3d/Project-ES-20-21/General/gh-pages/docs/Alohomora/Assembly_kluis_github.stl"></script>
 
