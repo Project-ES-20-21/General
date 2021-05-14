@@ -9,7 +9,7 @@ nav_order: 2
 # Software
 Voor het project wordt gebruik gemaakt van een ESP32-chip. 
 
-### void setup()
+## void setup()
 Zoals elk Arduino programma zal de code vertrekken vanuit de setup()-methode. Deze methode wordt 1 keer gerunt, het bevat informatie voor de opstart van het programma. Variabelen, pin modes, wifi-instellingen ... worden hier geïnitialiseerd. 
 
 Eerst en vooral verhogen we hier de baud rate. Voor ons project verhogen we het maximum aantal symbolen per seconde naar 115200. Het ROM bootloader van de ESP32 communiceert namelijk met deze snelheid. Wanneer we de baud rate niet zouden aanpssen, kan de inkomende data niet correct gelezen worden door de UART.
@@ -18,7 +18,7 @@ In beide onderdelen wordt ook een debounce tijd voorzien voor de button, hiervoo
 
 Om te kunnen werken met de broker via MQTT, moet ook een wifi-setup() doorlopen worden. Deze methode wordt ook opgeroepen in de setup()-methode. _setup_wifi()_ wordt dus 1 keer uitgevoerd. Verder wordt ook de MQTT-server en MQTT-poort geïnitialiseerd via de methode _client.setServer(MQTT_SERVER, MQTT_PORT)_
 
-### void setup_wifi()
+## void setup_wifi()
 In deze setup gebeuren de wifi-instellingen. Via de methoden _WiFi.begin(SSID, PWD)_ wordt de Service Set IDentifier meegegeven (dit is de naam voor een bepaald netwerk met een IP-adres), én het bijhorende paswoord van dit WiFi-signaal. 
 Ter controle vragen we aan het einde van de methode het IP-adres waarmee werd verbonden via de methode _WiFi.localIP()_.
 
@@ -27,15 +27,31 @@ Na deze setups kan het programma beginnen aan de loop()-methode. Deze methode za
 Vanaf dat deze connectie op punt staat, kan de rest van de code worden uitgevoerd. Het verdere verloop is verschillend voor de speaker en de micro. Deze onderdelen worden verder dus apart besproken.
 
 ## Speaker
+Volgende alinea bespreekt _void loop()_ van de speaker.
+
 ## Micro
+//default waarden uitleggen
+Voglende deeltje bespreekt _void loop()_ van de microfoon.
+
 Het blokschema geeft een overzicht van het verloop van de code. Zoals eerder vermeld wordt _void loop()_ oneindig keer herhaald. De verschillende methoden die verder worden besproken zullen dus ook vaak worden opgeroepen.
 
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/BlokschemaCodeMicro.JPG)
 
+Via _button.loop()_ zal er continu gekeken worden wat er gebeurt met de signalen afkomstig van de button. Wanneer de button wordt ingedrukt (_button.isPressed()_), wordt al het voorgaande gewist. Voor de spelers is het dus gemakkelijk om opnieuw te beginnen wanneer ze merken dat ze fout bezig waren: de knop loslaten en opnieuw indrukken.
 
+Wanneer de button ingedrukt blijft (dus wanneer zijn waarde 0 is, de button is namelijk active HIGH), zal de rest van _void loop()_ worden uitgevoerd.
 
-Bij de micro maken we gebruik van de waarde 4095. Dit is de maximum waarde die de microfoon kan doorsturen wanneer het een luid signaal detecteert. Het komt overeen met 3.3V en het is een 12bit-signaal. Er wordt gekeken naar de som van de vorige 100 samples, wanneer deze een bepaalde grens overschrijdt, zal de code dit zien als een kort/lang signaal. De detectie van een kort of een lang signaal wordt toegevoegd aan een andere array. 
+Het eerste wat gebeurt is detecteren en onthouden van de analoge waarde uit de microfoon. Wanneer we deze waarde weergeven op het scherm, ligt het tussen 0 (stil) en 4095 (max gedetecteerde waarde, bij een relatief luide omgeving). Hoe luider de omgeving, hoe groter de uitgeprinte digitale waarde. We zien digitale waarden verschijnen, omdat de ESP32 het analoge signaal dat ontvangen wordt van de microfoon omgezet wordt naar een digitale waarde. De maximale analoge waarde die de microfoon kan doorgeven is 3.3V, dit wordt omgezet naar de maximale digitale waarde. Deze digitale waarde is afhankelijk van de resolutie. De resolutie van de analoge pinnen is 12 bit. 3.3V wordt daarom omgezet naar 4095 (=111111111111).
+Via de potentiometer kan de gevoeligheid van de microfoon worden aangepast. 4095 kan dus overeen komen met verschillende decibelwaarden, afhankelijk van de weerstand van de potentiometer. De potentiometer werd nu zó ingesteld dat 4095 wordt gedetecteerd als men fluit op een afstand van 5 cm van de speaker.
+
+De gedetecteerde digitale waarde wordt opgeslagen in een rij. In deze rij zitten de laatste 100 digitale waarden die werden gedetecteerd. Hiervvan wordt telkens de som uitgerekend. Hoe langer men fluit, hoe hoger de som wordt. Verder wordt de som vergeleken met vooraf opgegeven waarde. Zo moet de som minstens 4095.45 zijn om een lang signaal te detecteren. Aangezien we tussen elke detectie 2 milliseconden wachten, moet er voor een lang signaal minstens 45*2=90 milliseconden gefloten worden aan 1 stuk. 
+
+Er wordt gekeken naar de som van de vorige 100 samples, wanneer deze een bepaalde grens overschrijdt, zal de code dit zien als een kort/lang signaal. De detectie van een kort of een lang signaal wordt toegevoegd aan een andere array. 
 Omdat we de som nemen, zal er bij een lang signaal eerst een kort signaal gedetecteerd worden. Ook kan het zijn dat een kort signaal van de speler iets langer duurt dan het opgegeven kort signaal, zonder controlevoorwaarde, worden er dan meerdere korte signalen gedetecteerd. Om dit te vermijden voerden we een controlevoorwaarde in. Ook de stiltes moeten dan gedetecteerd worden om 2 korte signalen na elkaar mogelijk te maken.
+
+ 
+
+Dit alles wordt enkel uitgevoerd als er geen pauzesignaal wordt gestuurd én als de oplossing nog niet juist werd uitgevoerd.
 
 ## Communicatie
 Over de broker kunnen verschillende berichten worden verstuurd. Wel is belangrijk dat deze berichten steeds van het type _char_ zijn. Integers kunnen namelijk niet worden doorgestuurd over dit signaal.
