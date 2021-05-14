@@ -70,8 +70,13 @@ We gebruiken een powerbank die 5V levert als voeding. Doordat het timer display 
 ![PCB-Ontwerp-back](pcb_b.png)
 
 ## 3D tekening
-![3D-tekening](Timer_doosje.stl)
-![3D-tekening](Timerdeksel.stl)
-![3D-assembly](Assembly_timer_github.stl)
+
+<script src="https://embed.github.com/view/3d/Project-ES-20-21/General/gh-pages/docs/Alohomora/Timer_doosje.stl"></script>
+
+
+<script src="https://embed.github.com/view/3d/Project-ES-20-21/General/gh-pages/docs/Alohomora/Timerdeksel.stl"></script>
+
+
+<script src="https://embed.github.com/view/3d/Project-ES-20-21/General/gh-pages/docs/Alohomora/Assembly_timer_github.stl"></script>
 
 ![Lasercut](Timer.svg)
