@@ -25,7 +25,7 @@ Node-RED is een handige tool die toelaat om op een simpele manier *flows* te imp
 
 ## Monitoring
 Om de activiteit op de broker vanop een laptop te monitoren voor debug doeleinden hebben we het volgende programma gebruikt:
-https://github.com/fauresystems/mqtt-observer
+https://github.com/fauresystems/mqtt-observer  
 Eens alles werkte konden we Node-RED gebruiken om alles te besturen en te controleren en was dit programma niet langer nodig.
 
 ## Gebruikte channels op de broker
