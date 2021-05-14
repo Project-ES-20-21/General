@@ -21,9 +21,9 @@ Node-RED is een handige tool die toelaat om op een simpele manier *flows* te imp
 - Ten slotte is er nog het feit dat alle *flows* en dergelijke worden opgeslaan als .js bestanden, wat een vrij leesbaar en makkelijk te delen bestandsextensie is.
 
 # Communicatie
+Hieronder wat verdere uitleg bij de afgesproken richtlijnen voor MQTT communicatie.<br />
 
 ## Gebruikte channels op de broker
-Hieronder wat verdere uitleg bij de keuze van de channels voor MQTT communicatie.<br />
 Enkele channels zijn voorbehouden voor gebruik voor de algemene aansturing: <br />
 esp32/+/control <br />
 "+" wordt hier vervangen door de naam van de proef in kwestie. <br />
