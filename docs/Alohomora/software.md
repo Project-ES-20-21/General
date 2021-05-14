@@ -7,11 +7,8 @@ nav_order: 1
 ---
 
 # Inhoud 
-- [Opmerkingen](#Opmerkingen)
-  - [Broker](#Communicatie)
-  - [Timer](#Timer)
-  - [Touchscreen](#Touchscreen)
-- [Code](#Code)
+- [Timer](#Timer)
+- [Touchscreen](#Touchscreen)
 
 # Opmerkingen
 
