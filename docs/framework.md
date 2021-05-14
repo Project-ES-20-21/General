@@ -44,6 +44,6 @@ op deze topic zijn momenteel 5 codes mogelijk waar elke ESP dan een implementati
 - '1' STOP (afstand)
 - '2' START (ontsmetten)
 - '3' POWEROFF (stop voor fitness)
-- '4' POWERON (start voor fitness) <br /
+- '4' POWERON (start voor fitness)  
 
 Op deze manier kan fitnesstracker alles stoppen en starten, vanop de broker kan alles gereset worden indien nodig, en voor afstand houden en ontsmetten is er dan nog een speciale situatie voorzien die ook fitness onderbreekt. Verdere uitbreiding hier is zeker mogelijk.
