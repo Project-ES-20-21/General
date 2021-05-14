@@ -57,7 +57,8 @@ We gebruiken een powerbank die 5V levert als voeding. Doordat het timer display 
 
 ## PCB ontwerp
 
-
+![PCB-Ontwerp-front](pcb.png)
+![PCB-Ontwerp-back](pcb_b.png)
 
 ## 3D tekening
 ![3D-tekening](Timer_doosje.stl)
