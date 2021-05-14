@@ -20,6 +20,8 @@ Node-RED is een handige tool die toelaat om op een simpele manier *flows* te imp
 - Node-RED is gebaseerd op Node.js. Dit is vooral interessant aangezien we werken met een Raspberry Pi, Node.js is namelijk *light-weight* en zeker compatibel met *low-cost hardware* zoals Raspberry Pi.
 - Ten slotte is er nog het feit dat alle *flows* en dergelijke worden opgeslaan als .js bestanden, wat een vrij leesbaar en makkelijk te delen bestandsextensie is.
 
+# Communicatie
+
 ## Gebruikte channels op de broker
 Hieronder wat verdere uitleg bij de keuze van de channels voor MQTT communicatie.<br />
 Enkele channels zijn voorbehouden voor gebruik voor de algemene aansturing: <br />
