@@ -60,7 +60,7 @@ Het geeft de spelers mee hoeveel tijd ze nog over hebben om de code te kraken en
 Om de tijd weer te geven wordt er gebruik gemaakt van een 4-digit 7-segment dispay. Via de broker wordt het start signaal gegeven om het spel te starten en vanaf dan zal de timer beginnen met aftellen. Aangezien het spel maximaal 60 minuten mag duren, hebben we met 4 digits genoeg om de spelers tot op de seconde hun resterende tijd te laten weten.
 
 ## Voeding
-We gebruiken een powerbank die 5V levert als voeding. Doordat het timer display zelf 5V als voeding gebruikt, kan deze hier rechtstreeks op worden aangesloten. Bij het ontwerpen van een PCB voor de esp32 moet men echter nog rekening houden met een conversie van 5V naar 3.3V wat we realiseren met een LDO.
+We gebruiken een powerbank die 5V levert als voeding. Doordat het timer display zelf 5V als voeding gebruikt, kan deze hier rechtstreeks op worden aangesloten. Bij het ontwerpen van een PCB voor de ESP32 moet men echter nog rekening houden met een conversie van 5V naar 3.3V wat we realiseren met een LDO.
 
 ![Timer circuit](image-removebg-preview.png)
 
