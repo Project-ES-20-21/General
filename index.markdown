@@ -46,6 +46,7 @@ Echter is niet iedereen zo enthousiast. Een groep anti vaxxers heeft het labo ge
 
 Een goed vaccin moet ook getest worden. Dit klinisch onderzoek wordt gedaan een groep van onderzoekers, zij zijn het kloppende hart van dit labo. Door de sabotage is hier ook de communicatie weg gevallen. Ontvang de geheime boodschap en breng deze over naar het testteam zodat het klinisch onderzoek kan verder gaan.
 
+Na het succesvol ontcijferen van de boodschap kan het team van onderzoekers. De boodschap beginnen verwerken daarvoor moeten ze opzoek gaan naar een sterk genoeg signaal voor de gegevens de uploaden. De uploadmodule zit in een bestelwagen maar door de vele jaren heen is heeft de besturing een eigen karakter ontwikkeld. Kunnen de onderzoekers een sterk genoeg signaal vinden en de kaart met de sleutel voor het vaccin bemachtigen.
 
 
 ## Useful links
@@ -61,7 +62,7 @@ Een goed vaccin moet ook getest worden. Dit klinisch onderzoek wordt gedaan een 
 ### Fitnesstracker
 
 We plaatsen accelerometer aan een kettlebell en deze zal dan gebruikt worden om de oefeningen te tracken. Ergens in de kamer zal een boek of poster voorzien worden met nummers op met daarbij een reeks van bijhorende oefeningen. Hieruit zullen de spelers kunnen afleiden welke serie van oefeningen ze moeten uitvoeren. 
-Als de spelers een juiste oefening uitvoeren zal de batterij opgeladen worden en zal dit een stijging van het balkje op de display veroorzaken. De batterij mag dus niet leeg zijn indien men andere puzzels wenst uit te voeren.Als de spelers een volledige oefeningenreeks correct uitvoeren, zullen we een getal laten vrijgeven van het digitaal cijferslot en zal de telefoon van morsecode afgaan. Als de spelers een incorrecte beweging uitvoeren zou het balkje niet mogen groeien. Doorheen het spel zal er energie verbruikt worden en zal het balkje dus krimpen. Eenmaal de batterij helemaal leeg is wordt dit met de andere puzzels gedeeld via de broker. 
+Als de spelers een juiste oefening uitvoeren zal de batterij opgeladen worden en zal dit een stijging van het balkje op de display veroorzaken. De batterij mag dus niet leeg zijn indien men andere puzzels wenst uit te voeren. Als de spelers een volledige oefeningenreeks correct uitvoeren, zullen we een getal laten vrijgeven van het digitaal cijferslot en zal de telefoon van morsecode afgaan. Als de spelers een incorrecte beweging uitvoeren zou het balkje niet mogen groeien. Doorheen het spel zal er energie verbruikt worden en zal het balkje dus krimpen. Eenmaal de batterij helemaal leeg is wordt dit met de andere puzzels gedeeld via de broker. 
 
 ### Morsecode
 
