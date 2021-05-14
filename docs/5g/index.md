@@ -5,7 +5,7 @@ parent: Onderdelen
 nav_order: 4
 has_children: true
 ---
-
+![afbeelding geheel](IMG_20210514_150400391.jpg)
 # 5G = Corona
 
 ## Inhoud
