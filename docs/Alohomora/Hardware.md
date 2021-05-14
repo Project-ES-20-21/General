@@ -5,6 +5,7 @@ parent: Alohomora
 grand_parent: Onderdelen
 nav_order: 2
 ---
+<script src="https://viewer.altium.com/client/static/js/embed.js"></script>
 # Inhoud
 - [Kluis](#Kluis)
     - [Touchscreen](#Touchscreen)
@@ -53,6 +54,8 @@ We gebruiken een powerbank die 5V levert als voeding. Doordat het timer display 
 ![Timer circuit](image-removebg-preview.png)
 
 ## PCB ontwerp
+
+<div class="altium-ecad-viewer" data-project-src="86cf00ee-2adc-4296-89db-00527828091c" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;"><a href=”https://www.altium.com/viewer/”>PCB File Viewer by Altium</a></div>
 
 ## 3D tekening
 ![3D-tekening](Timer_doosje.stl)
