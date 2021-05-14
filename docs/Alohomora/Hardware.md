@@ -28,6 +28,9 @@ De voeding van ons systeem wordt geleverd door een 11.1V lipo batterij. Deze lev
 
 ## PCB ontwerp
 
+![PCB-Ontwerp-f](pcb_schermv2_front.png)
+![PCB-Ontwerp-b](pcb_schermv2_back.png)
+
 ## 3D tekening
 Oorspronkelijk was het idee om de behuizing van de kluis te laten 3D printen. Door de omvang was het echter een beter plan om deze toch te laten lasercutten.
 ![Deur deksel](afdekplaatje_deur.stl)
@@ -53,8 +56,7 @@ We gebruiken een powerbank die 5V levert als voeding. Doordat het timer display 
 ![Timer circuit](image-removebg-preview.png)
 
 ## PCB ontwerp
-![PCB-Ontwerp-f](pcb_schermv2_front.PNG)
-![PCB-Ontwerp-b](pcb_schermv2_back.PNG)
+
 
 
 ## 3D tekening
