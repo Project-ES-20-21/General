@@ -110,11 +110,9 @@ Als router mochten we gebruik maken van een router van het merk NETGEAR, waar we
 
 Ook hierover wordt er verder uitgewijd onder het onderdeel [framework](https://project-es-20-21.github.io/General/docs/framework.html).
 
--hier komt nog een flowchart en een verwijzing naar de gebruikte code-
-
 ### Communicatie
 
-De communicatie verloopt steeds via MQTT, behalve dan enkele interne communicaties. Elke proef communiceert met de andere proeven waar nodig, de broker is dus slechts een tussenstation maar implementeert zelf (bijna) geen functionaliteit. Dit heeft als voordeel dat ook de broker makkelijk vervangen of uitgebreid kan worden, zonder de hele werking van de escape room in gevaar te brengen.
+De communicatie verloopt steeds via MQTT, behalve dan enkele interne communicaties. Elke proef communiceert met de andere proeven waar nodig, de broker is dus slechts een tussenstation maar implementeert zelf (bijna) geen functionaliteit. Dit heeft als voordeel dat ook de broker makkelijk vervangen of uitgebreid kan worden, zonder de hele werking van de escape room in gevaar te brengen. Verdere uitleg omtrent communicatie bevindt zich [hier](https://project-es-20-21.github.io/General/docs/framework.html#communicatie).
 
 ## FAQ's
 
