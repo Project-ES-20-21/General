@@ -7,6 +7,7 @@ nav_order: 2
 ---
 
 ## Software
+Voor het project wordt gebruik gemaakt van een ESP32-chip. 
 
 ### void setup()
 Zoals elk Arduino programma zal de code vertrekken vanuit de setup()-methode. Deze methode wordt 1 keer gerunt, het bevat informatie voor de opstart van het programma. Variabelen, pin modes, wifi-instellingen ... worden hier geïnitialiseerd. 
