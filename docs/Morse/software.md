@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Hardware
+title: Software
 parent: Morse
 grand_parent: Onderdelen
 nav_order: 2
