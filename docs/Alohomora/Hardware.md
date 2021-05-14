@@ -3,7 +3,7 @@ layout: default
 title: Hardware
 parent: Alohomora
 grand_parent: Onderdelen
-nav_order: 2
+nav_order: 1
 ---
 # Inhoud
 - [Kluis](#Kluis)
