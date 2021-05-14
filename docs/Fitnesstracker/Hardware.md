@@ -10,6 +10,7 @@ nav_order: 2
 ## Inhoud
 - [Kettlebell](#Kettlebell)
 - [LCD](#LCD)
+- [BOM](#BOM)
 ## Kettlebell
 De hardware van dit deel van de puzzel bestaat uit twee delen. 
 Het eerste deel bestaat uit een gewicht waarmee de fitness oefeningen worden uitgevoerd. 
@@ -27,3 +28,6 @@ Aan ingang drie en 25 worden respectievelijk de enable-en bootbutton geplaatst e
 ![VoorkantPCB_LCD](VoorkantPCB_LCD.PNG)
 ![AchterkantPCB_LCD](AchterkantPCB_LCD.PNG)
 Het volledige project in Kicad en het omhulsel van de LCD is terug te vinden op deze [link](https://github.com/FitnessTrackerpuzzle/PCB_LCD).
+
+## BOM
+De BOM (bill of materials) kan je [hier](https://github.com/FitnessTrackerpuzzle/BOM.git) terugvinden.
