@@ -17,11 +17,6 @@ Dit is de algemene beschrijving van de escape room. De documentatie en afspraken
   - [Concept](#concept)
     - [Flow chart](#flow-chart)
     - [Verhaallijn](#verhaallijn)
-      - [Fase 1: Inleiding](#fase-1-inleiding)
-      - [Fase 2: Communicatie herstellen](#fase-2-communicatie-herstellen)
-      - [Fase 3:](#fase-3)
-      - [Fase 4:](#fase-4)
-      - [Fase 5:](#fase-5)
   - [Useful links](#useful-links)
   - [Onderdelen](#onderdelen)
     - [Fitnesstracker](#fitnesstracker)
@@ -45,21 +40,13 @@ Elke deelpuzzel zal één digit van de code geven. Deze code kan dan gebruikt wo
 
 ### Verhaallijn
 
-#### Fase 1: Inleiding
-
 Het is eind 2020. België gaat voor de tweede keer in lockdown. Vele mensen zijn hopeloos en de sfeer wordt slechter met de dag. Er is echter één lichtpuntje. Het vaccin is in de laatste fase van ontwikkeling. De hele wereld wacht in volle spanning af tot het middel klaar is.
 
 Echter is niet iedereen zo enthousiast. Een groep anti vaxxers heeft het labo gesaboteerd door de stroom af te sluiten. Hierdoor is de ontwikkeling stil gevallen. Het is aan jullie om de productie herop te starten en het perfecte recept te vinden. Slagen jullie erin om dit binnen de tijd te doen?
 
-#### Fase 2: Communicatie herstellen
-
 Een goed vaccin moet ook getest worden. Dit klinisch onderzoek wordt gedaan een groep van onderzoekers, zij zijn het kloppende hart van dit labo. Door de sabotage is hier ook de communicatie weg gevallen. Ontvang de geheime boodschap en breng deze over naar het testteam zodat het klinisch onderzoek kan verder gaan.
 
-#### Fase 3:
 
-#### Fase 4:
-
-#### Fase 5:
 
 ## Useful links
 
