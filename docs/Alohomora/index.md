@@ -72,8 +72,9 @@ We gaan dan het circuit na met behulp van een multimeter en controleren of hier 
 De timer heeft als functie de spelers duidelijk te maken hoeveel tijd hen nog resteert om te ontsnappen uit de escaperoom. Ze vinden deze ergens op een duidelijke plaats in de kamer en zullen zelf moeten ondervinden dat ze binnen de tijd aangeduid door de timer moeten ontsnappen. De timer is opgebouwd uit een klein doosje waarop een zeven segment display te zien is. Vanaf het spel in werking treed, zal deze beginnen aftellen vanaf een ingestelde tijd (standaard 60 minuten). Wanneer de kluis binnen de tijd kan worden geopend zal de timer stoppen met aftellen en kunnen de spelers controleren hoelang ze er juist over hebben gedaan om te ontsnappen. Wanneer de tijd om is, zijn ze er niet ingeslaagd om de puzzel op tijd op te lossen en zal de timer via MQTT de kluis openen zodat de spelers de kamer kunnen verlaten er wordt voor de duidelijkheid "GAME OVER" op het display weergegeven.
 
 ### Blokschema
-![Blokschema](Timer_Algemeen.png)
+![Blokschema](blokschema.png)
 
+Voor een schaalbare afbeelding van ditzelfde schema klik [hier](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Alohomora/pcb.svg).
 ### Communicatie
 Alle communicatie van de timer verloopt via de broker, zelf is niet veel interactie nodig met de timer en andere delen in de escape room. Voor de minimale werking van de timer maken we gebruik van de volgende kanalen:
 - esp32/timer/control: wordt gebruikt om de timer te laten resetten, starten met aftellen, stoppen met aftellen, opnieuw verbinding maken met de broker.
