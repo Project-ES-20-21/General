@@ -44,15 +44,7 @@ Functie die regelmatig dient opgeroepen te worden. Deze zal de handdetectie vert
 
 ## Scherm
 
-Voor de visuele indicatie maken we gebruik van een LCD scherm. Dit scherm zal communiceren via SPI. Deze communicatie wordt softwarematig verwezenlijkt door enkele libraries. We zullen steeds rechtstreeks gebruik maken van de Adafruit_ILI9341 library. Deze is speciaal ontwikkeld voor het type scherm dat we gebruiken. Het pakket zal gebruik maken van de algemene Adafruit_GFX library voor het genereren van de beelden. Bij het aanmaken van de klasse moeten een Adafruit_ILI9341 scherm object aangemaakt worden. Dit kan al dan niet statisch gebeuren via volgende constructor:
-```c
-static Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC, TFT_RST);
-```
-Hierbij worden volgende IO pin nummers mee gegeven:
-
-| `TFT_CS`    | clock select pin   |
-| `TFT_DC`    | data / command pin |
-| `TFT_RESET` | reset pin          |
+Voor de visuele indicatie maken we gebruik van een LCD scherm. Dit scherm zal communiceren via SPI. Deze communicatie wordt softwarematig verwezenlijkt door enkele libraries. We zullen steeds rechtstreeks gebruik maken van de Adafruit_ILI9341 library. Deze is speciaal ontwikkeld voor het type scherm dat we gebruiken. Het pakket zal gebruik maken van de algemene Adafruit_GFX library voor het genereren van de beelden.
 
 ### Functies
 Het gebruik van de Adafruit bibliotheek zal het afbeelden van vormen en figuren sterk vergemakkelijken. Er verschillende functies in de Scherm klasse, die verantwoordelijk zijn voor het tekenen/afbeelden van bepaalde "scenes". 
@@ -80,7 +72,7 @@ Functie die de bovenstaande visualisatie wist.
 
 ## Login
 De registratie en authenticatie van de verschillende (besmette) spelers gebeurd via deze klasse. Deze personen worden geïdentificeerd via een nfc tag. Deze tag heeft een uniek id dat kan worden uitgelezen. De geldige tags zijn gekoppeld aan een nummer vanaf 0 tot en met 3. De unieke id's van de tags zijn opgeslagen in een extern document genaamd "*validTags.h*". Dit document staat in de include folder en heeft volgende structuur:
-```c
+```cpp
 int length = 4;
 String tags[4] = {"0X12 0X34 0X56 0XC78 0X00 0X00 0X00",
                   ...
@@ -94,7 +86,7 @@ Het is belangrijk dat elke id uit 7 hexadecimale delen bestaat, gescheiden door 
 De login klasse maakt gebruik van verschillende functie om de personen te registeren en bij te houden.
 ##### setId(String ids)
 Deze functie zal de mee gegeven id's (nummers) registreren als besmet. De nummers zijn zoals hierboven vermeldt, gekoppeld aan een bijhorende tagId. De mee gegeven String wordt als volgt opgemaakt: 
-```c
+```cpp
 "123" //personen 1, 2 en 3 zijn dus besmet
 ```
 Hierbij wordt elke individueel karakter van de string beschouwd als een tag nummer. Let op dat deze String enkel cijfers bevat. Er zijn dus maximaal 10 (0 - 9) nummers mogelijk.
@@ -127,6 +119,83 @@ Monitor::println("Hello world!");
 ```
 
 Indien men extra functionaliteit wil toevoegen, kan in de `println()` methode altijd extra dingen toegevoegd worden. Zo is het mogelijk gebruik te maken van een scherm om de berichten te laten zien. Dit bleek in het geval van de Ontsmettinator niet handig te zijn.
+
 ## MQTT
+De communicatie van het gehele systeem gebeurt via MQTT. Dit protocol werkt volgens het publish-subscribe principe. Hierbij wordt een broker gebruikt die dienst doet als centrale server.
+##### setup()
+Basis functie die connectie met Wifi en MQTT server maakt. Voor de connectie met het internet maakt deze gebruik van `setupWifi()`. De MQTT verbinding zal dan weer gebeuren via `reconnect()` Ook zal de callback functie gekoppeld worden aan de MQTT verbinding. Indien deze setup geslaagd is, zal het IP-adres van de ESP32 op het daarvoor voorziene MQTT kanaal gepost worden. Hierdoor is het eenvoudiger om te programmeren via OTA. Dit bericht is retained, het meest recente IP-adres zal dus altijd zichtbaar zijn.
+##### setupWifi()
+Deze methode zal een Wifi verbinding opstellen. Hierbij is het mogelijk om drie verschillende Wifi netwerken in te stellen (via config.h). De methode zal nu eerst en vooral met netwerk 1 proberen verbinden. Indien deze connectie niet gelukt is, zal er overgeschakeld worden naar het volgende netwerk. Op deze manier kan de opstelling zonder problemen verplaatst worden naar andere plaatsen (bv. thuis) waar een ander netwerk aanwezig is. Let op, de controller zal pas na 10 seconden overschakelen naar het volgende netwerk. Het kan dus tot 30 seconden duren voor men met het netwerk verbonden is. Indien er geen connectie tot stand is gebracht, zal de led een foutcode geven. In dit geval is dit volgende  sequentie: ![wifi led blink](blink_wifi.gif) (lang aan, kort uit)
+##### reconnect()
+Via deze functie kan de MQTT verbinding opgesteld worden. Deze kan ook gebruikt worden om de connectie te testen. Indien de controller verbonden is met de server, zal de methode niks doen. Als de verbinding verbroken is zal deze opnieuw proberen verbinden. Als reconnect() regelmatig wordt opgeroepen (in de loop), is er zo goed als altijd een verbinding met de MQTT server. Ook hier wordt gebruik gemaakt van een led error code. Indien de MQTT verbinding verbroken is, zal de sequentie het volgende zijn:![mqtt led blink](blink_mqtt.gif) (kort aan, lang uit)
+
+##### callback(char *topic, byte *message, unisgned int length)
+Deze functie wordt opgeroepen door de MQTT handler als er een bericht ontvangen wordt op een bepaald kanaal. Deze callback functie behoort tot huidige klasse, echter zal de MQTT handler een std function callback verwachten. Een conversie van `MQTT::callback()` naar `std::function()` is vereist. Dit kan op volgende manier gebeuren:
+
+```cpp
+using std::placeholders::_1;
+using std::placeholders::_2;
+using std::placeholders::_3;
+client.setCallback(std::bind(&MQTT::callback, this, _1, _2, _3));
+```
+De bind methode zal de `MQTT::callback()` forwarden naar een `std::function()` waarbij de placeholders gebruikt worden om de argumenten in te vullen.
+##### loop()
+De loop functie zal regelmatig moeten overlopen worden. Deze zal zorgen voor een stabiele verbinding. Indien de connectie verloren is, zal men opnieuw proberen verbinden. Ook wordt hier het laatste MQTT bericht opgehaald.
+
+##### getCurrentSignal()
+###### returns: `String`
+Geeft het huidige ontvangen MQTT bericht terug.
+
+
+##### getLastSignal()
+###### returns: `String`
+Geeft het vorige ontvangen MQTT bericht terug.
+
+##### setOK()
+Hierdoor zullen alle andere onderdelen van de escape room op de hoogte gebracht worden dat iedereen ontsmet is.
+
+##### println(String bericht)
+Hiermee kan men prints doen via MQTT. Deze worden dan op het monitor kanaal geplaatst. Deze functie wordt gebruikt in de monitor klasse.
+
 ## NFC
+Voor het identificeren van verschillende spelers, maken we gebruik van NFC-tags. Deze kunnen uitgelezen worden door met een tag in de buurt van de sensor te komen. De lezer maakt gebruik van I²C in combinatie met interrupts.
+
+### Functies
+##### setup()
+Deze dient zoals alle andere setup functie aan het begin van de code opgeroepen te worden. Hier zal de verbinding met de scanner tot stand gebracht worden. Indien deze verbinding niet geslaagd is, zal hier ook een error led blink zijn. Deze gaat als volgt: ![led blink nfc](blink_nfc.gif) (kort aan, kort uit)
+
+##### startListeningToNFC()
+Indien men wil beginnen met lezen van tags, moet deze functie opgeroepen worden. Hierbij zullen de interrupt indicatoren gerest worden.
+
+##### handleCardDetected()
+###### returns: `String`
+Bij het scannen van tags kan men de huidige tag opvragen. Dit zal gebeuren als een interrupt ontvangen wordt. Hiervoor maakt men gebruik van deze functie. Indien de tag succesvol gescand is, zal een String met het tag id terug gegeven worden. Initieel staat het resultaat opgeslagen in een array van hexadecimale getallen. Door het gebruik van `hexToString()` kan man deze array omzetten in een String.
+
+##### getCardDetected()
+###### returns: `String`
+In de main loop wordt gebruik gemaakt van deze functie voor het lezen van tags. Deze zal `handleCardDetected()` gebruiken in combinatie met interrupts en enable values voor het verwerken van de metingen. Indien de sensor softwarematig is uitgescakeld, zal `"DISABLED"` terug gegeven worden. Anders wordt het gescande id terug gegeven.
+
+##### hexToString(uint8_t *cardid)
+###### returns: `String`
+De methodes van de Adafruit NFC klasse zullen een array van ints returnen. In de `validTags.h` worden de id's van de tags als Strings opgeslagen. Een conversie is dus nodig. Deze functie zet een array van ints om in een String.
+
+##### enable() en disable()
+Hiermee kan men de sensor softwarematig in- en uitschakelen.
+
 ## Speaker
+Om de aandacht van de spelers te trekken, wordt er gebruik gemaakt van een speaker. Hier kan men verschillende geluiden afspelen. Het audiofragment wordt opgeslagen met een `.wav` indeling. Dit `.wav` bestand wordt geëxporteerd als een *C* array. Deze array wordt in `SoundData.h` opgeslagen. Deze file bevindt zich in de include folder. Hierbij zijn enkel instellingen vereist:
+
+| Aanbevolen sample rate     | 16000 Hz   |
+| Maximale lengte           | ongeveer 20 seconden  |
+| Indeling | Unsigned 8-bit PCM           |
+
+Voor het opnemen en verwerken is [Audacity](https://www.audacityteam.org/) zeer handig. Het exporteren van de array uit de `.wav` file kan dan weer makkelijk gedaan worden met [HxD hex editor](https://mh-nexus.de/en/hxd/). Een gedetailleerde beschrijving is via [deze link](https://www.xtronical.com/basics/audio/dacs-for-sound/playing-wav-files/) terug te vinden.
+
+### Functies
+##### setup()
+Aan het begin van de code moet deze opgeroepen worden.
+##### loop()
+De `loop()` moet regelmatig overlopen worden in de code.
+
+##### play()
+Deze zal het geluid van `SoundData.h` afspelen.
