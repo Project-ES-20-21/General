@@ -9,7 +9,7 @@ nav_order: 2
 ## Software
 Voor het project wordt gebruik gemaakt van een ESP32-chip. 
 
-### void setup()
+#### void setup()
 Zoals elk Arduino programma zal de code vertrekken vanuit de setup()-methode. Deze methode wordt 1 keer gerunt, het bevat informatie voor de opstart van het programma. Variabelen, pin modes, wifi-instellingen ... worden hier geïnitialiseerd. 
 
 Eerst en vooral verhogen we hier de baud rate. Voor ons project verhogen we het maximum aantal symbolen per seconde naar 115200. Het ROM bootloader van de ESP32 communiceert namelijk met deze snelheid. Wanneer we de baud rate niet zouden aanpssen, kan de inkomende data niet correct gelezen worden door de UART.
@@ -18,7 +18,7 @@ In beide onderdelen wordt ook een debounce tijd voorzien voor de button, hiervoo
 
 Om te kunnen werken met de broker via MQTT, moet ook een wifi-setup() doorlopen worden. Deze methode wordt ook opgeroepen in de setup()-methode. _setup_wifi()_ wordt dus 1 keer uitgevoerd. Verder wordt ook de MQTT-server en MQTT-poort geïnitialiseerd via de methode _client.setServer(MQTT_SERVER, MQTT_PORT)_
 
-### void setup_wifi()
+#### void setup_wifi()
 In deze setup gebeuren de wifi-instellingen. Via de methoden _WiFi.begin(SSID, PWD)_ wordt de Service Set IDentifier meegegeven (dit is de naam voor een bepaald netwerk met een IP-adres), én het bijhorende paswoord van dit WiFi-signaal. 
 Ter controle vragen we aan het einde van de methode het IP-adres waarmee werd verbonden via de methode _WiFi.localIP()_.
 
@@ -28,7 +28,7 @@ Vanaf dat deze connectie op punt staat, kan de rest van de code worden uitgevoer
 
 ### Speaker
 ### Micro
-Het blokschema geeft een overzicht van het verloop van de code.
+Het blokschema geeft een overzicht van het verloop van de code. Zoals eerder vermeld wordt _void loop()_ oneindig keer herhaald. De verschillende methoden die verder worden besproken zullen dus ook vaak worden opgeroepen.
 
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/BlokschemaCodeMicro.JPG)
 
@@ -37,4 +37,20 @@ Het blokschema geeft een overzicht van het verloop van de code.
 Bij de micro maken we gebruik van de waarde 4095. Dit is de maximum waarde die de microfoon kan doorsturen wanneer het een luid signaal detecteert. Het komt overeen met 3.3V en het is een 12bit-signaal. Er wordt gekeken naar de som van de vorige 100 samples, wanneer deze een bepaalde grens overschrijdt, zal de code dit zien als een kort/lang signaal. De detectie van een kort of een lang signaal wordt toegevoegd aan een andere array. 
 Omdat we de som nemen, zal er bij een lang signaal eerst een kort signaal gedetecteerd worden. Ook kan het zijn dat een kort signaal van de speler iets langer duurt dan het opgegeven kort signaal, zonder controlevoorwaarde, worden er dan meerdere korte signalen gedetecteerd. Om dit te vermijden voerden we een controlevoorwaarde in. Ook de stiltes moeten dan gedetecteerd worden om 2 korte signalen na elkaar mogelijk te maken.
 
+### Communicatie
+Over de broker kunnen verschillende berichten worden verstuurd. Wel is belangrijk dat deze berichten steeds van het type _char_ zijn. Integers kunnen namelijk niet worden doorgestuurd over dit signaal.
 
+Om berichten te ontvangen, moeten de devices gesubscribed zijn op de kanalen waarvan het berichten wil ontvangen. Dit gebeurt net nadat er connectie wordt gelegd met de broker in de methode _reconnect()_.
+
+Via de _callback()_-functie reageert het device onmiddellijk wanneer een bericht wordt ontvangen op één van de gesubscribde kanalen. Afhankelijk van het kanaal en van de 'message' wordt een andere actie ondernomen.
+
+#### Wat bij pauze en reset?
+Deze signalen worden verstuurd over het kanaal "esp32/morse/control".
+Bij een reset signaal wordt er volledig opnieuw opgestart. Geen enkele vorige waarde wordt onthouden, en ook de WiFi wordt verbroken om vervolgens opnieuw te connecteren vanuit de setup()-methode. Reset gebeurt wanneer de broker het bericht "0" over het kanaal "esp32/morse/control" sturen. Bij de speaker wordt ook opnieuw gereset wanneer het signaal correct werd nagefloten, en de puzzel dus niet meer gebruikt zal worden tijdens het spel.
+
+Pauzesignalen zorgen ervoor dat de speaker stopt met het uitzenden van de morsesequentie. De sequentie zal nog worden afgerond, maar het zal niet opnieuw beginnen met een herhaling. Bij de microfoon zal niet meer worden gereageerd op binnenkomende signalen, waardoor ze terug opnieuw moeten beginnen met het fluiten van de sequentie.
+
+#### Overige communicatie
+* Het kanaal "esp32/fitness/telefoon" wordt gebruikt om onze puzzel een startsignaal te geven. De telefoon zal beginnen rinkelen en de display van de microfoon zal oplichten. Hierdoor is het duidelijk dat er voldoende energie is om beide onderdelen te laten werken.
+* Wanneer onze puzzel gedaan is, zal vanuit de microfoon het bericht "einde_morse" over het kanaal "esp32/morse/output" worden gestuurd, om aan de de volgende puzzel te laten weten dat het mag starten. Ook zal er naar de speaker worden gestuurd dat het morse signaal niet meer moet worden herhaald. Dit gebeurt over het kanaal "esp32/morse/intern".
+* Aangezien het cijfer voor de alohomorapuzzel varieert, moet ook dit over een kanaal worden doorgestuud. Er wordt gecommuniceerd over het kanaal "esp32/alohomora/code2".
