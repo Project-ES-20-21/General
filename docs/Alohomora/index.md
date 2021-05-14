@@ -37,8 +37,7 @@ De touchscreen zelf zal niet responsief zijn tot alle nodige info doorgestuurd i
 Door dit gedrag van de ESP32 is er wel geen manier om het slot vanop afstand te openen eens de wifi uitgeschakeld is. Om hier eventuele problemen op te lossen voorzien we simpelweg code '0000' als noodoplossing moest iemand in de kamer zelf in paniek raken. Als de wifi nog aan staat kan er simpelweg van buitenaf een signaal gestuurd worden om het compartiment met de sleutel te openen.
 
 ### Blokschema
-![Blokschema](Kluis_Algemeen.png)
-![Blokschema](capture.png)
+![Blokschema](Capture.png)
 
 Voor een schaalbare afbeelding van ditzelfde schema klik [hier](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Alohomora/pcb_schermv2.svg).
 
