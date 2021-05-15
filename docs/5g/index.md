@@ -11,6 +11,7 @@ has_children: true
 ## Inhoud
  
 - [Algemeen](#Algemeen)
+- [Opstelling](#Opstelling)
 - [Blokschema](#Blokschema)
 - [Communicatie](#Communicatie)
   - [afstandsbediening -> auto](#afstandsbediening---auto)
@@ -25,6 +26,7 @@ Ergens in de ruimte zal een ESP-32 verstopt zijn, dit is dus de stralingslocatie
 
 Als de auto wordt opgenomen - dit wordt bepaald aan de hand van een afstandssensor aan de onderkant van het wagentje - zal er bij wijze van straf een buzzer afgaan en zal de LED-bar niet meer werken. Hierdoor kan de afstand tot de stralingslocatie niet meer afgelezen worden. Dit is dezelfde werkwijze die wordt toegepast als de handen ontsmet moeten worden, afgezien van de buzzer.
 Het cijfer dat nodig is voor het slot (zie puzzel Alohamora) zal kunnen afgeleid worden aan de hand van een kaart die in de ruimte aanwezig is: de coördinaten van de stralingslocatie op deze kaart zal overeenkomen met het juiste cijfer.
+## Opstelling
 
 ## Blokschema
 ![blok schema](blokschema.png)
