@@ -14,4 +14,11 @@ De casing van beide onderdelen werd gerealiseerd met een laser cutter. De speake
 ![](https://raw.githubusercontent.com/BachMorse/Behuizing/master/speaker_resultaat.jpg)
 
 ## Microfoon
+De boven- en onderkant van de svg-files zien eruit als volgt:
+![](https://raw.githubusercontent.com/BachMorse/Behuizing/main/micro_bovenonder.JPG)
+
+De zijkanten: 
+![](https://raw.githubusercontent.com/BachMorse/Behuizing/main/micro_zijkanten.JPG)
+
+Het uiteindelijke resultaat:
 ![](https://raw.githubusercontent.com/BachMorse/Behuizing/master/micro_resultaat.jpg)
