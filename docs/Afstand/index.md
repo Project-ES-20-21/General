@@ -16,7 +16,7 @@ Het doel van dit ontwerp is het verzekeren van een corona-veilige afstand tussen
 ## Blokschema
 ![blokschema](Blokschema.png)
 ## Opstelling
-De module wordt gedragen door de spelers. Voor een correcte meting is het noodzakelijk dat de antenne bevenop het hoofd gedragen wordt zodat er een minimale verstoring is van het signaal en meting. Via een draad en gaten door de behuizing kunnen de modules aan een faceshield verbonden worden maar ook een pet of hoofdband zijn mogelijk. In de achterkant van de behuizing zitten vier schroefgaten waardoor touwtjes of eventueel schroeven aan een klemplaatje kunnen worden gedraaid. <br/>
+De module wordt gedragen door de spelers. Voor een correcte meting is het noodzakelijk dat de antenne bevenop het hoofd gedragen wordt zodat er een minimale verstoring is van het signaal en meting. Via een draad en gaten door de behuizing kunnen de modules aan een faceshield verbonden worden maar ook een pet of hoofdband zijn mogelijk. In de achterkant van de behuizing zitten vier schroefgaten waardoor schroeven aan een klemplaatje kunnen worden gedraaid. <br/>
 ![alt text](montage_hoofdband.JPG)<br/>
 Bij de antenne zit een mounting ring meegeleverd. Deze ring past op de mounting hole op de bovenkant van het deksel. Zorg ervoor dat de antenne loodrecht naar boven wijst. Dit deksel kan zowel rechtstreeks op de rest van de behuizing gezet worden of kan op een andere locatie dienen als hulpmiddel om de antenne te monteren.<br/>
 ![alt text](antenne_mounting.JPG)<br/>
