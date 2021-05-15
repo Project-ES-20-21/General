@@ -28,19 +28,17 @@ In de loop-methode wordt steeds gekeken of er een kaart is voorgelegd aan de rea
 
 Alle kanalen die gebruikt worden kunnen onderaan gevonden bij de sectie '[Communicatie](#Communicatie)'
 
-![Flowchart_RFID](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_RFID.png)
+![Flowchart_RFID](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_RFID.PNG)
 
 ### Code Button
 
-Ten tweede hebben we twee PCB's voor de twee knoppen die gebruikt worden om de kleurensensors te activeren. Ook hier zijn de grote delen de MQTT methodes en de methodes om de kleuren te lezen. De belangrijkste is de colorChecker()-methode, deze zet de gemeten RGB-waarden om naar de gemeten kleur. Deze wordt dan later op de button kanalen van de MQTT gezet.
+Ten tweede hebben we twee PCB's voor de twee knoppen die gebruikt worden om de kleurensensors te activeren. Ook hier zijn de grote delen de MQTT methodes en de methodes om de kleuren te lezen. 
 
-Ook hier wordt tijdens de loop gecheckt of de knop wordt ingedrukt, want dan dient de kleur gemeten te worden en op de juiste kanalen gezet worden.
-
-![Flowchart_Button](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_button.png)
+![Flowchart_Button](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_button.PNG)
 
 ### Code Ledstrip
 
-![Flowchart_Ledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_central_ESP32.png)
+![Flowchart_Ledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_central_ESP32.PNG)
 
 ## Communicatie
 ### De gebruikte kanalen van het PCB aan de NFC-reader
@@ -54,7 +52,8 @@ Ook hier wordt tijdens de loop gecheckt of de knop wordt ingedrukt, want dan die
 
 | topic                | bericht | betekenis          | zender | ontvanger |
 |----------------------|---------|--------------------|--------|-----------|
-| esp32/vaccin/button# | ##      | nummer van kleur   | X      |           |
+| esp32/vaccin/control | ‘0’     | reset de ESP-32    |        | X         |
+| esp32/vaccin/button# | ##      | nummer van kleur 2 | X      |           |
 
 ### De gebruikte kanalen van het PCB aan de ledstrip
 
