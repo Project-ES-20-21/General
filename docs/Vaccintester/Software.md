@@ -10,9 +10,9 @@ nav_order: 2
 
 ## Inhoud
 - [Code](#Code)
-    - [Code_NFCsender](#Code NFCsender)
-    - [Code_Button](#Code Button)
-    - [Code_Ledstrip](#Code Ledstrip)
+    - [Code NFCsender](#Code_NFCsender)
+    - [Code Button](#Code_Button)
+    - [Code Ledstrip](#Code_Ledstrip)
 
 - [Communicatie](#Communicatie)
 
