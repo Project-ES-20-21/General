@@ -28,7 +28,7 @@ Daarnaast zal de laatst besproken ESP via het wifi-netwerk geconnecteerd zijn me
 
 ## Flowcharts
 ### Vaccintester
-![Flowchart_vaccintester](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/Vaccintester_flowchart.png)
+![Flowchart_vaccintester](Vaccintester_flowchart.png)
 ### RFID
 ![Flowchart_RFID](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_RFID.png)
 ### Buttons
