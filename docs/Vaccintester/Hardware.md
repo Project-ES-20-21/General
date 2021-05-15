@@ -12,7 +12,6 @@ nav_order: 1
 - [ESP NFC](#ESP NFC)
 - [ESP Butons](#ESP Buttons)
 - [ESP Ledstrip](#ESP Ledstrip)
-- [BOM](#BOM)
 
 ## ESP NFC
 ![Voorkant_PCBnfc](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBKast.png)
