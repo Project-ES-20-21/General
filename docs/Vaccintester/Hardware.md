@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Hardware
-parent: vaccintester
+parent: Vaccintester
 grand_parent: Onderdelen
 nav_order: 2
 ---
