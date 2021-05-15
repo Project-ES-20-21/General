@@ -1,3 +1,10 @@
+---
+layout: default
+title: Hardware
+parent: vaccintester
+grand_parent: Onderdelen
+nav_order: 2
+---
 # RainbowSyringe
 Dit is de uitleg horende bij de vaccintester uit de escape room.
 
