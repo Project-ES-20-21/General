@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Hardware
+title: Software
 parent: Vaccintester
 grand_parent: Onderdelen
 nav_order: 2
