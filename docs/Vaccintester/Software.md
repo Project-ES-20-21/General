@@ -30,10 +30,9 @@ Alle kanalen die gebruikt worden kunnen onderaan gevonden bij de sectie '[Commun
 
 ![Flowchart_RFID](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_RFID.png)
 
-
-
-
 ### Code Button
+
+Ten tweede hebben we twee PCB's voor de twee knoppen die gebruikt worden om de kleurensensors te activeren. Ook hier zijn de grote delen de MQTT methodes en de methodes om de kleuren te lezen. 
 
 ![Flowchart_Button](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_button.png)
 
@@ -42,7 +41,13 @@ Alle kanalen die gebruikt worden kunnen onderaan gevonden bij de sectie '[Commun
 ![Flowchart_Ledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_central_ESP32.png)
 
 ## Communicatie
+### De gebruikte kanalen van het PCB aan de buttons
+| topic                  | bericht | betekenis          | zender | ontvanger |
+|------------------------|---------|--------------------|--------|-----------|
+| “esp32/vaccin/control” | ‘0’     | reset de ESP-32    |        | X         |
+| esp32/vaccin/button#   | ##      | nummer van kleur 2 | x      |           |
 
+### De gebruikte kanalen van het PCB aan de ledstrip
 | topic                     | bericht| betekenis                         |  zender   | ontvanger |
 | "esp32/vaccin/control"|'0'| reset de ESP-32                   |           |     X     |
 | "esp32/vaccin/control"|'1'| pauzeer de proef       |           |     X     |
@@ -53,3 +58,5 @@ Alle kanalen die gebruikt worden kunnen onderaan gevonden bij de sectie '[Commun
 | esp32/vaccin/button1 | ## | nummer van kleur 1     |   | x |
 | esp32/vaccin/kast    | ## | sequentie van de kast  |   | x |
 | esp32/vaccin/number  | ## | random nummer codeslot | x |   |
+
+
