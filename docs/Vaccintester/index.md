@@ -20,12 +20,15 @@ Dit is de uitleg horende bij de vaccintester uit de escape room.
 
 ## Algemene uitleg
 
-Door het oplossen van de 5G-puzzel, wordt er een RFID kaart verkregen. Die kaart kan gebruikt worden om de uiteindelijke kleurensequentie voor de vaccintester te vinden. In de deur van een kast zit op een bepaalde plaats een NFC reader. De spelers moeten dan met de kaart op zoek gaan naar de kast en uitzoeken waar in de deur de NFC reader zit. Door de kaart dan te scannen worden er witte leds in de kast geactiveerd. Boven elke witte led bevindt zich een gekleurde vloeistof in een proefbuis. De houders voor de proefbuis kunnen gebruikt worden om de witte leds weg te steken. De leds gaan in een bepaalde volgorde oplichten, zodat er een sequentie gevonden kan worden van 7 kleuren die na elkaar oplichten. Om die kleurensequentie in te geven wordt er gebruik gemaakt van drie knoppen die verspreid zijn in de ruimte. Bij elke knop hoort een kastje, hierin kan een voorwerp met een primaire kleur gestoken worden. Om de kleuren te vormen worden de knoppen dan ingedrukt, de kleur van het voorwerp wordt gescand. Om alle spelers te laten meedoen moeten de knoppen om de kleuren te vormen binnen een bepaald interval ingedrukt worden. Zo wordt geel gevormd door groen, rood en zwart moeten groen, rood en zwart dus ongeveer op hetzelfde moment ingedrukt worden. Die knoppen zorgen er dan voor dat de bijhorende ledstrip die zich in een spuit bevindt oplicht. Wanneer de juiste kleur verkregen is wordt er gesprongen naar de volgende kleur in de sequentie en herhaalt het vorige zich. Wanneer de laatste kleur juist is, wordt een random getal gegenereerd dat een digit van de te zoeken code is. Deze wordt doorgestuurd naar de centrale eenheid en ook getoond aan de deelnemers door het aantal proefbuizen die oplichten binnen de kast.
+Het doel van de puzzel is het mengen van kleuren om een sequentie van kleuren na te maken. Wanneer deze sequentie volledig correct nagemaakt is, wordt een getal van de code verkregen. 
 
-Om dit alles te kunnen uitvoeren wordt er gebruik gemaakt van twee ESP32's, die met elkaar kunnen communiceren via een ESPnow-connectie. Wanneer de juiste RFID gescand wordt, wordt er een signaal verzonden van de ESP32 die verbonden is met de NFC-reader naar de ESP32 die verbonden is met de kleursensoren, de drukknoppen en de leds binnen de spuit en in de kast. Dat signaal zal ervoor zorgen dat de kleursensoren, de leds binnen de spuit en in de kast en de drukknoppen geactiveerd worden.
+In het ideale geval zou er een RFID kaart gescand moeten worden aan een kast. Door het scannen van deze kaart wordt er een random sequentie van zeven kleuren aangemaakt. Deze sequentie wordt getoond door leds in een bepaalde volgorde te doen oplichten. Elke led staat voor een bepaald kleur. Dat kleur zal duidelijk gemaakt worden door een pillendoosje met materiaal in bijhorende kleur boven de led te plaatsen. Na het tonen van de zeven kleuren lichten alle leds tegelijk twee maal op en herhaalt de sequentie zich. 
 
-Daarnaast zal de laatst besproken ESP via het wifi-netwerk geconnecteerd zijn met de broker. Op die manier kan er uiteindelijk een digit van de code die ingevoerd moet worden bij alohomara doorgestuurd worden naar de centrale eenheid of broker.
+Deze kleuren moeten worden nagemaakt door groen, blauw of rood in de dozen met de kleurensensors te schuiven. Door op de knoppen bovenop de dozen te duwen worden deze kleuren 
+doorgestuurd naar de ledstrip en kunnen deze dus gemengd worden door bijvoorbeeld groen in de ene doos te steken en blauw in de andere doos en dan op de knoppen te drukken. 
+Wanneer men zeker is van de kleur, kan men op de knop aan de ledstrip drukken om het kleur op de ledstrip te plaatsen en te laten controleren. Wanneer de juiste kleur gevormd is zal de ledstrip groen pinken en kan de volgende kleur van de sequentie gevormd worden. Wanneer een foutieve kleur aangemaakt is zal de ledstrip rood pinken en moet men opnieuw bij de eerste kleur van de sequentie beginnen. Wanneer uiteindelijke alle kleuren juist gevormd zijn zal de ledstrip opeenvolgend een aantal keer blauw pinken en een aantal keer wit pinken, wat het laatste getal van de code voorstelt. Wanneer de ledstrip vier maal blauw pinkt en daarna vier keer wit, is het getal dus gelijk aan vier. Dit getal wordt dan ook via de broker naar Alohomora verstuurd.
 
+De puzzel zou moeten opgelost kunnen worden in 10-15 minuten.
 ## Flowcharts
 ### Vaccintester
 ![Flowchart_vaccintester](Flowchart_general.PNG)
@@ -35,8 +38,6 @@ Daarnaast zal de laatst besproken ESP via het wifi-netwerk geconnecteerd zijn me
 ![Flowchart_buttons](flowchart_button.PNG)
 ### Centrale ESP32
 ![Flowchart_centralESP32](flowchart_central_ESP32.PNG)
-
-
 
 ## Implementatie
 
@@ -112,11 +113,15 @@ Algemeen totaal: € 101.81
 
 ## Risico's
 
+- Wanneer er iets misloopt binnen de puzzel kan deze steeds gereset worden door via MQTT "0" te sturen via het kanaal "esp32/vaccin/control".
+
 - Wanneer de 5G-puzzle niet werkt, kan de nodige RFID kaart niet verkregen worden. Hierdoor zou de puzzel niet gestart kunnen worden. 
 
 - Wanneer de knoppen op de buttons niet goed ingedrukt worden wordt het juiste kleur niet daar de ledstrip gestuurd. Dit kan ervoor zorgen dat de gevormde kleur fout is en de spelers opnieuw moeten beginnen. Er wordt dus beter eens extra op de knop gedrukt. 
 
-- 
+- Indien de broker niet werkt is er geen communicatie via MQTT meer mogelijk. Dit zou ervoor zorgen dat de verschillende delen van de puzzel niet met elkaar kunnen communiceren en de puzzel dus niet opgelost kan worden.
+
+- Op een gegeven moment kunnen de PCB's van de buttons of deze met de NFC reader uitvallen doordat de powerbanks plat zijn. Dit kan opgelost worden door de powerbanks altijd zeer goed op te laden of door krachtigere powerbanks te gebruiken.
 
 ## Gantt chart
 
