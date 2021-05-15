@@ -14,33 +14,33 @@ Zoals elk Arduino programma zal de code vertrekken vanuit de setup()-methode. De
 
 Eerst en vooral verhogen we hier de baud rate. Voor ons project verhogen we het maximum aantal symbolen per seconde naar 115200. Het ROM bootloader van de ESP32 communiceert namelijk met deze snelheid. Wanneer we de baud rate niet zouden aanpassen, kan de inkomende data niet correct gelezen worden door de UART.
 
-In beide onderdelen wordt ook een debounce tijd voorzien voor de button, hiervoor wordt het commando _setDebounceTime(x)_ gebruikt. Deze methode wordt bij elk gebruik van de button toegepast. Bij de activatie van de button (van low naar high of andersom), zal deze elk binnenkomend signaal voor x milliseconden negeren. 
+In beide onderdelen wordt ook een debounce tijd voorzien voor de button, hiervoor wordt het commando `setDebounceTime(x)` gebruikt. Deze methode wordt bij elk gebruik van de button toegepast. Bij de activatie van de button (van low naar high of andersom), zal deze elk binnenkomend signaal voor x milliseconden negeren. 
 
-Om te kunnen werken met de broker via MQTT, moet ook een wifi-setup() doorlopen worden. Deze methode wordt ook opgeroepen in de setup()-methode. _setup_wifi()_ wordt dus 1 keer uitgevoerd. Verder wordt ook de MQTT-server en MQTT-poort geïnitialiseerd via de methode _client.setServer(MQTT_SERVER, MQTT_PORT)_
+Om te kunnen werken met de broker via MQTT, moet ook een wifi-setup() doorlopen worden. Deze methode wordt ook opgeroepen in de setup()-methode. `setup_wifi()` wordt dus 1 keer uitgevoerd. Verder wordt ook de MQTT-server en MQTT-poort geïnitialiseerd via de methode `client.setServer(MQTT_SERVER, MQTT_PORT)`
 
 ## void setup_wifi()
-In deze setup gebeuren de wifi-instellingen. Via de methoden _WiFi.begin(SSID, PWD)_ wordt de Service Set IDentifier meegegeven (dit is de naam voor een bepaald netwerk met een IP-adres), én het bijhorende paswoord van dit WiFi-signaal. 
-Ter controle vragen we aan het einde van de methode het IP-adres waarmee werd verbonden via de methode _WiFi.localIP()_.
+In deze setup gebeuren de wifi-instellingen. Via de methoden `WiFi.begin(SSID, PWD)` wordt de Service Set IDentifier meegegeven (dit is de naam voor een bepaald netwerk met een IP-adres), én het bijhorende paswoord van dit WiFi-signaal. 
+Ter controle vragen we aan het einde van de methode het IP-adres waarmee werd verbonden via de methode `WiFi.localIP()`.
 
-Na deze setups kan het programma beginnen aan de loop()-methode. Deze methode zal telkens opnieuw herhaald worden. Het eerste wat wordt gedaan is nakijken of nog steeds verbonden is met de MQTT-server. Als dit (nog) niet het geval is, zal via _reconnect()_ (opnieuw) worden geconnecteerd met de MQTT-server. Deze methode zal blijven doorlopen worden zolang er niet geconnecteerd werd. Wanneer er connectie gelegd werd, zal de client ook onmiddellijk subscriben op de nodige kanalen. 
+Na deze setups kan het programma beginnen aan de loop()-methode. Deze methode zal telkens opnieuw herhaald worden. Het eerste wat wordt gedaan is nakijken of nog steeds verbonden is met de MQTT-server. Als dit (nog) niet het geval is, zal via `reconnect()` (opnieuw) worden geconnecteerd met de MQTT-server. Deze methode zal blijven doorlopen worden zolang er niet geconnecteerd werd. Wanneer er connectie gelegd werd, zal de client ook onmiddellijk subscriben op de nodige kanalen. 
 
 Vanaf dat deze connectie op punt staat, kan de rest van de code worden uitgevoerd. Het verdere verloop is verschillend voor de speaker en de micro. Deze onderdelen worden verder dus apart besproken.
 
 ## void loop() - Speaker
-Volgende alinea bespreekt _void loop()_ van de speaker.
+Volgende alinea bespreekt `void loop()` van de speaker.
 
 ## void loop() - Micro
-Volgende deeltje bespreekt _void loop()_ van de microfoon.
+Volgende deeltje bespreekt `void loop()` van de microfoon.
 
-Het blokschema geeft een overzicht van het verloop van de code. Zoals eerder vermeld wordt _void loop()_ oneindig keer herhaald. De verschillende methoden die verder worden besproken zullen dus ook vaak worden opgeroepen.
+Het blokschema geeft een overzicht van het verloop van de code. Zoals eerder vermeld wordt `void loop()` oneindig keer herhaald. De verschillende methoden die verder worden besproken zullen dus ook vaak worden opgeroepen.
 
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/BlokschemaCodeMicro.JPG)
 
 Beginnen doen we met de uitleg voor de default ingestelde waarden, zo wordt onmiddellijk duidelijk welke elementen gebruikt worden. We gebruiken 2 arrays van dezelfde lengte. De ene onthoudt de gefloten sequentie, de andere bewaart wat werd doorgestuurd van de speaker. Beide hebben ze een vaste lengte, zo moet niet elke keer opnieuw wat geheugen worden vrijgemaakt als de grens wordt overschreden. We nemen hier een lengte van 44, aangezien dit de langst mogelijke lengte is die kan bekomen worden. Naast deze array, worden er ook verschillende 'lopers' aangemaakt. Elk van deze loper houdt de positie in de array of op de display bij.
 
-Via _button.loop()_ zal er continu gekeken worden wat er gebeurt met de signalen afkomstig van de button. Wanneer de button wordt ingedrukt (_button.isPressed()_), wordt al het voorgaande gewist. Voor de spelers is het dus gemakkelijk om opnieuw te beginnen wanneer ze merken dat ze fout bezig waren: de knop loslaten en opnieuw indrukken.
+Via `button.loop()` zal er continu gekeken worden wat er gebeurt met de signalen afkomstig van de button. Wanneer de button wordt ingedrukt (`button.isPressed()`), wordt al het voorgaande gewist. Voor de spelers is het dus gemakkelijk om opnieuw te beginnen wanneer ze merken dat ze fout bezig waren: de knop loslaten en opnieuw indrukken.
 
-Wanneer de button ingedrukt blijft (dus wanneer zijn waarde 0 is, de button is namelijk active HIGH), zal de rest van _void loop()_ worden uitgevoerd.
+Wanneer de button ingedrukt blijft (dus wanneer zijn waarde 0 is, de button is namelijk active HIGH), zal de rest van `void loop()` worden uitgevoerd.
 
 Het eerste wat gebeurt is detecteren en onthouden van de analoge waarde uit de microfoon. Wanneer we deze waarde weergeven op het scherm, ligt het tussen 0 (stil) en 4095 (max gedetecteerde waarde, bij een relatief luide omgeving). Hoe luider de omgeving, hoe groter de uitgeprinte digitale waarde. We zien digitale waarden verschijnen, omdat de ESP32 het analoge signaal dat ontvangen wordt van de microfoon omgezet wordt naar een digitale waarde. De maximale analoge waarde die de microfoon kan doorgeven is 3.3V, dit wordt omgezet naar de maximale digitale waarde. Deze digitale waarde is afhankelijk van de resolutie. De resolutie van de analoge pinnen is 12 bit. 3.3V wordt daarom omgezet naar 4095 (=111111111111).
 Via de potentiometer kan de gevoeligheid van de microfoon worden aangepast. 4095 kan dus overeen komen met verschillende decibelwaarden, afhankelijk van de weerstand van de potentiometer. De potentiometer werd nu zó ingesteld dat 4095 wordt gedetecteerd als men fluit op een afstand van 5 cm van de speaker.
@@ -52,18 +52,18 @@ De speaker stuurt {0, 1} door bij een Punt (= kort signaal), en {0, 1, 2} bij ee
 
 Als laatste komt het erop neer om de gefloten sequentie te vergelijken met de sequentie afkomstig van de speaker. De volledige gefloten array wordt hierbij overlopen, en voor elk element wordt gekeken of ze overeenkomt met de sequentie van de speaker. Als dit het geval is, voegen we 1 toe bij een teller. Wanneer de teller even groot is als de lengte van de morse-array, wil dit zeggen dat elke waarde juist gefloten is. De oplossing zal dan verschijnen op de display.
 
-Via de methode _lcd.setCursor(0, 1)_ zetten we de cursor van het display op rij 1, kolom 0. Vanaf dat er 1 fout werd gefloten, zal dit ook te zien zijn op het scherm. De methode _vergelijk_fout()_ vergelijkt namelijk het gefloten deeltje met het overeenkomstige deel van de array afkomstig van de speaker.
+Via de methode `lcd.setCursor(0, 1)` zetten we de cursor van het display op rij 1, kolom 0. Vanaf dat er 1 fout werd gefloten, zal dit ook te zien zijn op het scherm. De methode `vergelijk_fout()` vergelijkt namelijk het gefloten deeltje met het overeenkomstige deel van de array afkomstig van de speaker.
 
 Verder wordt de display ook gebruikt om te tonen wat de spelers floten. Een punt wordt weergegeven met '.', een streep met '_'.
 
 Dit alles wordt enkel uitgevoerd als er geen pauzesignaal wordt gestuurd én als de oplossing nog niet juist werd uitgevoerd.
 
 ## Communicatie
-Over de broker kunnen verschillende berichten worden verstuurd. Wel is belangrijk dat deze berichten steeds van het type _char_ zijn. Integers kunnen namelijk niet worden doorgestuurd over dit signaal.
+Over de broker kunnen verschillende berichten worden verstuurd. Wel is belangrijk dat deze berichten steeds van het type `char` zijn. Integers kunnen namelijk niet worden doorgestuurd over dit signaal.
 
-Om berichten te ontvangen, moeten de devices gesubscribed zijn op de kanalen waarvan het berichten wil ontvangen. Dit gebeurt net nadat er connectie wordt gelegd met de broker in de methode _reconnect()_.
+Om berichten te ontvangen, moeten de devices gesubscribed zijn op de kanalen waarvan het berichten wil ontvangen. Dit gebeurt net nadat er connectie wordt gelegd met de broker in de methode `reconnect()`.
 
-Via de _callback()_-functie reageert het device onmiddellijk wanneer een bericht wordt ontvangen op één van de gesubscribde kanalen. Afhankelijk van het kanaal en van de 'message' wordt een andere actie ondernomen.
+Via de `callback()`-functie reageert het device onmiddellijk wanneer een bericht wordt ontvangen op één van de gesubscribde kanalen. Afhankelijk van het kanaal en van de 'message' wordt een andere actie ondernomen.
 
 ### Wat bij pauze en reset?
 Deze signalen worden verstuurd over het kanaal "esp32/morse/control".
