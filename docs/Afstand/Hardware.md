@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Anderhalvemeter
-parent: Onderdelen
+grand_parent: Onderdelen
 nav_order: 2
 ---
 ## Hardware
