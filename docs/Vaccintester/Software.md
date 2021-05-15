@@ -45,7 +45,7 @@ Ten tweede hebben we twee PCB's voor de twee knoppen die gebruikt worden om de k
 | topic                | bericht | betekenis               | zender | ontvanger |
 |---------------------------|--------|----------------|---------|--------|
 | esp32/vaccin/control | ‘0’     | reset de ESP-32         | X      | X         |
-| esp32/vaccin/kast    | ##      | Sequentie van de kleure | X      |           |
+| esp32/vaccin/kast    | ##      | Sequentie van de kleuren | X      |           |
 
 ### De gebruikte kanalen van het PCB aan de buttons
 | topic                  | bericht | betekenis          | zender | ontvanger |
