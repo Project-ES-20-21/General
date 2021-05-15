@@ -63,6 +63,43 @@ De positie van deze puzzel binnen het lokaal maakt in principe niet zo veel uit.
 | Pin header 4              | 2      | € 0.05         | € 0.10  |
 | Adapter 12V               | 1      | € 5.00         | € 5.00  |
 | Totaal                    |        |                | € 28.22 |
+| Buttons (beide samen)     | Aantal | Prijs per stuk | Totaal  |
+|---------------------------|--------|----------------|---------|
+| PCBway (10 per soort)     | 1      | € 5.00         | € 5.00  |
+| ESP32                     | 2      | € 2.60         | € 5.20  |
+| Drukknop groot            | 2      | € 0.50         | € 1.00  |
+| Micro-USB female          | 2      | € 0.92         | € 1.84  |
+| LDO 3.3V                  | 2      | € 0.43         | € 0.86  |
+| Boot/enable button        | 4      | € 0.48         | € 1.92  |
+| Condensator 10 μF (1206)  | 4      | € 0.24         | € 0.98  |
+| Condensator 100 nF (1206) | 8      | € 0.12         | € 0.94  |
+| Weerstand 10 kΩ (1206)    | 8      | € 0.05         | € 0.40  |
+| Weerstand 47 kΩ (1206)    | 2      | € 0.05         | € 0.10  |
+| Pin header 8              | 2      | € 0.05         | € 0.10  |
+| Pin header 4              | 2      | € 0.05         | € 0.10  |
+| Pin header 2              | 2      | € 0.05         | € 0.10  |
+| Powerbank                 | 2      | € 5.00         | € 10.00 |
+| Kleurensensor             | 2      | € 4.00         | € 8.00  |
+| Totaal                    |        |                | € 36.54 |
+| Kast                      | Aantal | Prijs per stuk | Totaal  |
+|---------------------------|--------|----------------|---------|
+| PCBway (10 per soort)     | 1      | € 5.00         | € 5.00  |
+| ESP32                     | 1      | € 2.60         | € 2.60  |
+| Witte Leds                | 6      | € 0.10         | € 0.60  |
+| Micro-USB female          | 1      | € 0.92         | € 0.92  |
+| LDO 3.3V                  | 1      | € 0.43         | € 0.43  |
+| Boot/enable button        | 2      | € 0.48         | € 0.96  |
+| Condensator 10 μF (1206)  | 2      | € 0.24         | € 0.49  |
+| Condensator 100 nF (1206) | 3      | € 0.12         | € 0.35  |
+| Weerstand 10 kΩ (1206)    | 4      | € 0.05         | € 0.20  |
+| Weerstand 5.6 kΩ (1206)   | 6      | € 0.05         | € 0.30  |
+| Pin header 6              | 3      | € 0.05         | € 0.15  |
+| Pin header 4              | 1      | € 0.05         | € 0.05  |
+| Powerbank                 | 1      | € 20.00        | € 20.00 |
+| NFC reader                | 1      | € 5.00         | € 5.00  |
+| Totaal                    |        |                | € 37.05 |
+| Algemeen totaal |  |  | € 101.81 |
+|-----------------|--|--|----------|
 
 ## Risico's
 
