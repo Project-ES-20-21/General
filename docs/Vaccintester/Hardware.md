@@ -10,9 +10,9 @@ nav_order: 1
 
 ## Inhoud
 - [Algemeen](#Algemeen)
-- [ESP NFC](#ESP NFC)
-- [ESP Butons](#ESP Buttons)
-- [ESP Ledstrip](#ESP Ledstrip)
+- [ESP NFC](#ESP_NFC)
+- [ESP Buttons](#ESP_Buttons)
+- [ESP Ledstrip](#ESP_Ledstrip)
 
 ## Algemeen
 De KiCad files horende bij de verschillende PCB-ontwerpen zijn te vinden via volgende link: https://github.com/Project-ES-20-21/General/tree/gh-pages/docs/Vaccintester/KiCad
