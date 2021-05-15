@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Anderhalvemeter
+title: Afstand
 parent: Onderdelen
 has_children: true
 nav_order: 8
