@@ -47,4 +47,7 @@ In de loop-methode wordt steeds gekeken of er een kaart is voorgelegd aan de rea
 | "esp32/vaccin/control"|'2'| pauzeer de proef       |           |     X     |
 | "esp32/vaccin/control"|'3'| hervat de proef       |           |     X     |
 | "esp32/vaccin/control"|'4'| hervat de proef       |           |     X     |
-| "esp32/vaccin/alohomora"|'4'| hervat de proef       |           |     X     |
+| esp32/vaccin/button2 | ## | nummer van kleur 2     |   | x |
+| esp32/vaccin/button1 | ## | nummer van kleur 1     |   | x |
+| esp32/vaccin/kast    | ## | sequentie van de kast  |   | x |
+| esp32/vaccin/number  | ## | random nummer codeslot | x |   |
