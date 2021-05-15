@@ -19,6 +19,7 @@ De KiCad files horende bij de verschillende PCB-ontwerpen zijn [hier](https://gi
 
 ## ESP NFC
 ### Schema
+![Schema_NFC](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/SchemaKast.png)
 
 ### PCB
 ![Voorkant_PCBnfc](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBKast.png)
