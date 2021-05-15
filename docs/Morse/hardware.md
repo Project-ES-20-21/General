@@ -10,6 +10,11 @@ nav_order: 2
 ## Speaker
 
 ## Micro
+Het centrale element in ons project is een ESP32. Verschillende pinnen voorzien we van pull-up weerstanden van 10k en/of ontladingscondensatoren van 100nF. De 3.3V voeding voorzien we van een ontladingscondensator. De 2 buttons (enable en boot) worden voorzien van zowel ontladingscondensatorena, als weerstanden.
+
+, voorzien we, naast de verschillende componenten die nog volgen, ook van een LEDlichtje. Hiermee kunnen we gemakkelijk controleren of het solderen gelukt is en of de ESP werkt.
+![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/schakeling_ESP32.JPG)
+
 Op de PCB-plaat voorzien we een aansluiting voor een externe display, een externe microfoon en een externe button. Deze 3 elementen worden via pinheaders aangesloten. Om de ESP te programmeren, wordt een extra pinheader voorzien. Aangezien de ESP32 maar 1 keer geprogrammeerd moet worden, is dit de meest efficiënte manier. 
 
 De ESP32 zal gevoed worden met een powerbank van 5V. Deze 5V is nodig om de display aan te sturen. Via de LDO zal 5V omgezet worden naar 3.3V. De program header, de microfoon en de ESP32 worden aangesloten aan de 3.3V.
@@ -18,8 +23,7 @@ De enable butten en reset button worden voorzien van een pull-up weerstand, net 
 
 De display maakt gebruik van I2C communicatie. Hiervoor maken we gebruik van de SDA- en SCL-poorten. Via de SDA-poort sturen we data van en naar de display, vanuit de ESP32. Deze 2 poorten zijn active low. Daarom werden pull-up weerstanden voorzien op het display zelf. De pull-up weerstanden moeten dus niet op onze eigen PCB aangesloten worden.
 
-Het centrale element, ESP32, voorzien we, naast de verschillende componenten die nog volgen, ook van een LEDlichtje. Hiermee kunnen we gemakkelijk controleren of het solderen gelukt is en of de ESP werkt.
-![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/schakeling_ESP32.JPG)
+
 
 De micro-USB voorziet een voltage van 5 volt. De andere pinnen worden niet gebruikt. De programmatie van de ESP32 gebeurt namelijk via een pinheader. Deze 5V wordt gebruikt om de display te voeden. Via MOSFET?? wordt deze 5 volt omgezet naar 3.3V om de ESP32 met de juiste spanning te voeden, om de pinheaders met de juiste spanning te voeden, en om de micro met de juiste spanning te voeden.
 
