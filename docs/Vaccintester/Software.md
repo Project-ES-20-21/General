@@ -26,19 +26,26 @@ In dit deel van de proef moet met een RFID tag gescand worden aan een PN532 boar
 
 In de loop-methode wordt steeds gekeken of er een kaart is voorgelegd aan de reader en of er een MQTT-message op één van de gevolgde kanalen is gezet. Indien de juiste kaart is voorgelegd wordt er zelf data op vershillende kanalen gezet.
 
-Alle kanalen die gebruikt worden kunnen onderaan gevonden bij de sectie '[Communicatie](#Communicatie)'
+Alle kanalen die gebruikt worden kunnen onderaan gevonden worden bij de sectie '[Communicatie](#Communicatie)'
 
-![Flowchart_RFID](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_RFID.PNG)
+![Flowchart_RFID](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_RFID.png)
 
 ### Code Button
 
-Ten tweede hebben we twee PCB's voor de twee knoppen die gebruikt worden om de kleurensensors te activeren. Ook hier zijn de grote delen de MQTT methodes en de methodes om de kleuren te lezen. 
+Ten tweede hebben we twee PCB's voor de twee knoppen die gebruikt worden om de kleurensensors te activeren. Ook hier zijn de grote delen de MQTT methodes en de methodes om de kleuren te lezen. De belangrijkste is de colorChecker()-methode, deze zet de gemeten RGB-waarden om naar de gemeten kleur. Deze wordt dan later op de button kanalen van de MQTT gezet.
 
-![Flowchart_Button](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_button.PNG)
+Ook hier wordt tijdens de loop gecheckt of de knop wordt ingedrukt, want dan dient de kleur gemeten te worden en op de juiste kanalen gezet worden.
+
+![Flowchart_Button](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_button.png)
 
 ### Code Ledstrip
+In deze code worden vooral alle signalen die ontvangen worden van de andere PCB's samengebracht. De ontvangen primaire kleuren van de buttons worden gemengd tot de gewenste kleur. Deze wordt dan op de ledstrip gezet en vergeleken met de betreffende kleur van de ontvangen sequentie. 
 
-![Flowchart_Ledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_central_ESP32.PNG)
+De code moet ook ten allen tijde gepauzeerd kunnen worden door de pauze's van de fitness en de ontsmetting en mag pas hervatten wanneer beide weer oke zijn. Ook een reset is geïmplemteerd om de proef ten allen tijde te kunnen herstarten van nul.
+
+Ten slotte wordt wanneer de hele sequentie correct is nagemaakt een random getal naar alohomora verstuurd via MQTT om het codeslot te openen.
+
+![Flowchart_Ledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_central_ESP32.png)
 
 ## Communicatie
 ### De gebruikte kanalen van het PCB aan de NFC-reader
@@ -52,8 +59,7 @@ Ten tweede hebben we twee PCB's voor de twee knoppen die gebruikt worden om de k
 
 | topic                | bericht | betekenis          | zender | ontvanger |
 |----------------------|---------|--------------------|--------|-----------|
-| esp32/vaccin/control | ‘0’     | reset de ESP-32    |        | X         |
-| esp32/vaccin/button# | ##      | nummer van kleur 2 | X      |           |
+| esp32/vaccin/button# | ##      | nummer van kleur   | X      |           |
 
 ### De gebruikte kanalen van het PCB aan de ledstrip
 
