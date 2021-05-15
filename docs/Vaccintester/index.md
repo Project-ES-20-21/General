@@ -40,7 +40,12 @@ Daarnaast zal de laatst besproken ESP via het wifi-netwerk geconnecteerd zijn me
 
 ## Implementatie
 
-De positie van deze puzzel binnen het lokaal maakt in principe niet zo veel uit. Er moet wel voor gezorgd worden dat de knoppen minstens 1,5 meter van elkaar gescheiden zijn zodat telkens aan de voorwaarde van de "T'is beter op anderhalve meter"-puzzel voldaan is. Daarnaast gaat de spuit aan een muur moeten hangen zodat alles op een correcte manier aangesloten kan worden.
+De positie van deze puzzel binnen het lokaal maakt in principe niet zo veel uit. Er moet wel voor gezorgd worden dat de knoppen minstens 1,5 meter van elkaar gescheiden zijn zodat telkens aan de voorwaarde van de "T'is beter op anderhalve meter"-puzzel voldaan is. Daarnaast gaat de spuit aan een muur moeten hangen zodat alles op een correcte manier aangesloten kan worden. In dit project zijn de buttons gemaakt aan de hand van een 3D-printer. De spuit die aan de muur opgehangen wordt is met behulp van een laser cutter tot stand gebracht. Om de sequentie te tonen is gebruik gemaakt van een kast, ook tot stand gebracht met behulp van een lasercutter. In deze kast zijn pillendoosjes geplaats op een balk waarin de leds ingebouwd zijn. 
+
+De bijhorende files horende bij het 3D-printen en de laser cutter zijn terug te vinden via onderstaande links:
+
+- [3D-prints](https://github.com/Project-ES-20-21/General/tree/gh-pages/docs/Vaccintester/3Dprints)
+- [Laser cutter](https://github.com/Project-ES-20-21/General/tree/gh-pages/docs/Vaccintester/Lasercut)
 
 ## BOM
 
@@ -104,15 +109,14 @@ De kostenanalyse wordt hieronder weergegeven.
 | Totaal                    |        |                | € 37.05 |
 
 Algemeen totaal: € 101.81
+
 ## Risico's
 
-- Wanneer de 5G-puzzle niet werkt, kan de nodige RFID kaart niet verkregen worden. Dit kan opgelost worden door een tweede kaart te gebruiken die ook gebruikt kan worden om onze puzzel te starten. Deze kaart kan ergens verstopt worden binnen de kamer. De positie van die kaart kan dan via een raadsel achterhaald worden.
+- Wanneer de 5G-puzzle niet werkt, kan de nodige RFID kaart niet verkregen worden. Hierdoor zou de puzzel niet gestart kunnen worden. 
 
-- Wanneer de RFID reader en de receiver niet geconnecteerd zijn, kan de puzzel niet volledig gestart worden. Dit kan eventueel opgelost worden door Alohomora een signaal te laten versturen naar de tweede ESP32. 
+- Wanneer de knoppen op de buttons niet goed ingedrukt worden wordt het juiste kleur niet daar de ledstrip gestuurd. Dit kan ervoor zorgen dat de gevormde kleur fout is en de spelers opnieuw moeten beginnen. Er wordt dus beter eens extra op de knop gedrukt. 
 
-- De kleursensor kan soms bij de eerste meting een fout resultaat geven. Dit kan opgelost worden door bijvoorbeeld tien metingen na elkaar te doen en het gemiddelde te nemen van de verschillende waarden.
-
-- De kleursensor kan foute resultaten geven door reflectie. Er moet dus gebruik gemaakt worden van een buis die mat is, waardoor de resultaten geen invloed van reflectie zullen hebben.
+- 
 
 ## Gantt chart
 
