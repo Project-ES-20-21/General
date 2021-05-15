@@ -43,16 +43,19 @@ Ten tweede hebben we twee PCB's voor de twee knoppen die gebruikt worden om de k
 ## Communicatie
 ### De gebruikte kanalen van het PCB aan de NFC-reader
 | topic                | bericht | betekenis               | zender | ontvanger |
+|---------------------------|--------|----------------|---------|--------|
 | esp32/vaccin/control | ‘0’     | reset de ESP-32         | x      | X         |
 | esp32/vaccin/kast    | ##      | Sequentie van de kleure | x      |           |
 
 ### De gebruikte kanalen van het PCB aan de buttons
 | topic                  | bericht | betekenis          | zender | ontvanger |
+|---------------------------|--------|----------------|---------|--------|
 | esp32/vaccin/control | ‘0’     | reset de ESP-32    |        | X         |
 | esp32/vaccin/button#   | ##      | nummer van kleur 2 | x      |           |
 
 ### De gebruikte kanalen van het PCB aan de ledstrip
 | topic                     | bericht| betekenis                         |  zender   | ontvanger |
+|---------------------------|--------|----------------|---------|--------|
 | esp32/vaccin/control|'0'| reset de ESP-32                   |           |     X     |
 | esp32/vaccin/control|'1'| pauzeer de proef       |           |     X     |
 | esp32/vaccin/control|'2'| pauzeer de proef       |           |     X     |
