@@ -17,7 +17,7 @@ nav_order: 2
 - [Communicatie](#Communicatie)
 
 ## Code
-Aangezien we werken met 3 verschillende PCB's moest voor elk hiervan verschillende code geschreven worden. Deze werken allemaal met een ESP32 module en kunnen geprogrammeerd worden via Arduino C/C++. De code van elke deel kan teruggevonden worden op de algemene github van dit onderdeel van de Escape room.
+Aangezien we werken met 3 verschillende PCB's moest voor elk hiervan verschillende code geschreven worden. Deze werken allemaal met een ESP32 module en kunnen geprogrammeerd worden via Arduino C/C++. De code van elke deel kan teruggevonden worden op de algemene github van dit onderdeel van de Escape room. Al de code kan teruggevonden worden in deze [directory](https://github.com/Project-ES-20-21/Vaccintester).
 
 ### Code NFCsender
 Het eerste PCB dat in de schakeling gebruikt wordt is dat van de kast. Onze code is opgedeeld in 3 grote delen, namelijk de methodes om de NFC-reader op te zetten, de methodes om de MQTT communicatie te implementeren en tenslotte de setup- en loopmethodes.
