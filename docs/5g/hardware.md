@@ -47,7 +47,7 @@ Voor het aankoppelen motoren maken we gebruik van een extra PCB zodat de 5 kabel
 ![](https://github.com/5Gstraling/MotorPCB/blob/master/MotorPCBZonderLevelShifterbottem.png?raw=true)
 Het volledige KiCAD project is terug te vinden [hier](https://github.com/5Gstraling/MotorPCB).
 # LED-bar
-De LED-bar wordt gevoed door een powerbank. Dit omdat de LED-bar 8 LEDs heeft (die elk 20mA verbruiken) en zo het stroomverbruik een stuk hoger ligt dan bij de stralingslocatie. Qua hardware is hier niets speciaal gebruikt - enkel de al vermelde LEDs met natuurlijk hun voorschakelweerstand. Er is ook hier een behuizing gelasercut. Het is wel belangrijk op te merken dat niet alle kleuren LEDs kunnen gebruikt worden, aangezien de ESP-32 maar een spanning op de GPI pinnen kan aanleggen van 3,3V - bij sommige kleuren ligt de drempelspanning hoger.
+De LED-bar wordt gevoed door een powerbank. Dit omdat de LED-bar 8 LEDs heeft (die elk 20mA verbruiken) en zo het stroomverbruik een stuk hoger ligt dan bij de stralingslocatie. Qua hardware is hier niets speciaal gebruikt - enkel de al vermelde LEDs met natuurlijk hun voorschakelweerstand. Er is ook hier een behuizing gelasercut. Het is wel belangrijk op te merken dat niet alle kleuren LEDs kunnen gebruikt worden, aangezien de ESP-32 maar een spanning op de GPIO pinnen kan aanleggen van 3,3V - bij sommige kleuren ligt de drempelspanning hoger.
 ![](https://github.com/5Gstraling/5G---LEDbar/blob/master/LEDbar/LEDbarPCBupper.png?raw=true)
 ![](https://github.com/5Gstraling/5G---LEDbar/blob/master/LEDbar/LEDbarPCBbottem.png?raw=true)
 Het volledige KiCAD project is terug te vinden [hier](https://github.com/5Gstraling/5G---LEDbar).
