@@ -21,16 +21,6 @@ Om aan de spelers te laten weten wat er juist moet gebeuren zal er een blad naas
 Zoals te zien op het blokschema wacht onze volledige puzzel op een signaal van de vorige puzzel. Vanaf dan wordt onze puzzel opgestart. Signalen tussen de microfoon en de speaker worden vanaf dan verstuurd over de broker. 
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/BlokschemaMorse.JPG)
 
-## Communicatie
-Eerst en vooral moet er gecommuniceerd worden met de vorige puzzel, de fitnesstracker, en met de volgende puzzel, 5G-proef. Wanneer de opdracht van de fitnesstracker werd volbracht, mag de speaker beginnen met het uitzenden van de morse code.
-Via het kanaal "esp32/fitness/telefoon" wordt het signaal "BEL" gestuurd. Zo weet de speaker dat het geluid mag beginnen spelen.
-
-Wanneer de spelers klaar zijn met onze proef, zal er een start signaal gegeven worden naar de afstandsbediening van de 5G-proef. Hiervoor wordt het "morse_einde" doorgestuurd via het kanaal "esp32/morse/output".
-
-Daarnaast wordt over de broker ook de juiste morse-sequentie doorgegeven door de speaker aan de microfoon. Hierdoor weet de microfoon met welke sequentie het ontvangen fluitsignaal moet vergeleken worden. Het kanaal waarover we hiervoor communiceren is "esp32/morse/intern".
-
-En als laatste zorgt de broker ook voor een start-, pauze- en stopsignaal. Wanneer we een pauzesignaal ontvangen, zal de button van de microfoon niet werken, de speaker zal stoppen met geluid uitzenden.
-
 ## Opstelling
 De speaker wordt geïmplementeerd in een 3D-geprinte telefoon. De verdere hardware voor deze telefoon wordt weggestoken in een box die werd gelasercut. We voorzien in deze behuizing ook plaats voor een button.
 Voor de microfoon maakten we ook gebruik van de lasercutter. In deze behuizing voorzien we plaats voor de button, de display en de microfoon. Voor de 5V voeding van beide delen, is een powerbank nodig.
