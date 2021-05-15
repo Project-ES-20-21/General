@@ -43,16 +43,16 @@ Ten tweede hebben we twee PCB's voor de twee knoppen die gebruikt worden om de k
 ## Communicatie
 ### De gebruikte kanalen van het PCB aan de buttons
 | topic                  | bericht | betekenis          | zender | ontvanger |
-| “esp32/vaccin/control” | ‘0’     | reset de ESP-32    |        | X         |
+| esp32/vaccin/control | ‘0’     | reset de ESP-32    |        | X         |
 | esp32/vaccin/button#   | ##      | nummer van kleur 2 | x      |           |
 
 ### De gebruikte kanalen van het PCB aan de ledstrip
 | topic                     | bericht| betekenis                         |  zender   | ontvanger |
-| "esp32/vaccin/control"|'0'| reset de ESP-32                   |           |     X     |
-| "esp32/vaccin/control"|'1'| pauzeer de proef       |           |     X     |
-| "esp32/vaccin/control"|'2'| pauzeer de proef       |           |     X     |
-| "esp32/vaccin/control"|'3'| hervat de proef       |           |     X     |
-| "esp32/vaccin/control"|'4'| hervat de proef       |           |     X     |
+| esp32/vaccin/control|'0'| reset de ESP-32                   |           |     X     |
+| esp32/vaccin/control|'1'| pauzeer de proef       |           |     X     |
+| esp32/vaccin/control|'2'| pauzeer de proef       |           |     X     |
+| esp32/vaccin/control|'3'| hervat de proef       |           |     X     |
+| esp32/vaccin/control|'4'| hervat de proef       |           |     X     |
 | esp32/vaccin/button2 | ## | nummer van kleur 2     |   | x |
 | esp32/vaccin/button1 | ## | nummer van kleur 1     |   | x |
 | esp32/vaccin/kast    | ## | sequentie van de kast  |   | x |
