@@ -11,6 +11,7 @@ nav_order: 3
 Communicatie met andere proeven gebeurt aan de hand van het MQTT protocol via de broker. De ESP reageert op 2 signalen en stuurt er één uit.
 
 -"esp32/ontsmetten/control" 
+
 | topic                     | bericht   | betekenis                         |  zender   | ontvanger |
 | "esp32/ontsmetten/control"| '0'       | reset de ESP-32                   |           |     X     |
 | "esp32/ontsmetten/control"| '1'       | start ontsmettingssequentie       |           |     X     |
