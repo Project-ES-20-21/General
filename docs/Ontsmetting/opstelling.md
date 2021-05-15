@@ -8,7 +8,7 @@ nav_order: 4
 
 De PCB werd ondergebracht in een uniek ontworpen case. Binnen deze case bevinden zich de PCB, het reservoir dat ontsmettingsmiddel bevat, de powerbank en alle externe onderdelen. Bij het ontwerpen hiervan werd extra aandacht gegeven aan het compact zijn en de gebruiksvriendelijkheid. Vooraan de case bevinden zich het scherm en een aanduiding waar de RFID-tags gescand moeten worden. Achter deze aanduiding zit de NFC module. Aan de onderkant bevinden zich de IR-sensoren en de uitgang van de darm van de ontsmettingspomp. Op deze manier kan men in één beweging een hand scannen en ontsmetting verkrijgen. Het lagere gedeelte bevat het reservoir en zorgt ervoor dat de pomp zich lager bevindt dan het uiteinde van de darm. Dit voorkomt dat het reservoir in één keer leegloopt door de wet van verbonden vaten. Ten slotte is in het dak van de case een rooster aanwezig waar de speaker gemonteerd is.
 
-![case](sfeerbeeldje.png)
+![case](voorfoto.jpg)
 
 Binnenin de case bevinden zich houten rails waartussen een plankje met de PCB bevestigd kan worden. Op deze manier is het gemakkelijk om de PCB te verwijderen indien nodig. 
 
