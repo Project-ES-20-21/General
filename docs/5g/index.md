@@ -16,7 +16,7 @@ has_children: true
   - [afstandsbediening -> auto](#afstandsbediening---auto)
   - [auto -> ledbar](#auto---ledbar)
   - [broker -> ledbar](#broker---ledbar) 
-- [Error Handling](#Error-Handling)
+- [Mogelijke fouten](#Mogelijke-fouten)
  
 
 ## Algemeen
@@ -37,7 +37,8 @@ De afstandsbediening communiceert over 433Mhz met een ontvanger aangesloten aan 
 ### broker -> ledbar
 De LED-bar vraagt enkele signalen op om te weten wat de toestand is van de globale puzzel. Dit gebeurt via MQTT volgens de afgesproken [richtlijnen](https://project-es-20-21.github.io/General/MQTTchannels.html) hierrond.
 
-## Error Handling
-- Als eerste worden best alle verbindingen gecontroleerd. Een slecht contact aan de motoren of de PCB vormen vaak het probleem.
+## Mogelijke fouten
+- Indien de auto niet rijdt kan het best eerste alle verbindingen gecontroleerd aan de motoren. De verbinding tussen de connectoren en de kabel durven al eens een slecht contact te geven met als gevolg dat de auto niet rijdt.
 - Indien er problemen zijn met de RSSI-waarden door te sturen kan dit komen doordat het kanaal van de stralingslocatie verkeerd is ingesteld. Dit kunt u nakijken met een app zoals wifi-analyzer. Meer uitleg vind u terug [hier](https://project-es-20-21.github.io/General/docs/5g/software.html#Opmerkingen).
-- Een mogelijke verbetering voor deze puzzel zou zijn dat er gebruik gemaakt wordt van motoren met een hoger koppel: de motoren die voorzien waren (FIT0441) hebben een koppel van 2.4kg\*cm. Deze motoren hebben soms niet voldoende grip.
+- Een mogelijke verbetering voor deze puzzel zou zijn dat er gebruik gemaakt wordt van motoren met een hoger koppel: de motoren die voorzien waren (FIT0441) hebben een koppel van 2.4kg\*cm. Deze motoren hebben soms niet voldoende kracht om de auto in beweging te krijgen dit treed voornamelijk op als een wiel in een voeg is komen te zitten.
+- De fouten die kunnen optreden zorgen bijna steeds voor het niet kunnen voltooien van de puzzel. Behalve voor het beetje vooruitduwen van de wagen kan er niet veel gedaan worden van buitenaf of door de spelers. Het beste in deze situaties is dat de locatie waarnaar de auto moet verplaatst worden wordt doorgegeven aan de spelers. En vandaar kan er verder gespeeld worden.
