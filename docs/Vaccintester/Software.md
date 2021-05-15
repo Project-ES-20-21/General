@@ -41,3 +41,10 @@ In de loop-methode wordt steeds gekeken of er een kaart is voorgelegd aan de rea
 
 ## Communicatie
 
+| topic                     | bericht| betekenis                         |  zender   | ontvanger |
+| "esp32/vaccin/control"|'0'| reset de ESP-32                   |           |     X     |
+| "esp32/vaccin/control"|'1'| pauzeer de proef       |           |     X     |
+| "esp32/vaccin/control"|'2'| pauzeer de proef       |           |     X     |
+| "esp32/vaccin/control"|'3'| hervat de proef       |           |     X     |
+| "esp32/vaccin/control"|'4'| hervat de proef       |           |     X     |
+| "esp32/vaccin/alohomora"|'4'| hervat de proef       |           |     X     |
