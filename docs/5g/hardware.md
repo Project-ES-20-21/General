@@ -37,7 +37,10 @@ Het PWM signaal kan gegeneerd met "ledcWrite()" deze laat ons toe om de frequent
 ![](https://github.com/5Gstraling/autopcb/blob/master/autopcbupperbottem.png?raw=true)
 Het volledige KiCAD project is terug te vinden [hier](https://github.com/5Gstraling/autopcb).
 ## Behuizing
-Under construction: Hier komt een foto en een link naar alle STL-files.
+![voorkant](IMG_20210514_150431767.jpg)
+![voorkant](IMG_20210514_150448087.jpg)
+[Hier](https://github.com/Project-ES-20-21/5G-Stralingslocatie/tree/main/Algemeen/Lasercut%20Files) vindt u alle SVG-files.
+Er is ook gebruik gemaakt van een [bevestingstuk voor de afstandsensor](https://github.com/Project-ES-20-21/5G-Stralingslocatie/tree/main/Algemeen/3D-print%20Files). Als ook een [koppelstuk voor de wielen](https://github.com/Project-ES-20-21/5G-Stralingslocatie/tree/main/Algemeen/3D-print%20Files). 
 # PCB motor
 Voor het aankoppelen motoren maken we gebruik van een extra PCB zodat de 5 kabels per motor niet rechtstreeks op het pcb van de auto worden aangekoppeld. De keuze voor dit extra PCB zorgt er ook voor dat er zo weinig mogelijk kabel gebruikt wordt. Ook omdat de voeding van de motoren elk maar een maximale stroom van 0,7A kunnen trekken is dit een goede keuze.
 ![](https://github.com/5Gstraling/MotorPCB/blob/master/MotorPCBZonderLevelShifterupper.png?raw=true)
@@ -48,7 +51,8 @@ De LED-bar wordt gevoed door een powerbank. Dit omdat de LED-bar 8 LEDs heeft (d
 ![](https://github.com/5Gstraling/5G---LEDbar/blob/master/LEDbar/LEDbarPCBupper.png?raw=true)
 ![](https://github.com/5Gstraling/5G---LEDbar/blob/master/LEDbar/LEDbarPCBbottem.png?raw=true)
 Het volledige KiCAD project is terug te vinden [hier](https://github.com/5Gstraling/5G---LEDbar).
-
+![voorkant](IMG_20210514_150411680.jpg)
+[Hier](https://github.com/Project-ES-20-21/5G-Stralingslocatie/tree/main/Algemeen/Lasercut%20Files) vindt u alle SVG-files.
 # Stralingslocatie
 De stralingslocatie is een PCB met een ESP-32 dat een WiFi-netwerk opzet. Aan de hand van dit netwerk kan de ESP-32 uit de auto RSSI-waardes bepalen en kan de afstand berekend worden tussen beide ESP’s. Voor de voeding is er een batterijhouder voorzien voor 4 AA-batterijen, wat neerkomt op een theoretische spanning van 4x1,5V=6V. Hier volstaan batterijen en is het niet nodig een powerbank te voorzien. De stralingslocatie wordt ergens ingebouwd in de kamer, bijvoorbeeld in een meubel of een doos, waardoor de printplaat en batterijen niet zichtbaar zijn.
 ![](https://github.com/5Gstraling/5G---Stralingslocatie/blob/master/Stralingslocatie/StralingslocatiePCBupper.png?raw=true)
