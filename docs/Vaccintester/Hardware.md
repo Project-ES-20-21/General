@@ -21,6 +21,8 @@ nav_order: 1
 ## ESP Ledstrip
 
 ## BOM
-De BOM (bill of materials) kan je [hier](https://github.com/FitnessTrackerpuzzle/BOM.git) terugvinden.
+De Bill of Materials kan je hieronder terugevinden.
+
+
 
 
