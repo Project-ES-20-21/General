@@ -20,7 +20,14 @@ De manier van communiceren in de puzzel zelf, alsook met de broker is zo gekozen
 ## Afstandsensor 
 In de code wordt de afstand twee keerna elkaar gechecked, alvorens het alarm af gaat. Dit is om te vermijden dat door omgevingsfactoren, zoals voegen in de vloer als de wagen rijdt, dit onnodig afgaat. Uit verschillende testen is gebleken dat dit een simpele oplossing is met een goed resultaat. 
 # Code
-De code van de verschillende onderdelen van deze puzzle vind u hieronder terug. (Under Construction)
+De code van de verschillende onderdelen van deze puzzle vind u hieronder terug.
 ## Stralingslocatie
+De stralingslocatie voorziet enkel een wifi access point. Doordat de auto wilt communiceren met de led-bar via esp_now moeten beide esp verbonden met een wifi netwerk dat zich op hetzelfde kanaal bevindt. Een goede oplossing zou zijn dat het algemene wifi netwerk wordt gerbuikt als stralingslocatie maar voor technische reden was dit niet mogelijk bij het ontwikkelen. Het wifikanaal dat de esp gerbuikt kan ingesteld worden via softap().
+[Code](https://github.com/Project-ES-20-21/5G-Stralingslocatie/tree/main/Code/ESP32%20-%20Stralingslocatie)
+
 ## LED-bar
+[Code]()
 ## Auto
+Voor de auto ziet de code er als volgt uit.
+![](Schermafbeelding 2021-05-15 134052.png)
+[Code]()
