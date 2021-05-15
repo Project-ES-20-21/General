@@ -26,8 +26,6 @@ nav_order: 1
 ![Voorkant_PCBledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBLedstrip.png)
 ![Achetrkant_PCBledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBLedstrip.png)
 
-## BOM
-De Bill of Materials kan je hieronder terugevinden.
 
 
 
