@@ -15,10 +15,16 @@ nav_order: 1
 - [BOM](#BOM)
 
 ## ESP NFC
+![Voorkant_PCBnfc](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBKast.png)
+![Achterkant_PCBnfc](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBKast.png)
 
 ## ESP Buttons
+![Voorkant_PCBbutton](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBButton.png)
+![Achterkant_PCBbutton](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBButton.png)
 
 ## ESP Ledstrip
+![Voorkant_PCBledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBLedstrip.png)
+![Achetrkant_PCBledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBLedstrip.png)
 
 ## BOM
 De Bill of Materials kan je hieronder terugevinden.
