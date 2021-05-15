@@ -3,7 +3,7 @@ layout: default
 title: Hardware
 parent: Vaccintester
 grand_parent: Onderdelen
-nav_order: 2
+nav_order: 1
 ---
 # RainbowSyringe
 Dit is de uitleg horende bij de vaccintester uit de escape room.
