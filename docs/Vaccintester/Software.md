@@ -26,6 +26,8 @@ In dit deel van de proef moet met een RFID tag gescand worden aan een PN532 boar
 
 In de loop-methode wordt steeds gekeken of er een kaart is voorgelegd aan de reader en of er een MQTT-message op één van de gevolgde kanalen is gezet. Indien de juiste kaart is voorgelegd wordt er zelf data op vershillende kanalen gezet.
 
+Alle kanalen die gebruikt worden kunnen onderaan gevonden bij de sectie '[Communicatie](#Communicatie)'
+
 ![Flowchart_RFID](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_RFID.png)
 
 
