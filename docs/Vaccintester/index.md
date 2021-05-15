@@ -103,9 +103,9 @@ De kostenanalyse wordt hieronder weergegeven.
 | NFC reader                | 1      | € 5.00         | € 5.00  |
 | Totaal                    |        |                | € 37.05 |
 
-| Algemeen totaal | € 101.81 |
-|-----------------|----------|
-
+| Algemeen totaal |
+|-----------------|
+| € 101.81        |
 
 ## Risico's
 
