@@ -28,6 +28,7 @@ De KiCad files horende bij de verschillende PCB-ontwerpen zijn [hier](https://gi
 
 ## ESP Buttons
 ### Schema
+![Schema_Buttons](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/SchemaButton.png)
 
 ### PCB
 ![Voorkant_PCBbutton](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBButton.png)
@@ -35,6 +36,7 @@ De KiCad files horende bij de verschillende PCB-ontwerpen zijn [hier](https://gi
 
 ## ESP Ledstrip
 ### Schema
+![Schema_Ledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/SchemaLedstrip.png)
 
 ### PCB
 ![Voorkant_PCBledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBLedstrip.png)
