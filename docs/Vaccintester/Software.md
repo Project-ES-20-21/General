@@ -44,14 +44,14 @@ Ten tweede hebben we twee PCB's voor de twee knoppen die gebruikt worden om de k
 ### De gebruikte kanalen van het PCB aan de NFC-reader
 | topic                | bericht | betekenis               | zender | ontvanger |
 |---------------------------|--------|----------------|---------|--------|
-| esp32/vaccin/control | ‘0’     | reset de ESP-32         | x      | X         |
-| esp32/vaccin/kast    | ##      | Sequentie van de kleure | x      |           |
+| esp32/vaccin/control | ‘0’     | reset de ESP-32         | X      | X         |
+| esp32/vaccin/kast    | ##      | Sequentie van de kleure | X      |           |
 
 ### De gebruikte kanalen van het PCB aan de buttons
 | topic                  | bericht | betekenis          | zender | ontvanger |
 |---------------------------|--------|----------------|---------|--------|
 | esp32/vaccin/control | ‘0’     | reset de ESP-32    |        | X         |
-| esp32/vaccin/button#   | ##      | nummer van kleur 2 | x      |           |
+| esp32/vaccin/button#   | ##      | nummer van kleur 2 | X      |           |
 
 ### De gebruikte kanalen van het PCB aan de ledstrip
 | topic                     | bericht| betekenis                         |  zender   | ontvanger |
@@ -61,9 +61,9 @@ Ten tweede hebben we twee PCB's voor de twee knoppen die gebruikt worden om de k
 | esp32/vaccin/control|'2'| pauzeer de proef       |           |     X     |
 | esp32/vaccin/control|'3'| hervat de proef       |           |     X     |
 | esp32/vaccin/control|'4'| hervat de proef       |           |     X     |
-| esp32/vaccin/button2 | ## | nummer van kleur 2     |   | x |
-| esp32/vaccin/button1 | ## | nummer van kleur 1     |   | x |
-| esp32/vaccin/kast    | ## | sequentie van de kast  |   | x |
-| esp32/vaccin/number  | ## | random nummer codeslot | x |   |
+| esp32/vaccin/button2 | ## | nummer van kleur 2     |   | X |
+| esp32/vaccin/button1 | ## | nummer van kleur 1     |   | X |
+| esp32/vaccin/kast    | ## | sequentie van de kast  |   | X |
+| esp32/vaccin/number  | ## | random nummer codeslot | X |   |
 
 
