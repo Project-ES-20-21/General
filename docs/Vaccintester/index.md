@@ -103,10 +103,7 @@ De kostenanalyse wordt hieronder weergegeven.
 | NFC reader                | 1      | € 5.00         | € 5.00  |
 | Totaal                    |        |                | € 37.05 |
 
-| Algemeen totaal |
-|-----------------|
-| € 101.81        |
-
+Algemeen totaal: € 101.81
 ## Risico's
 
 - Wanneer de 5G-puzzle niet werkt, kan de nodige RFID kaart niet verkregen worden. Dit kan opgelost worden door een tweede kaart te gebruiken die ook gebruikt kan worden om onze puzzel te starten. Deze kaart kan ergens verstopt worden binnen de kamer. De positie van die kaart kan dan via een raadsel achterhaald worden.
