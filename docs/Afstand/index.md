@@ -3,11 +3,15 @@ layout: default
 title: Anderhalvemeter
 parent: Onderdelen
 has_children: true
-nav_order: 7
+nav_order: 8
 ---
 
 # 'T is beter op anderhalve meter
-## Algemeen doel
+## Inhoud 
+- [Algemeen](#Algemeen)
+- [Blokschema](#Blokschema)
+- [Error Handling](#Error-Handling)
+## Algemeen
 Het doel van dit ontwerp is het verzekeren van een corona-veilige afstand tussen de spelers van de escaperoom. Hierdoor mogen de spelers niet binnen een afstand van 1,5 meter van elkaar komen. Wanneer een kleinere afstand gedetecteerd wordt, worden de nodige signalen verzonden om het spel te pauzeren en de spelers die te dicht staan te laten weten dat ze hun handen moeten gaan ontsmetten.
 ## Hardware
 #### Gebruikte componenten:
@@ -39,6 +43,8 @@ Uit veiligheidsoverwegingen wordt aangeraden om nooit tegelijkertijd een voeding
 
 
 ## Software
+### Flowchart
+![flowchart](bachproef_flowchart_afbeelding.png)
 
 ## Communicatie
 Alle communicatie verloopt via de broker met mqtt. Er is zowel interne communicatie voor synchronisatie tussen de modules als externe communicatie voor de nodige controlesignalen te versturen en ontvangen van andere elementen in de escape room.
@@ -73,3 +79,5 @@ Elke module stuurt zijn coördinaten door via mqtt kanalen. Voor elke coördinaa
 ### Opstelling
 De opstelling wordt uitgebreid met drie modules, deze drie extra modules zijn de drie trilateratie nodes zoals eerder vermeld in code. In de hoeken van de kamer worden deze nodes bevestigd op 1,80 meter (een schatting van de gemiddelde lengte van de kandidaten). Met de drie nodes wordt een assenstelsel gebouwd, de coordinaten van de nodes in dit assenstelsel worden aangepast in de code in de klasse "Metingen.h". De rest van de opstelling is identiek hetzelfde.
 
+## Erro handling
+blablabla
