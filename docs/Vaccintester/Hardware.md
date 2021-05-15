@@ -25,28 +25,28 @@ De KiCad files horende bij de verschillende PCB-ontwerpen zijn [hier](https://gi
 
 ## ESP NFC
 ### Schema
-![Schema_NFC](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/SchemaKast.PNG)
+![Schema_NFC](SchemaKast.PNG)
 
 ### PCB
-![Voorkant_PCBnfc](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBKast.PNG)
-![Achterkant_PCBnfc](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBKast.PNG)
+![Voorkant_PCBnfc](VoorkantPCBKast.PNG)
+![Achterkant_PCBnfc](AchterkantPCBKast.PNG)
 
 
 ## ESP Buttons
 ### Schema
-![Schema_Buttons](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/SchemaButton.PNG)
+![Schema_Buttons](SchemaButton.PNG)
 
 ### PCB
-![Voorkant_PCBbutton](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBButton.PNG)
-![Achterkant_PCBbutton](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBButton.PNG)
+![Voorkant_PCBbutton](VoorkantPCBButton.PNG)
+![Achterkant_PCBbutton](AchterkantPCBButton.PNG)
 
 ## ESP Ledstrip
 ### Schema
-![Schema_Ledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/SchemaLedstrip.PNG)
+![Schema_Ledstrip](SchemaLedstrip.PNG)
 
 ### PCB
-![Voorkant_PCBledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBLedstrip.PNG)
-![Achterkant_PCBledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBLedstrip.PNG)
+![Voorkant_PCBledstrip](VoorkantPCBLedstrip.PNG)
+![Achterkant_PCBledstrip](AchterkantPCBLedstrip.PNG)
 
 
 
