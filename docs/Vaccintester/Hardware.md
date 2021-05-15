@@ -21,23 +21,23 @@ De KiCad files horende bij de verschillende PCB-ontwerpen zijn [hier](https://gi
 ### Schema
 
 ### PCB
-![Voorkant PCBnfc](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBKast.png)
-![Achterkant PCBnfc](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBKast.png)
+![Voorkant_PCBnfc](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBKast.png)
+![Achterkant_PCBnfc](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBKast.png)
 
 
 ## ESP Buttons
 ### Schema
 
 ### PCB
-![Voorkant PCBbutton](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBButton.png)
-![Achterkant PCBbutton](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBButton.png)
+![Voorkant_PCBbutton](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBButton.png)
+![Achterkant_PCBbutton](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBButton.png)
 
 ## ESP Ledstrip
 ### Schema
 
 ### PCB
-![Voorkant PCBledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBLedstrip.png)
-![Achetrkant PCBledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBLedstrip.png)
+![Voorkant_PCBledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBLedstrip.png)
+![Achterkant_PCBledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBLedstrip.png)
 
 
 
