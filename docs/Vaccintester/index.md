@@ -63,6 +63,7 @@ De positie van deze puzzel binnen het lokaal maakt in principe niet zo veel uit.
 | Pin header 4              | 2      | € 0.05         | € 0.10  |
 | Adapter 12V               | 1      | € 5.00         | € 5.00  |
 | Totaal                    |        |                | € 28.22 |
+
 | Buttons (beide samen)     | Aantal | Prijs per stuk | Totaal  |
 |---------------------------|--------|----------------|---------|
 | PCBway (10 per soort)     | 1      | € 5.00         | € 5.00  |
@@ -81,6 +82,7 @@ De positie van deze puzzel binnen het lokaal maakt in principe niet zo veel uit.
 | Powerbank                 | 2      | € 5.00         | € 10.00 |
 | Kleurensensor             | 2      | € 4.00         | € 8.00  |
 | Totaal                    |        |                | € 36.54 |
+
 | Kast                      | Aantal | Prijs per stuk | Totaal  |
 |---------------------------|--------|----------------|---------|
 | PCBway (10 per soort)     | 1      | € 5.00         | € 5.00  |
@@ -98,6 +100,7 @@ De positie van deze puzzel binnen het lokaal maakt in principe niet zo veel uit.
 | Powerbank                 | 1      | € 20.00        | € 20.00 |
 | NFC reader                | 1      | € 5.00         | € 5.00  |
 | Totaal                    |        |                | € 37.05 |
+
 | Algemeen totaal |  |  | € 101.81 |
 |-----------------|--|--|----------|
 
