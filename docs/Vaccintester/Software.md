@@ -41,6 +41,11 @@ Ten tweede hebben we twee PCB's voor de twee knoppen die gebruikt worden om de k
 ![Flowchart_Ledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_central_ESP32.png)
 
 ## Communicatie
+### De gebruikte kanalen van het PCB aan de NFC-reader
+| topic                | bericht | betekenis               | zender | ontvanger |
+| esp32/vaccin/control | ‘0’     | reset de ESP-32         | x      | X         |
+| esp32/vaccin/kast    | ##      | Sequentie van de kleure | x      |           |
+
 ### De gebruikte kanalen van het PCB aan de buttons
 | topic                  | bericht | betekenis          | zender | ontvanger |
 | esp32/vaccin/control | ‘0’     | reset de ESP-32    |        | X         |
