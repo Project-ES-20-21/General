@@ -15,7 +15,7 @@ Dit is de uitleg horende bij de vaccintester uit de escape room.
 - [Flowcharts](#flowcharts)
 - [Implementatie](#implementatie)
 - [Budget](#budget)
-- [Risico's](#risicos)
+- [Error handling](#Error_handling)
 - [Gantt chart](#gantt-chart)
 
 ## Algemene uitleg
@@ -111,7 +111,7 @@ De kostenanalyse wordt hieronder weergegeven.
 
 Algemeen totaal: € 101.81
 
-## Risico's
+## Error handling
 
 - Wanneer er iets misloopt binnen de puzzel kan deze steeds gereset worden door via MQTT "0" te sturen via het kanaal "esp32/vaccin/control".
 
