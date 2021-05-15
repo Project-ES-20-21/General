@@ -16,7 +16,7 @@ nav_order: 1
   - [Afstandsensor](#Afstandsensor)
  
 # Code
-De code van de verschillende onderdelen van deze puzzle vind u hieronder terug.
+De code van de verschillende onderdelen van deze puzzle vindt u hieronder terug.
 ## Stralingslocatie
 De stralingslocatie voorziet enkel een wifi access point. Doordat de auto wilt communiceren met de led-bar via esp_now moeten beide esp verbonden met een wifi netwerk dat zich op hetzelfde kanaal bevindt. Een goede oplossing zou zijn dat het algemene wifi netwerk wordt gerbuikt als stralingslocatie maar voor technische reden was dit niet mogelijk bij het ontwikkelen. Het wifikanaal dat de esp gerbuikt kan ingesteld worden via softap().
 [Code](https://github.com/Project-ES-20-21/5G-Stralingslocatie/tree/main/Code/ESP32%20-%20Stralingslocatie)
