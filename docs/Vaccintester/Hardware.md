@@ -25,28 +25,28 @@ De KiCad files horende bij de verschillende PCB-ontwerpen zijn [hier](https://gi
 
 ## ESP NFC
 ### Schema
-![Schema_NFC](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/SchemaKast.png)
+![Schema_NFC](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/SchemaKast.PNG)
 
 ### PCB
-![Voorkant_PCBnfc](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBKast.png)
-![Achterkant_PCBnfc](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBKast.png)
+![Voorkant_PCBnfc](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBKast.PNG)
+![Achterkant_PCBnfc](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBKast.PNG)
 
 
 ## ESP Buttons
 ### Schema
-![Schema_Buttons](SchemaButton.PNG)
+![Schema_Buttons](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/SchemaButton.PNG)
 
 ### PCB
-![Voorkant_PCBbutton](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBButton.png)
-![Achterkant_PCBbutton](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBButton.png)
+![Voorkant_PCBbutton](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBButton.PNG)
+![Achterkant_PCBbutton](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBButton.PNG)
 
 ## ESP Ledstrip
 ### Schema
-![Schema_Ledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/SchemaLedstrip.png)
+![Schema_Ledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/SchemaLedstrip.PNG)
 
 ### PCB
-![Voorkant_PCBledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBLedstrip.png)
-![Achterkant_PCBledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBLedstrip.png)
+![Voorkant_PCBledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/VoorkantPCBLedstrip.PNG)
+![Achterkant_PCBledstrip](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/AchterkantPCBLedstrip.PNG)
 
 
 
