@@ -36,6 +36,7 @@ De verschillende pin headers zorgen voor de aansluiting van de externe component
 * De display maakt gebruik van I2C communicatie. Hiervoor maken we gebruik van de SDA- en SCL-poorten. De SCL-poort zorgt voor de transmissie van het kloksignaal. Via de SDA-poort sturen we data van en naar de ESP32, vanuit de display. Deze 2 poorten zijn active low. Daarom werden pull-up weerstanden van 4k7 voorzien op het display zelf (ze dienen dus niet toegevoegd te worden op de zelfgemaakte display).
 * De program header wordt, naast Tx en Rx kanalen, voorzien van een voeding. Deze aansluiting kan gebruikt worden wanneer de micro-USB nog niet werd gesoldeerd op de PCB-plaat. Verder hebben deze 2 pinnen geen functie.
 * Ook voorzien we pinheaders voor een button, deze button is niet enorm stabiel, het debounced bij het indrukken en loslaten, dit wordt softwarematig opgelost.
+* De laatste pinheader zal zorgen voor de connectie tussen de microfoon en de ESP32. De microfoon wordt voorzien van een potentiometer. Hoe lager de weerstand van de potentiometer, hoe gevoeliger de mcirofoon zal zijn.
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/schakeling_headers.JPG)
 
 
