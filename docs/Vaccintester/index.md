@@ -44,6 +44,8 @@ De positie van deze puzzel binnen het lokaal maakt in principe niet zo veel uit.
 
 ## BOM
 
+De kostenanalyse wordt hieronder weergegeven.
+
 | Spuit                     | Aantal | Prijs per stuk | Totaal  |
 |---------------------------|--------|----------------|---------|
 | PCBway (10 per soort)     | 1      | € 5.00         | € 5.00  |
