@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Anderhalvemeter
+title: Hardware
 parent: Afstand
 grand_parent: Onderdelen
-nav_order: 2
+nav_order: 1
 ---
 ## Hardware
 #### Gebruikte componenten:
