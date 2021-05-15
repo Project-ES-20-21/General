@@ -28,13 +28,13 @@ Daarnaast zal de laatst besproken ESP via het wifi-netwerk geconnecteerd zijn me
 
 ## Flowcharts
 ### Vaccintester
-![Flowchart_vaccintester](https://github.com/ViktorMorre/RainbowSyringe/blob/main/Vaccintester_flowchart.png)
+![Flowchart_vaccintester](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/Vaccintester_flowchart.png)
 ### RFID
-![Flowchart_RFID](https://github.com/ViktorMorre/RainbowSyringe/blob/main/flowchart_RFID.png)
+![Flowchart_RFID](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_RFID.png)
 ### Buttons
-![Flowchart_buttons](https://github.com/ViktorMorre/RainbowSyringe/blob/main/flowchart_button.png)
+![Flowchart_buttons](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_button.png)
 ### Centrale ESP32
-![Flowchart_centralESP32](https://github.com/ViktorMorre/RainbowSyringe/blob/main/flowchart_central_ESP32.png)
+![Flowchart_centralESP32](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Vaccintester/Foto's/flowchart_central_ESP32.png)
 
 
 
