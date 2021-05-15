@@ -42,31 +42,28 @@ Daarnaast zal de laatst besproken ESP via het wifi-netwerk geconnecteerd zijn me
 
 De positie van deze puzzel binnen het lokaal maakt in principe niet zo veel uit. Er moet wel voor gezorgd worden dat de knoppen minstens 1,5 meter van elkaar gescheiden zijn zodat telkens aan de voorwaarde van de "T'is beter op anderhalve meter"-puzzel voldaan is. Daarnaast gaat de spuit aan een muur moeten hangen zodat alles op een correcte manier aangesloten kan worden.
 
-## Budget
+## BOM
 
-| Artikel                                      | Aantal | Kostprijs | Totaal  |
-|----------------------------------------------|--------|-----------|---------|
-| Kleurensensor                                | 1      | 4.00 €    | 4.00 €  |
-| Esp32                                        | 2      | 5.79 €    | 11.58 € |
-| NRF24L01+ 2.4GHz wireless transceiver module | 3      | 1.95 €    | 5.85 €  |
-| Witte led                                    | 7      | 0.42 €    | 2.94 €  |
-| Kleurenledstrip 1m                           | 1      | 10.00 €   | 10.00 € |
-| NFC reader                                   | 1      | 5.00 €    | 5.00 €  |
-| Weerstanden                                  | 7      | x         | x       |
-| RobotDynUNO R3                               | 1      | 11.00 €   | 11.00 € |
-|                                              |        |           |         |
-| Hebben we reeds                              |        |           | 50.37 € |
-|                                              |        |           |         |
-| Drukknoppen                                  | 3      | 2.00 €    | 6.00 €  |
-| Adapters                                     | 5      | x         | x       |
-| PCBway                                       | 1      | 5.00 €    | 5.00 €  |
-| Kleurensensor                                | 2      | 4.00 €    | 8.00 €  |
-| RobotDynUNO R3                               | 2      | 11.00 €   | 22.00 € |
-|                                              |        |           |         |
-| Nog aan te kopen                             |        |           | 41.00 € |
-|                                              |        |           |         |
-| Totaal budget                                |        |           | 91.37 € |
-|                                              |        |           |         |
+| Spuit                     | Aantal | Prijs per stuk | Totaal  |
+|---------------------------|--------|----------------|---------|
+| PCBway (10 per soort)     | 1      | € 5.00         | € 5.00  |
+| Kleurenledstrip 1m        | 1      | € 10.00        | € 10.00 |
+| ESP32                     | 1      | € 2.60         | € 2.60  |
+| Drukknop groot            | 1      | € 0.50         | € 0.50  |
+| DC jack DCJ250            | 1      | € 0.84         | € 0.84  |
+| LDO 3.3V                  | 1      | € 0.43         | € 0.43  |
+| Boot/enable button        | 2      | € 0.48         | € 0.96  |
+| Condensator 10 μF (1206)  | 2      | € 0.24         | € 0.49  |
+| Condensator 100 nF (1206) | 4      | € 0.12         | € 0.47  |
+| Weerstand 10 kΩ (1206)    | 7      | € 0.05         | € 0.35  |
+| Weerstand 47 kΩ (1206)    | 1      | € 0.05         | € 0.05  |
+| Mosfet 2N7000             | 3      | € 0.21         | € 0.63  |
+| Andere mosfet             | 3      | € 0.25         | € 0.75  |
+| Pin header 2              | 1      | € 0.05         | € 0.05  |
+| Pin header 4              | 2      | € 0.05         | € 0.10  |
+| Adapter 12V               | 1      | € 5.00         | € 5.00  |
+| Totaal                    |        |                | € 28.22 |
+
 ## Risico's
 
 - Wanneer de 5G-puzzle niet werkt, kan de nodige RFID kaart niet verkregen worden. Dit kan opgelost worden door een tweede kaart te gebruiken die ook gebruikt kan worden om onze puzzel te starten. Deze kaart kan ergens verstopt worden binnen de kamer. De positie van die kaart kan dan via een raadsel achterhaald worden.
