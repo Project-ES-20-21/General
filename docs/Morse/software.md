@@ -26,16 +26,17 @@ Na deze setups kan het programma beginnen aan de loop()-methode. Deze methode za
 
 Vanaf dat deze connectie op punt staat, kan de rest van de code worden uitgevoerd. Het verdere verloop is verschillend voor de speaker en de micro. Deze onderdelen worden verder dus apart besproken.
 
-## Speaker
+## void loop() - Speaker
 Volgende alinea bespreekt _void loop()_ van de speaker.
 
-## Micro
-//default waarden uitleggen
-Voglende deeltje bespreekt _void loop()_ van de microfoon.
+## void loop() - Micro
+Volgende deeltje bespreekt _void loop()_ van de microfoon.
 
 Het blokschema geeft een overzicht van het verloop van de code. Zoals eerder vermeld wordt _void loop()_ oneindig keer herhaald. De verschillende methoden die verder worden besproken zullen dus ook vaak worden opgeroepen.
 
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/BlokschemaCodeMicro.JPG)
+
+Beginnen doen we met de uitleg voor de default ingestelde waarden, zo wordt onmiddellijk duidelijk welke elementen gebruikt worden. We gebruiken 2 arrays van dezelfde lengte. De ene onthoudt de gefloten sequentie, de andere bewaart wat werd doorg stuurd van de speaker. Beide hebben ze een vaste lengte, zo moet niet elke keer opnieuw wat geheugen worden vrijgemaakt als de grens wordt overschreden. We nemen hier een lengte van 44, aangezien dit de langst mogelijke lengte is die kan bekomen worden. Naast deze array, worden er ook verschillende 'lopers' aangemaakt. Elk van deze loper houdt de positie in de array of op de display bij.
 
 Via _button.loop()_ zal er continu gekeken worden wat er gebeurt met de signalen afkomstig van de button. Wanneer de button wordt ingedrukt (_button.isPressed()_), wordt al het voorgaande gewist. Voor de spelers is het dus gemakkelijk om opnieuw te beginnen wanneer ze merken dat ze fout bezig waren: de knop loslaten en opnieuw indrukken.
 
@@ -45,15 +46,15 @@ Het eerste wat gebeurt is detecteren en onthouden van de analoge waarde uit de m
 Via de potentiometer kan de gevoeligheid van de microfoon worden aangepast. 4095 kan dus overeen komen met verschillende decibelwaarden, afhankelijk van de weerstand van de potentiometer. De potentiometer werd nu zó ingesteld dat 4095 wordt gedetecteerd als men fluit op een afstand van 5 cm van de speaker.
 
 De gedetecteerde digitale waarde wordt opgeslagen in een rij. In deze rij zitten de laatste 100 digitale waarden die werden gedetecteerd. Hiervvan wordt telkens de som uitgerekend. Hoe langer men fluit, hoe hoger de som wordt. Verder wordt de som vergeleken met vooraf opgegeven waarde. Zo moet de som minstens 4095.45 zijn om een lang signaal te detecteren. Aangezien we tussen elke detectie 2 milliseconden wachten, moet er voor een lang signaal minstens 45*2=90 milliseconden gefloten worden aan 1 stuk. Hetzelfde wordt gedaan voor een kort signaal, ook de duur van de stilte wordt gedeclareerd.
-Telkens er een kort/lang/stil signaal wordt gedetecteerd, zal het worden toegevoegd worden aan een morse-array. Deze morse array bevat de gedetecteerde morse sequentie. Het wordt gebruikt om te vergelijken met het signaal dat werd doorgestuurd vanuit de speaker. Er is wel een voorwaarde gekoppeld bij de toevoeging van het kort/lang/stil signaal: het vorige gedetecteerde signaal dat werd toegevoegd, mag namelijk niet hetzelfde zijn als het signaal dat wordt toegevoegd. Hierdoor wordt vermeden dat hetzelfde kort/lang/stil signaal 2 keer wordt toevoegd.
+Telkens er een kort/lang/stil signaal wordt gedetecteerd, zal dit worden toegevoegd aan een morse-array. Deze morse array bevat de gedetecteerde morse sequentie. Het wordt gebruikt om te vergelijken met het signaal dat werd doorgestuurd vanuit de speaker. Er is wel een voorwaarde gekoppeld net vooreen kort/lang/stil signaal wordt toegevoegd: het vorige gedetecteerde signaal dat werd toegevoegd, mag namelijk niet hetzelfde zijn als het signaal dat wordt toegevoegd. Hierdoor wordt vermeden dat hetzelfde kort/lang/stil signaal 2 keer wordt toevoegd.
 
+De speaker stuurt {0, 1} door bij een Punt (= kort signaal), en {0, 1, 2} bij een Streep(= lang signaal. Zoals te zien zal er bij een lang signaal voorafgaand eerst een kort signaal worden gedetecteerd. Om te vermijden dat, onmiddellijk na toevoeging van '2' aan de morse array, opnieuw '1' wordt gedetecteerd, zullen alle waarden van de som-array verwijderd worden.
 
-//////////::vorige keer tot hier geraakt
+Als laatste komt het erop neer om de gefloten sequentie te vergelijken met de sequentie afkomstig van de speaker. De volledige gefloten array wordt hierbij overlopen, en voor elk element wordt gekeken of ze overeenkomt met de sequentie van de speaker. Als dit het geval is, voegen we 1 toe bij een teller. Wanneer de teller even groot is als de lengte van de morse-array, wil dit zeggen dat elke waarde juist gefloten is. De oplossing zal dan verschijnen op de display.
 
-Er wordt gekeken naar de som van de vorige 100 samples, wanneer deze een bepaalde grens overschrijdt, zal de code dit zien als een kort/lang signaal. De detectie van een kort of een lang signaal wordt toegevoegd aan een andere array. 
-Omdat we de som nemen, zal er bij een lang signaal eerst een kort signaal gedetecteerd worden. Ook kan het zijn dat een kort signaal van de speler iets langer duurt dan het opgegeven kort signaal, zonder controlevoorwaarde, worden er dan meerdere korte signalen gedetecteerd. Om dit te vermijden voerden we een controlevoorwaarde in. Ook de stiltes moeten dan gedetecteerd worden om 2 korte signalen na elkaar mogelijk te maken.
+Via de methode _lcd.setCursor(0, 1)_ zetten we de cursor van het display op rij 1, kolom 0. Vanaf dat er 1 fout werd gefloten, zal dit ook te zien zijn op het scherm. De methode _vergelijk_fout()_ vergelijkt namelijk het gefloten deeltje met het overeenkomstige deel van de array afkomstig van de speaker.
 
- 
+Verder wordt de display ook gebruikt om te tonen wat de spelers floten. Een punt wordt weergegeven met '.', een streep met '_'.
 
 Dit alles wordt enkel uitgevoerd als er geen pauzesignaal wordt gestuurd én als de oplossing nog niet juist werd uitgevoerd.
 
@@ -72,5 +73,6 @@ Pauzesignalen zorgen ervoor dat de speaker stopt met het uitzenden van de morses
 
 ### Overige communicatie
 * Het kanaal "esp32/fitness/telefoon" wordt gebruikt om onze puzzel een startsignaal te geven. De telefoon zal beginnen rinkelen en de display van de microfoon zal oplichten. Hierdoor is het duidelijk dat er voldoende energie is om beide onderdelen te laten werken.
+* De morse-sequentie die wordt aangemaakt bij de speaker, wordt via het kanaal "esp32/morse/intern" doorgestuurd. Bij de morse code wordt het karakter omgezet naar een integer, zodat met dit element kan worden vergeleken.
 * Wanneer onze puzzel gedaan is, zal vanuit de microfoon het bericht "einde_morse" over het kanaal "esp32/morse/output" worden gestuurd, om aan de de volgende puzzel te laten weten dat het mag starten. Ook zal er naar de speaker worden gestuurd dat het morse signaal niet meer moet worden herhaald. Dit gebeurt over het kanaal "esp32/morse/intern".
 * Aangezien het cijfer voor de alohomorapuzzel varieert, moet ook dit over een kanaal worden doorgestuud. Er wordt gecommuniceerd over het kanaal "esp32/alohomora/code2".
