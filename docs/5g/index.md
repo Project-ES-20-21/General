@@ -29,6 +29,7 @@ Het cijfer dat nodig is voor het slot (zie puzzel Alohamora) zal kunnen afgeleid
 ## Blokschema
 ![blok schema](blokschema.png)
 ## Communicatie
+![communicatie](communicatie geheel.jpg)
 ### auto -> ledbar
 Tussen de Auto en de ledbar wordt er in 1 richting gecommuniceerd via ESP-now. De RSSI-waarde wordt van de auto naar de ledbar gestuurd als een integer.
 ### afstandsbediening -> auto
