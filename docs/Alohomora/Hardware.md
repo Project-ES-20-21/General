@@ -7,15 +7,15 @@ nav_order: 2
 ---
 # Inhoud
 - [Kluis](#Kluis)
-    - [Touchscreen](#Touchscreen)
-    - [Voeding](#Voeding)
-    - [PCB ontwerp](#PCB-ontwerp)
+    - [Touchscreen](#touchscreen)
+    - [Voeding](#voeding)
+    - [PCB ontwerp](#pCB-ontwerp)
     - [3D tekening](#3D-tekening)
 - [Timer](#Timer)
-    - [Display](#Display)
-    - [Voeding](#Voeding)
-    - [PCB ontwerp](#PCB-ontwerp)
-    - [3D tekening](#3D-tekening)
+    - [Display](#display)
+    - [Voeding](#voeding-1)
+    - [PCB ontwerp](#pCB-ontwerp-1)
+    - [3D tekening](#3D-tekening-1)
     
 # Kluis
 ## Touchscreen
