@@ -29,7 +29,7 @@ Vanaf dat deze connectie op punt staat, kan de rest van de code worden uitgevoer
 ## void loop() - Speaker
 Volgende alinea bespreekt `void loop()` van de speaker.
 
-De loop functie continu doorlopen zolang er geen reset, pauze, of ander interrupt commando wordt gegeven.
+De loop functie wordt continu doorlopen zolang er geen reset, pauze, of ander interrupt commando wordt gegeven.
 Er wordt eerst gezorgd dat er een wifi en mqtt connectie gemaakt is met de broker. Nadat dit gebeurd is kan wordt de `playRinkeltoon()` opgeroepen die een rinkeltoon laat afspelen zolang de knop niet ingedrukt is geweest. Eenmaal de knop ingedrukt is wordt er overgegaan naar de tweede luidspreker die in de telefoon zit, de methode `playMorse()` wordt opgeroepen.
 
 ### button.loop()
