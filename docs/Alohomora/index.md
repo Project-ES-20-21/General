@@ -18,11 +18,11 @@ has_children: true
     - [Error handling](#Error-handling)
 
 - [Timer](#Timer)
-    - [Algemeen](#Algemeen)
-    - [Blokschema](#Blokschema)
-    - [Communicatie](#Communicatie)
-    - [Opstelling](#Opstelling)
-    - [Error handling](#Error-handling)
+    - [Algemeen](#Algemeen-1)
+    - [Blokschema](#Blokschema-1)
+    - [Communicatie](#Communicatie-1)
+    - [Opstelling](#Opstelling-1)
+    - [Error handling](#Error-handling-1)
 
 
 ## Touchlock
