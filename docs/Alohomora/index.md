@@ -100,6 +100,9 @@ Indien de display niet meer oplicht:
 - Controleren of de powerbank het circuit nog voedt.
 - Nakijken of de PCB naar behoren werkt (geen oververhitting, geen componenten die missen,..)
 
+## Verdere info
+Voor een uitgebreidere uitleg zie [hardware](hardware.md) en [software](software.md)
+
 
 
 
