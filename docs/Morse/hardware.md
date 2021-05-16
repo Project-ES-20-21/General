@@ -11,7 +11,6 @@ nav_order: 2
 ## Speaker
 
 
-
 ## Micro
 De documentatie van de printplaat kan [hier](https://github.com/BachMorse/Micro_PCB) gevonden worden. De printplaat ziet eruit als volgt:
 
