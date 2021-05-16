@@ -11,18 +11,18 @@ has_children: true
 ## Inhoud
 
 - [Touchlock](#Touchlock)
-    - [Algemeen](#Algemeen)
-    - [Blokschema](#Blokschema)
-    - [Communicatie](#Communicatie)
-    - [Opstelling](#Opstelling)
-    - [Error handling](#Error-handling)
+    - [Algemeen](#algemeen)
+    - [Blokschema](#blokschema)
+    - [Communicatie](#communicatie)
+    - [Opstelling](#opstelling)
+    - [Error handling](#error-handling)
 
 - [Timer](#Timer)
-    - [Algemeen](#Algemeen-1)
-    - [Blokschema](#Blokschema-1)
-    - [Communicatie](#Communicatie-1)
-    - [Opstelling](#Opstelling-1)
-    - [Error handling](#Error-handling-1)
+    - [Algemeen](#algemeen-1)
+    - [Blokschema](#blokschema-1)
+    - [Communicatie](#communicatie-1)
+    - [Opstelling](#opstelling-1)
+    - [Error handling](#error-handling-1)
 
 
 ## Touchlock
