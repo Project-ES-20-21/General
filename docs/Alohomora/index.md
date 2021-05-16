@@ -98,7 +98,7 @@ Wanneer de timer niet meer aftelt wanneer dit toch de bedoeling is kan men:
 - Nakijken of de timer verbonden is met de broker. Indien deze verbonden is handmatig de timer starten. Dit kan door gebruik te maken van de GUI.
 Indien de display niet meer oplicht:
 - Controleren of de powerbank het circuit nog voedt.
-- Nakijken of de PCB naar behoren werkt (geen oververhitting, geen componenten die missen,..)
+- Nakijken of de PCB naar behoren werkt (geen oververhitting, geen componenten die missen,..).
 
 ## Verdere info
 Voor een uitgebreidere uitleg zie [hardware](hardware.md) en [software](software.md)
