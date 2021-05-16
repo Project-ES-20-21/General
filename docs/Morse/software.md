@@ -37,7 +37,7 @@ Deze functie wordt opgeroepen bij de start van de `void.loop()`. De knop is dan 
 
 ### playRinkeltoon()
 Wanneer het "BEL" signaal van de fitnesstracker puzzel binnenkomt start de luidspreker een rinkeltoon te spelen. Deze rinkeltoon is een WAV-bestand dat software matig wordt toegevoegd. Er was ook de optie om dit als mp3 bestand af te spelen met behulkp van een SD kaart. Dit vereist dan wel de nodige hardware. 
-Het WAV-bestand wordt eerst bewerkt met audacity; samplefrequentie verlagen, lengte inkorten,... Zo wordt er een overflow voorkomen aangezien WAV-bestanden veel ruimte innemen. Nadien wordt dat bewerkte audio bestand in HxD gebracht (een Hex. editor). Hier wordt het audio bestand omgezet naar hex en kan het dan gekopieerd worden naar C. Volgende [link](https://www.xtronical.com/basics/audio/dacs-for-sound/playing-wav-files/) kan hierbij helpen.
+Het WAV-bestand wordt eerst bewerkt met audacity; samplefrequentie verlagen, lengte audiofragment inkorten,... Zo wordt er een overflow voorkomen aangezien WAV-bestanden veel ruimte innemen. Nadien wordt dat bewerkte audio bestand in HxD gebracht (een Hex. editor). Hier wordt het audio bestand omgezet naar hex en kan het dan gekopieerd worden naar een C-array. Het bestand wordt als 'SoundData.h' onder include toegevoegd. Volgende [link](https://www.xtronical.com/basics/audio/dacs-for-sound/playing-wav-files/) kan hierbij helpen.
 
 ### playMorse()
 Zodra de knop ingedrukt eenmaal ingedruk is geweest (`button.isPressed()`) wordt de `playMorse()` methode opgeroepen. Hierbinnen wordt de willekeurige aangemaakte morse code zelf afgespeeld. Deze willekeurige string wordt aangemaakt door de methode `getKar()`. De morse zelf wordt voorafgegaan door een laagfrequente toon om aan te geven dat het afspelen van start gaat. De aangemaakte string wordt opgeslaan in `String st`. Deze wordt binnen in `playMorse()` overlopen aan de hand van een for lus die voor elk karakter in de string zijn bijhorende methode oproept. De methode `Morse()` is hier een tussenpersoon voor. Elk letter heeft zijn eigen methode; bv. indien het karakter 'b' in de string zit wordt de methode `getB()` opgeroepen waarin gedefinieerd staat wat de vertaling van 'b' is in morse. Voor deze vertaling wordt er gebruik gemaakt van de methodes `punt()` en `streep()`.
@@ -83,7 +83,7 @@ Via de methode `lcd.setCursor(0, 1)` zetten we de cursor van het display op rij 
 Dit alles wordt enkel uitgevoerd als er geen pauzesignaal wordt gestuurd én als de oplossing nog niet juist werd uitgevoerd.
 
 ## Communicatie
-Over de broker kunnen verschillende berichten worden verstuurd. Wel is belangrijk dat deze berichten steeds van het type `char` zijn. Integers kunnen namelijk niet worden doorgestuurd over dit signaal.
+Over de broker kunnen verschillende berichten worden verstuurd. Wel is belangrijk dat deze berichten steeds van het type `char` zijn. Integers kunnen namelijk niet worden verstuurd over alle kanalen.
 
 Om berichten te ontvangen, moeten de devices gesubscribed zijn op de kanalen waarvan het berichten wil ontvangen. Dit gebeurt net nadat er connectie wordt gelegd met de broker in de methode `reconnect()`.
 
