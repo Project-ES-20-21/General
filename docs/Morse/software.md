@@ -27,7 +27,7 @@ Na deze setups kan het programma beginnen aan de loop()-methode. Deze methode za
 Vanaf dat deze connectie op punt staat, kan de rest van de code worden uitgevoerd. Het verdere verloop is verschillend voor de speaker en de micro. Deze onderdelen worden verder dus apart besproken.
 
 ## void loop() - Speaker
-Volgende alinea bespreekt `void loop()` van de speaker.
+Volgende paragraaf bespreekt `void loop()` van de speaker.
 
 De loop functie wordt continu doorlopen zolang er geen reset, pauze, of ander interrupt commando wordt gegeven.
 Er wordt eerst gezorgd dat er een wifi en mqtt connectie gemaakt is met de broker. Nadat dit gebeurd is kan wordt de `playRinkeltoon()` opgeroepen die een rinkeltoon laat afspelen zolang de knop niet ingedrukt is geweest. Eenmaal de knop ingedrukt is wordt er overgegaan naar de tweede luidspreker die in de telefoon zit, de methode `playMorse()` wordt opgeroepen.
@@ -48,7 +48,7 @@ Voor een kort signaal wordt de `punt()` methode opgeroepen terwijl voor een lang
 
 
 ## void loop() - Micro
-Volgende deeltje bespreekt `void loop()` van de microfoon.
+De volgende delen bespreekt `void loop()` van de microfoon.
 
 Het blokschema geeft een overzicht van het verloop van de code. Zoals eerder vermeld wordt `void loop()` oneindig keer herhaald. De verschillende methoden die verder worden besproken zullen dus ook vaak worden opgeroepen.
 
