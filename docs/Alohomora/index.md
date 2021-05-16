@@ -15,14 +15,14 @@ has_children: true
     - [Blokschema](#Blokschema)
     - [Communicatie](#Communicatie)
     - [Opstelling](#Opstelling)
-    - [Error handling](#Error handling)
+    - [Error handling](#Error_handling)
 
 - [Timer](#Timer)
     - [Algemeen](#Algemeen)
     - [Blokschema](#Blokschema)
     - [Communicatie](#Communicatie)
     - [Opstelling](#Opstelling)
-    - [Error handling](#Error handling)
+    - [Error handling](#Error_handling)
 
 
 ## Touchlock
