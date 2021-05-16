@@ -29,6 +29,23 @@ Vanaf dat deze connectie op punt staat, kan de rest van de code worden uitgevoer
 ## void loop() - Speaker
 Volgende alinea bespreekt `void loop()` van de speaker.
 
+De loop functie continu doorlopen zolang er geen reset, pauze, of ander interrupt commando wordt gegeven.
+Er wordt eerst gezorgd dat er een wifi en mqtt connectie gemaakt is met de broker. Nadat dit gebeurd is kan wordt de `playRinkeltoon()` opgeroepen die een rinkeltoon laat afspelen zolang de knop niet ingedrukt is geweest. Eenmaal de knop ingedrukt is wordt er overgegaan naar de tweede luidspreker die in de telefoon zit, de methode `playMorse()` wordt opgeroepen.
+###button.loop()
+Deze functie wordt opgeroepen bij de start van de `void.loop()`. De knop is dan actief en er wordt waargenomen wanneer de knop ingedrukt is geweest.
+
+###playRinkeltoon()
+Wanneer het "BEL" signaal van de fitnesstracker puzzel binnenkomt start de luidspreker een rinkeltoon te spelen. Deze rinkeltoon is een WAV-bestand dat software matig wordt toegevoegd. Er was ook de optie om dit als mp3 bestand af te spelen met behulkp van een SD kaart. Dit vereist dan wel de nodige hardware. 
+Het WAV-bestand wordt eerst bewerkt met audacity; samplefrequentie verlagen, lengte inkorten,... Zo wordt er een overflow voorkomen aangezien WAV-bestanden veel ruimte innemen. Nadien wordt dat bewerkte audio bestand in HxD gebracht (een Hex. editor). Hier wordt het audio bestand omgezet naar hex en kan het dan gekopieerd worden naar C. Volgende [link](https://www.xtronical.com/basics/audio/dacs-for-sound/playing-wav-files/) kan hierbij helpen.
+
+###playMorse()
+Zodra de knop ingedrukt eenmaal ingedruk is geweest (`button.isPressed()`) wordt de `playMorse()` methode opgeroepen. Hierbinnen wordt de willekeurige aangemaakte morse code zelf afgespeeld. Deze willekeurige string wordt aangemaakt door de methode `getKar()`. De morse zelf wordt voorafgegaan door een laagfrequente toon om aan te geven dat het afspelen van start gaat. De aangemaakte string wordt opgeslaan in `String st`. Deze wordt binnen in `playMorse()` overlopen aan de hand van een for lus die voor elk karakter in de string zijn bijhorende methode oproept. De methode `Morse()` is hier een tussenpersoon voor. Elk letter heeft zijn eigen methode; bv. indien het karakter 'b' in de string zit wordt de methode `getB()` opgeroepen waarin gedefinieerd staat wat de vertaling van 'b' is in morse. Voor deze vertaling wordt er gebruik gemaakt van de methodes `punt()` en `streep()`.
+
+####punt() & streep()
+Beide methodes maken gebruik van de functie `tone()` waarin de pin, lengte en frequentie als argumenten kunnen worden opgegeven.
+Voor een kort signaal wordt de `punt()` methode opgeroepen terwijl voor een lang signaal dat zo'n tien maal langer is `streep()`.
+
+
 ## void loop() - Micro
 Volgende deeltje bespreekt `void loop()` van de microfoon.
 
