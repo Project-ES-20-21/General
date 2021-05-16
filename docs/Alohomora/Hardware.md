@@ -51,7 +51,7 @@ Oorspronkelijk was het idee om de behuizing van de kluis te laten 3D printen. Do
 ![Lasercut](doos_kluis.svg)
 
 # Timer
-Deze timer begint af te tellen vanaf wanneer het spel officieel start. 
+Deze timer begint af te tellen van zodra het spel officieel gestart is. 
 Het geeft de spelers mee hoeveel tijd ze nog over hebben om de code te kraken en zo te ontsnappen uit de escape room. 
 
 ## Display
