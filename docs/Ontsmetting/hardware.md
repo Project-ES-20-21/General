@@ -9,8 +9,8 @@ nav_order: 2
 
 
 # PCB
-De files van ons volledige PCB ontwerp binnen Kicad kunnen via volgende link gevonden worden:
-![](https://github.com/Ontsmettinator3000/PCB)
+De files van ons volledige PCB ontwerp binnen Kicad kunnen via [volgende link] (https://github.com/Ontsmettinator3000/PCB)gevonden worden:
+
 
 ## 3D render PCB
 
@@ -35,15 +35,15 @@ Als modus van identificatie wordt er gebruik gemaakt van een RFID NFC-lezer. Spe
 
 ## Pomp
 
-Om het ontsmettingsmiddel te pompen maken we gebruik van een verticale onderwaterpomp die met 5V gevoed wordt. De pomp wordt aangestuurd door een Mosfet. Deze werd wel op een abnormale manier uitgevoerd aangezien de mosfet naar de ground schakelt. De Pomp wordt door een PWM-signaal aangestuurd zodat de juiste hoeveelheid ontsmettingsmiddel kan verkregen worden. Ten slotte werd er ook een flyback diode toegevoegd om eventuele inverse stromen tegen te houden.
+Om het ontsmettingsmiddel te pompen maken we gebruik van een verticale onderwaterpomp die met 5V gevoed wordt. De pomp wordt aangestuurd door een Mosfet wat op een abnormale manier werd uitgevoerd aangezien de mosfet naar de massa schakelt. De Pomp wordt voor een bepaalde tijdsduur ingeschakeld zodat de juiste hoeveelheid ontsmettingsmiddel kan verkregen worden. Ten slotte werd er ook een flyback diode toegevoegd om eventuele inverse stromen tegen te houden.
 
 ## Hand sensor
 
-Als hands-free sensor om ontsmetting te dispensen wordt gebruik gemaakt van een infrarood breakbeam sensor. Deze sensor gebruikt een IR-zender en receiver. Wanneer de verbinding tussen de twee wordt verbroken zal er een signaal worden verzonden. Door de zender en receiver parallel naast elkaar te plaatsen kan de sensor ook als afstandssensor gebruikt worden. Wanneer een object het IR licht weerkaatst tot de receiver zal er ook een signaal gegeven worden. Aan de uitgang werd een pull-up weerstand toegevoegd voor correcte werking. Door de simpele uitvoering van deze IR-sensor werd deze verkozen boven een ultrasone afstandssensor.
+Als hands-free sensor maken we gebruik van een infrarood breakbeam sensor. Deze sensor gebruikt een IR-zender en receiver. Wanneer de verbinding tussen de twee wordt verbroken zal er een signaal worden verzonden. Door de zender en receiver parallel naast elkaar te plaatsen kan de sensor ook als afstandssensor gebruikt worden. Wanneer een object het IR licht weerkaatst tot de receiver zal er ook een signaal gegeven worden. Aan de uitgang werd een pull-up weerstand toegevoegd voor correcte werking. Door de simpele uitvoering van deze IR-sensor werd deze verkozen boven een ultrasone afstandssensor.
 
 ## LCD scherm
 
-Om visuele instructies te geven aan de gebruiker wordt gebruik gemaakt van een TFT-LCD scherm. Deze werkt via SPI, hier wordt een full duplex verbinding gemaakt. Er worden bij SPI vier verbindingen gebruikt. MOSI stuurt data van master naar slave terwijl MISO het omgekeerde doet. CS, chip select, bepaalt met welke slave gecommuniceerd wordt. Tenslotte is er ook nog een seriele klok nodig. Er is ook een enable ingang die gebruikt wordt om het scherm uit te schakelen wanneer het niet nodig is om er iets op te zien. Dit zorgt voor een kleiner verbruik.
+Om visuele instructies te geven aan de gebruiker wordt gebruik gemaakt van een TFT-LCD scherm. Deze communiceert via SPI, hierbij wordt een full duplex verbinding gemaakt. Er worden bij SPI vier verbindingen gebruikt. MOSI stuurt data van master naar slave terwijl MISO het omgekeerde doet. CS, chip select, bepaalt met welke slave gecommuniceerd wordt. Tenslotte is er ook nog een seriële klok nodig. Er is ook een enable ingang die gebruikt wordt om het scherm uit te schakelen wanneer het niet nodig is om er iets op te zien. Dit zorgt voor een kleiner verbruik.
 
 ## Versterker
 

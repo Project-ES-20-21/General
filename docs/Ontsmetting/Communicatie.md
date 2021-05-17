@@ -8,7 +8,7 @@ nav_order: 3
 
 # Communicatie
 
-Communicatie met andere proeven gebeurt aan de hand van het MQTT protocol via de broker. De ESP reageert op 2 signalen en stuurt er één uit.
+Communicatie met andere proeven gebeurt aan de hand van het MQTT protocol via de broker. De ESP reageert op 3 signalen en stuurt er evenveel uit.
 
 
 | topic                     | bericht| betekenis                         |  zender   | ontvanger |
