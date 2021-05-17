@@ -56,5 +56,9 @@ De verschillende pin headers zorgen voor de aansluiting van de externe component
 * De laatste pinheader zal zorgen voor de connectie tussen de microfoon en de ESP32. De microfoon wordt voorzien van een potentiometer. Hoe lager de weerstand van de potentiometer, hoe gevoeliger de mcirofoon zal zijn.
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/schakeling_headers.JPG)
 
+## Overzicht 
+### Speaker
+![](https://github.com/BachMorse/Documentatie-speaker/blob/master/Overzicht.png)
 
-
+### Micro
+![]()
