@@ -14,11 +14,5 @@ De bestanden voor de 3D-geprinte telefoon kunnen via volgende [link](https://www
 ![](https://github.com/BachMorse/Behuizing-speaker/blob/main/IMG_20210515_213034__01.jpg)
 ![](https://github.com/BachMorse/Behuizing-speaker/blob/main/telfoondoos.jpg)
 ## Microfoon
-De boven- en onderkant van de svg-files zien eruit als volgt:
-![](https://raw.githubusercontent.com/BachMorse/Behuizing/main/micro_bovenonder.JPG)
 
-De zijkanten: 
-![](https://raw.githubusercontent.com/BachMorse/Behuizing/main/micro_zijkanten.JPG)
-
-Het uiteindelijke resultaat:
 ![](https://raw.githubusercontent.com/BachMorse/Behuizing/master/micro_resultaat.jpg)
