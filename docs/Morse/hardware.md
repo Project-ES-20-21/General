@@ -16,11 +16,15 @@ De documentatie van de printplaat via volgende [link](https://github.com/BachMor
 ![](https://github.com/BachMorse/Documentatie-speaker/blob/master/PCB%20achterkant.png)
 ### ESP32
 ![](https://github.com/BachMorse/Documentatie-speaker/blob/master/schema%20ESP32.png)
-### Low Drop-out Regulator
+### Voeding
+Voor het voeden van deze gehele schakeling wordt er gebruik gemaakt van een power bank van 5V,het aansluiten van deze powerbank gebeurt via een micro usb poort. Deze 5V wordt gebruikt om de versterker (LM386), intern op de schakeling, rechtstreeks te voeden. Voor de esp32 zelf volstaat een spanning van 3.3V. Dit wordt omgezet aan de hand van een DC spanningsregelaar (LDO). De schakeling kan dan uiteindelijk geprogrammeerd worden met behulp van een uart-bridge en de voorziene pinheaders.
+#### Low Drop-out Regulator (LDO)
 ![](https://github.com/BachMorse/Documentatie-speaker/blob/master/LDO.png)
-### USB
+#### USB
 ![](https://github.com/BachMorse/Documentatie-speaker/blob/master/USB.png)
 ### Versterker
+Voor het afspelen van audiofragmenten via een luidspreker is er een versterking nodig. Aan de hand van de IC LM386 wordt deze eindversterking gerealiseerd.
+Deze versterker is ideaal voor schakelingen die op een lage voltage functioneren.
 ![](https://github.com/BachMorse/Documentatie-speaker/blob/master/versterker.png)
 ### 
 ## Micro
