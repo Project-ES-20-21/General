@@ -7,14 +7,16 @@ nav_order: 1
 ---
 ## Hardware
 #### Gebruikte componenten:
-| Component                       | type            | gebruik|
+
+| Component                       | type            | gebruik |
 | ESP32-WROOM-32UE 4MB FLASH      | micro processor  | verzenden BLE signalen, RSSI metingen, controleren van veilige afstand, communicatie met broker|
 | AMS1117-3.3                     | LDO                  | conversie van inputspanning naar een stabiele 3.3V voeding  |
 | Conrad Components 93038c213a    | buzzer               | piept wanneer de speler te dicht bij een andere speler staat  |
 | MOLEX 105017-1001                | micro-usb            | voeding vanuit een 5V powerbank/oplader|
 | diverse modellen                  | printkroonsteentje    | voeding vanuit een 9V batterij |
-| On Shine Enterprise Surface Mount Right Angle Switch | bistabiele schakelaar| keuzeschakelaar voor voeding uit usb versus uit batterij |
-| A24-HABUF-P5I-ND                 | omnidirictionele antenne| verzenden en ontvangen van wifi en ble signalen|
+| On Shine Enterprise Surface Mount Right Angle Switch | bistabiele schakelaar | keuzeschakelaar voor voeding uit usb versus uit batterij |
+| A24-HABUF-P5I-ND                 | omnidirictionele antenne | verzenden en ontvangen van wifi en ble signalen |
+
 ##### ESP32-WROOM-32UE 4MB FLASH
 De ESP32 is een MCU met geïntegreegde wifi -en bluetooth capaciteiten ontworpen door Espressif Systems. De ESP32 heeft veel geïntegreerde features en is vooral gefocust op IoT-applicaties. In dit project voert de ESP32 alle taken uit: hij verzendt de BLE signalen, meet de RSSI-waardes van binnenkomende BLE-signalen, controleert deze waarden en verzorgt communicatie met de rest van de escape room aan de hand van mqtt.
 ##### Voeding
@@ -28,7 +30,7 @@ De ESP32 is een MCU met geïntegreegde wifi -en bluetooth capaciteiten ontworpen
 * Aansturing LED: IO-pin 13
 * De buzzer wordt gebruikt om 5 seconden geluid te maken wanneer de module een te dichte afstand tussen zichzelf en een andere module heeft gedetecteerd. De LED heeft op zich geen specifiek nut maar kan worden gebruikt bij het debuggen.
 ##### Antenne
-Een goede omnidirectionele antenne is cruciaal voor een correcte RSSI meting in elke richting. Ook levert de gekozenen antenne (A24-HABUF-P5I-ND) nog eens 2dBi gain wat de nauwkeurigheid sterk verbeterd. Door deze versterking is het vermogen nog veel hoger op 1,5 meter afstand waardoor de variaties in RSSI-waarde rond dit 1,5 meter-punt veel groter zijn aangezien het vermogenverlies een exponentieel verband met de afstand tot de zender is.
+Een goede omnidirectionele antenne is cruciaal voor een correcte RSSI meting in elke richting. Experimenteel is ondervonden dat een externe antenne beter omnidirectioneel is en de BLE-signalen krachtiger kan verzenden en ontvangen. Dit komt de nauwkeurigheid sterk ten goede omdat de afstand tegenover een zender een exponentieel verband kent. Dit betekent dat hoe dichter men bij de bron komt, hoe sterker de RSSI-waardes zullen variëren. Deze extra gevoeligheid zorgt ervoor dat er een groter verschil ligt tussen bijvoorbeeld 1.4 meter en 1.6 meter waardoor we de RSSI-grenswaarde op 1.5 meter beter kunne specifiëren. Voor meer informatie over deze grenswaarde, zie [software](software.md).
 #### PCB
 ##### Schema van de PCB
 ![schema van PCB](schema.JPG)
