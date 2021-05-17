@@ -8,11 +8,11 @@ nav_order: 1
 
 # Software
 
-Het gehele project wordt bestuurd via een ESP32 module. Deze module kan geprogrammeerd worden via Arduino flavoured C en C++. Alle geschreven software staat opgeslaan op de [algemene reopository](https://github.com/Ontsmettinator3000/main) van onze [organisatie](https://github.com/Ontsmettinator3000). Bij de start van de ontwikkeling kozen we er voor om het geheel "modulair" maken. Hierbij splitsten we de verschillende onderdelen op in aparte klasses. Dit deden we om de main loop leesbaar en overzichtelijk te maken. Ook is het hierdoor makkelijk om dingen uit te breiden of te overbruggen bij foutieve werking.
+Het gehele project wordt bestuurd via een ESP32 module. Deze module kan geprogrammeerd worden via Arduino flavoured C en C++. Alle geschreven software staat opgeslagen op de [algemene reopository](https://github.com/Ontsmettinator3000/main) van onze [organisatie](https://github.com/Ontsmettinator3000). Bij de start van de ontwikkeling kozen we er voor om het geheel "modulair" maken. Hierbij splitsten we de verschillende onderdelen op in aparte klasses. Dit deden we om de main loop leesbaar en overzichtelijk te maken. Ook is het hierdoor makkelijk om dingen uit te breiden of te overbruggen bij foutieve werking.
 
 ## Setup en main loop
 
-Zoals elk Arduino programma, zal ook onze code lopen vanuit een loop. Hierbij zal eenmaal de setupmethode overlopen worden alvorens de loop te starten. In de setup zullen we de verschillende onderdelen juist configureren. Zo zullen we de wifi en MQTT verbinding instellen, alsook enkele pinModes definiëren. Ook de OTA connectie wordt hier ingesteld.
+Zoals elk Arduino-programma, zal ook onze code lopen vanuit een loop. Hierbij zal eenmaal de setupmethode overlopen worden alvorens de loop te starten. In de setup zullen we de verschillende onderdelen juist configureren. Zo zullen we de wifi en MQTT verbinding instellen, alsook enkele pinModes definiëren. Ook de OTA connectie wordt hier ingesteld.
 
 De main loop is een vertaling van de [algemene flowchart](index.md#Blokschema) in code. Eerst en vooral zullen we loop functies hebben voor verschillende klasses. Deze zullen zeer frequent opgeroepen worden. Vaak zullen deze functie bepaalde informatie ophalen of dingen updaten. Hierna zullen we eerste test doen. Merk op dat in deze fase alle andere onderdelen uitgeschakeld zijn door de setup. Indien een alarm ontvangen is, zullen we het scherm updaten en de NFC handler inschakelen. We bevinden ons nu in fase twee van het proces. Hierbij zal een gescande kaart de login functie oproepen. Deze zal testen of de tag al dan niet correct is en eventueel reeds geregistreerd. Als dit onderdeel doorlopen is, rest er nog enkel de alcohol te laten lopen. Dit zal gebeuren nadat de scanner een hand geregistreerd heeft via de scanner klasse. Indien deze cyclus doorlopen is voor iedere besmette speler, zal een OK signaal verzonden worden naar de broker.
 
@@ -55,7 +55,7 @@ Moet worden opgeroepen in het begin van de code om het scherm te configureren.
 Functie die tijdens het lopen van het programma geregeld moet opgeroepen worden. Deze wordt gebruikt voor een niet blokkerende timer.
 
 ##### paintCross(int positie)
-Hiermee kan men de indicator voor een personen op een kruisje zetten. Dit betekend dat de persoon niet ontsmet is. Het positie argument zal de plaats bepalen waar het icoon afgebeeld wordt. De positie is een int van 0 tot en met 3. De plaatsing is als volgt:<br>
+Hiermee kan men de indicator voor een personen op een kruisje zetten. Dit betekent dat de persoon niet ontsmet is. Het positie argument zal de plaats bepalen waar het icoon afgebeeld wordt. De positie is een int van 0 tot en met 3. De plaatsing is als volgt:<br>
 >>![volgorde paint](volgorde_paint.png)
 
 ##### paintCheck(int positie)
@@ -96,7 +96,7 @@ Om de de gescande tags te testen op eventuele besmetting, kan men deze functie g
 
 ##### login(String id)
 ###### returns: `boolean`
-Bij het checken van bepaalde tag id's, kan het handig zijn om direct ook te registreren dat deze persoon ontsmet is. Dit is mogelijk met deze functie. Als argument wordt een String met een bepaald tag id gevraagd. Indien deze in de lijst met besmette id's aanwezig is, zal deze uit de lijst geschrapt worden en `true` gereturnd worden. Indien deze tag niet gekend is, zal `false` terug gegeven worden. Deze functie zal gebruik maken van [`validate(String id)`](#validatestring-id) voor het opzoeken van de tag.
+Bij het checken van bepaalde tag id's, kan het handig zijn om direct ook te registreren dat deze persoon ontsmet is. Dit is mogelijk met deze functie. Als argument wordt een String met een bepaald tag id gevraagd. Indien deze in de lijst met besmette id's aanwezig is, zal deze uit de lijst geschrapt worden en `true` terug gegeven worden. Indien deze tag niet gekend is, zal `false` terug gegeven worden. Deze functie zal gebruik maken van [`validate(String id)`](#validatestring-id) voor het opzoeken van de tag.
 ##### getUserCount()
 ###### returns: `int`
 Deze functie zal het aantal besmette speler terug geven.
@@ -113,12 +113,12 @@ Hierdoor zullen alle geregistreerde besmette spelers gewist worden uit de lijst.
 Het debuggen van een microcontroller is vaak moeilijk. Men kan berichten uitschrijven via de Seriële monitor. Echter is de seriële monitor niet altijd beschikbaar. Hiervoor is steeds een bekabelde USB verbinding nodig. Deze klasse zal dit probleem oplossen. Via een statische methode, kan je zowel langs seriële monitor als mqtt de berichten uitlezen. In tegenstelling tot andere klassen, hoeft er geen object gemaakt te worden. Dit zal ervoor zorgen dat we geen parallelle objecten aanmaken of de code complexer maken door pointers naar een Monitor object te bij te houden.
 
 ### Functies
-De monitor maakt slecht gebruik van twee functies. Deze moeten statisch zijn om aanmaken van een object te vermijden. Deze functies worden, na het includeren van de juiste header file, op volgende manier aangesproken:
+De monitor maakt slechts gebruik van twee functies. Deze moeten statisch zijn om aanmaken van een object te vermijden. Deze functies worden, na het includeren van de juiste header file, op volgende manier aangesproken:
 ```cpp
 Monitor::println("Hello world!");
 ```
 
-Indien men extra functionaliteit wil toevoegen, kan in de `println()` methode altijd extra dingen toegevoegd worden. Zo is het mogelijk gebruik te maken van een scherm om de berichten te laten zien. Dit bleek in het geval van de Ontsmettinator niet handig te zijn.
+Indien men extra functionaliteit wilt toevoegen, kan in de `println()` methode altijd extra dingen toegevoegd worden. Zo is het mogelijk gebruik te maken van een scherm om de berichten te laten zien. Dit bleek in het geval van de Ontsmettinator niet handig te zijn.
 
 ## MQTT
 De communicatie van het gehele systeem gebeurt via MQTT. Dit protocol werkt volgens het publish-subscribe principe. Hierbij wordt een broker gebruikt die dienst doet als centrale server.
@@ -165,7 +165,7 @@ Voor het identificeren van verschillende spelers, maken we gebruik van NFC-tags.
 Deze dient zoals alle andere setup functie aan het begin van de code opgeroepen te worden. Hier zal de verbinding met de scanner tot stand gebracht worden. Indien deze verbinding niet geslaagd is, zal hier ook een error led blink zijn. Deze gaat als volgt: ![led blink nfc](blink_nfc.gif) (kort aan, kort uit)
 
 ##### startListeningToNFC()
-Indien men wil beginnen met lezen van tags, moet deze functie opgeroepen worden. Hierbij zullen de interrupt indicatoren gerest worden.
+Indien men wilt beginnen met lezen van tags, moet deze functie opgeroepen worden. Hierbij zullen de interrupt indicatoren gerest worden.
 
 ##### handleCardDetected()
 ###### returns: `String`
@@ -177,13 +177,13 @@ In de main loop wordt gebruik gemaakt van deze functie voor het lezen van tags. 
 
 ##### hexToString(uint8_t *cardid)
 ###### returns: `String`
-De methodes van de Adafruit NFC klasse zullen een array van ints returnen. In de `validTags.h` worden de id's van de tags als Strings opgeslagen. Een conversie is dus nodig. Deze functie zet een array van ints om in een String.
+De methodes van de Adafruit NFC-klasse zullen een array van ints returnen. In de `validTags.h` worden de id's van de tags als Strings opgeslagen. Een conversie is dus nodig. Deze functie zet een array van ints om in een String.
 
 ##### enable() en disable()
 Hiermee kan men de sensor softwarematig in- en uitschakelen.
 
 ## Speaker
-Om de aandacht van de spelers te trekken, wordt er gebruik gemaakt van een speaker. Hier kan men verschillende geluiden afspelen. Het audiofragment wordt opgeslagen met een `.wav` indeling. Dit `.wav` bestand wordt geëxporteerd als een *C* array. Deze array wordt in `SoundData.h` opgeslagen. Deze file bevindt zich in de include folder. Hierbij zijn enkel instellingen vereist:
+Om de aandacht van de spelers te trekken, wordt er gebruik gemaakt van een speaker. Hier kan men verschillende geluiden afspelen. Het audiofragment wordt opgeslagen met een `.wav` indeling. Dit `.wav` bestand wordt geëxporteerd als een *C*-array. Deze array wordt in `SoundData.h` opgeslagen. Deze file bevindt zich in de include folder. Hierbij zijn enkel instellingen vereist:
 
 | Aanbevolen sample rate     | 16000 Hz   |
 | Maximale lengte           | ongeveer 20 seconden  |
