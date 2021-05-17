@@ -7,15 +7,28 @@ nav_order: 2
 ---
 
 # Hardware
+
 ## Speaker
+### 3D 
+De documentatie van de printplaat via volgende [link](https://github.com/BachMorse/Speaker_PCB).Een 3D render van de printplaat ziet er als volgt uit:
 
+![](https://github.com/BachMorse/Documentatie-speaker/blob/master/PCB%20voorkant.png)
+![](https://github.com/BachMorse/Documentatie-speaker/blob/master/PCB%20achterkant.png)
+### ESP32
+![](https://github.com/BachMorse/Documentatie-speaker/blob/master/schema%20ESP32.png)
+### Low Drop-out Regulator
+![](https://github.com/BachMorse/Documentatie-speaker/blob/master/LDO.png)
+### USB
+![](https://github.com/BachMorse/Documentatie-speaker/blob/master/USB.png)
+### Versterker
+![](https://github.com/BachMorse/Documentatie-speaker/blob/master/versterker.png)
+### 
 ## Micro
-De documentatie van de printplaat kan [hier]((https://github.com/BachMorse/Micro_PCB)) gevonden worden. De printplaat ziet eruit als volgt:
+De documentatie van de printplaat kan [hier](https://github.com/BachMorse/Micro_PCB) gevonden worden. De printplaat ziet eruit als volgt:
 
-Voorkant: 
+### 3D
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/PCB_voorkant.JPG)
 
-Achterkant:
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/PCB_achterkant.JPG)
 
 ### ESP32

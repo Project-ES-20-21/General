@@ -4,6 +4,16 @@ title: Framework
 parent: Onderdelen
 nav_order: 1
 ---
+# Inhoud
+- [Framework](#framework)
+    - [Touchscreen](#touchscreen)
+    - [Mosquitto](#mosquitto)
+    - [Node-RED](node-RED)
+- [Communicatie](#communicatie)
+    - [Monitoring](#monitoring)
+    - [Gebruikte channels op de broker](#gebruikte-channels-op-de-broker)
+    - [Controle signalen](#controle-signalen)
+- [GUI](#gUI)
 
 # Framework
 Als MQTT broker werd ons een Raspberry Pi (v2) aangeboden. Om alle communicatie met het MQTT protocol vlot te laten verlopen moest wel nog een framework gekozen worden om op de Raspberry Pi te installeren. We lichten onze keuzes omtrent het framework voor dit project even bij.

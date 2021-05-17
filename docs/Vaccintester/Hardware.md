@@ -62,9 +62,19 @@ Na het maken van het schema kan het PCB-ontwerp aangemaakt worden. Het finale on
 
 ## ESP Ledstrip
 ### Schema
+Ook hier wordt opnieuw gebruik gemaakt van een ESP32 als centrale chip. Nu wordt deze niet aangedreven via micro-usb, maar via een DC-jack, namelijk een DCJ250. Via deze jack wordt 12V aangesloten op de PCB. Die 12V is nodig om de ledstrip te voeden. De ESP32 werkt echter op 3.3V. Deze wordt verkregen door opnieuw gebruik te maken van een LDO die ontkoppeld is via twee condensatoren van 10uF. 
+
+Voor het flashen van de ESP wordt opnieuw van twee drukknoppen die gedebounced zijn gebruik gemaakt. Deze worden aangesloten op de enable en IO0 van de ESP32. Daarnaast worden RX en TX opnieuw verbonden met pinheaders om de UART bridge aan te sluiten.
+
+Net zoals bij de buttons wordt IO12 gebruikt om een drukknop aan te sluiten. Dit gebeurt opnieuw via twee pinheaders die parallel geschakeld zijn met een condensator om de knop te debouncen. Daarnaast wordt de ingang van de ESP opnieuw ontkoppeld door gebruik te maken van een weerstand.
+
+Het belangrijkste element van dit gedeelte van de puzzel is de ledstrip. Deze wordt aangestuurd door IO25, IO26 en IO27 van de ESP32. Elk van deze uitgangen van de ESP32 bepaalt één van de drie kleuren aanwezig in de ledstrip. Deze kleuren zijn groen, blauw en rood. Om de ledstrip correct te kunnen aansturen zijn zes n-mosfets nodig. De uitgangen van de ESP32 zijn eerst en vooral verbonden met de gate van een 2N7000 mosfet. De source is verbonden met de ground en de drain met de gate van een andere n-mosfet. Ook bij deze mosfet is de source verbonden met de ground. De drain is verbonden met een pinheader. Wanneer de uitgang van de ESP32 hoog is, zorgen deze mosfets ervoor dat de drain van de laatste mosfet laag is. Omgekeerd wordt de uitgang van de drain van de tweede mosfet hoog wanneer de uitgang van de ESP32 laag is. De drain van de tweede mosfet wordt dan via een pinheader aangesloten op de groene, rode of blauwe pin van de ledstrip. Het aansturen van de ledstrip is dus geïnverteerd. Wanneer de uitgang aan de ESP32 laag is zal de bijhorende kleur dus zichtbaar zijn op de ledstrip. Daarnaast is nog een extra pinheader nodig om de ledstrip te voeden met een spanning van 12V afkomstig van de DC jack.
+
 ![Schema_Ledstrip](SchemaLedstrip.PNG)
 
 ### PCB
+Na het maken van het schema kan het PCB-ontwerp aangemaakt worden. Het finale ontwerp van de PCB kan men zien op de foto's hieronder. De bovenste foto is de voorkant van de PCB, de onderste de achterkant.
+
 ![Voorkant_PCBledstrip](VoorkantPCBLedstrip.PNG)
 ![Achterkant_PCBledstrip](AchterkantPCBLedstrip.PNG)
 
