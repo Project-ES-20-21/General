@@ -6,6 +6,6 @@ grand_parent: Onderdelen
 nav_order: 2
 ---
 
-#Software
-##Flowchart
+# Software
+## Flowchart
 ![flowchart](bachproef_flowchart_afbeelding.png)
