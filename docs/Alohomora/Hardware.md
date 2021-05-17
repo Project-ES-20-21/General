@@ -7,15 +7,15 @@ nav_order: 2
 ---
 # Inhoud
 - [Kluis](#Kluis)
-    - [Touchscreen](#Touchscreen)
-    - [Voeding](#Voeding)
-    - [PCB ontwerp](#PCB-ontwerp)
+    - [Touchscreen](#touchscreen)
+    - [Voeding](#voeding)
+    - [PCB ontwerp](#pCB-ontwerp)
     - [3D tekening](#3D-tekening)
 - [Timer](#Timer)
-    - [Display](#Display)
-    - [Voeding](#Voeding)
-    - [PCB ontwerp](#PCB-ontwerp)
-    - [3D tekening](#3D-tekening)
+    - [Display](#display)
+    - [Voeding](#voeding-1)
+    - [PCB ontwerp](#pCB-ontwerp-1)
+    - [3D tekening](#3D-tekening-1)
     
 # Kluis
 ## Touchscreen
@@ -51,7 +51,7 @@ Oorspronkelijk was het idee om de behuizing van de kluis te laten 3D printen. Do
 ![Lasercut](doos_kluis.svg)
 
 # Timer
-Deze timer begint af te tellen vanaf wanneer het spel officieel start. 
+Deze timer begint af te tellen van zodra het spel officieel gestart is. 
 Het geeft de spelers mee hoeveel tijd ze nog over hebben om de code te kraken en zo te ontsnappen uit de escape room. 
 
 ## Display
@@ -60,7 +60,7 @@ Het geeft de spelers mee hoeveel tijd ze nog over hebben om de code te kraken en
 Om de tijd weer te geven wordt er gebruik gemaakt van een 4-digit 7-segment dispay. Via de broker wordt het start signaal gegeven om het spel te starten en vanaf dan zal de timer beginnen met aftellen. Aangezien het spel maximaal 60 minuten mag duren, hebben we met 4 digits genoeg om de spelers tot op de seconde hun resterende tijd te laten weten.
 
 ## Voeding
-We gebruiken een powerbank die 5V levert als voeding. Doordat het timer display zelf 5V als voeding gebruikt, kan deze hier rechtstreeks op worden aangesloten. Bij het ontwerpen van een PCB voor de ESP32 moet men echter nog rekening houden met een conversie van 5V naar 3.3V wat we realiseren met een LDO.
+We gebruiken een powerbank die 5V levert als voeding. Doordat de timer display zelf 5V als voeding gebruikt, kan deze hier rechtstreeks op worden aangesloten. De extra 5V LDO hebben we dus in de finale versie weggelaten en overbrugt. Bij het ontwerpen van een PCB voor de ESP32 moet men echter nog rekening houden met een conversie van 5V naar 3.3V wat we realiseren met een 3.3V LDO.
 
 ![Timer circuit](image-removebg-preview.png)
 

@@ -61,8 +61,8 @@ De wetenschappers proberen de anti vaxxers te stoppen door één van hun gerucht
 
 ### Fitnesstracker
 
-We plaatsen accelerometer aan een kettlebell en deze zal dan gebruikt worden om de oefeningen te tracken. Ergens in de kamer zal een boek of poster voorzien worden met nummers op met daarbij een reeks van bijhorende oefeningen. Hieruit zullen de spelers kunnen afleiden welke serie van oefeningen ze moeten uitvoeren. 
-Als de spelers een juiste oefening uitvoeren zal de batterij opgeladen worden en zal dit een stijging van het balkje op de display veroorzaken. De batterij mag dus niet leeg zijn indien men andere puzzels wenst uit te voeren. Als de spelers een volledige oefeningenreeks correct uitvoeren, zullen we een getal laten vrijgeven van het digitaal cijferslot en zal de telefoon van morsecode afgaan. Als de spelers een incorrecte beweging uitvoeren zou het balkje niet mogen groeien. Doorheen het spel zal er energie verbruikt worden en zal het balkje dus krimpen. Eenmaal de batterij helemaal leeg is wordt dit met de andere puzzels gedeeld via de broker. 
+We plaatsen een motionsensor aan een kettlebell en deze wordt dan gebruikt om de oefeningen te tracken. Ergens in de kamer wordt een boek of poster voorzien met nummers op met daarbij een reeks van bijhorende oefeningen. Hieruit kunnen de spelers afleiden welke serie van oefeningen ze moeten uitvoeren. 
+Als de spelers een oefening juist uitvoeren, laadt de batterij op en stijgt het balkje op de display. De batterij mag niet leeg zijn indien men andere puzzels wenst uit te voeren. Als de spelers een volledige oefeningenreeks correct uitvoeren, wordt een getal vrijgegeven van het digitaal cijferslot en gaat de telefoon van morsecode af. Als de spelers een incorrecte beweging uitvoeren daalt het balkje. Doorheen het spel wordt er energie verbruikt en krimpt het balkje dus. Eenmaal de batterij helemaal leeg is, wordt dit met de andere puzzels gedeeld via de broker. 
 
 ### Morsecode
 
@@ -110,11 +110,9 @@ Als router mochten we gebruik maken van een router van het merk NETGEAR, waar we
 
 Ook hierover wordt er verder uitgewijd onder het onderdeel [framework](https://project-es-20-21.github.io/General/docs/framework.html).
 
--hier komt nog een flowchart en een verwijzing naar de gebruikte code-
-
 ### Communicatie
 
-De communicatie verloopt steeds via MQTT, behalve dan enkele interne communicaties. Elke proef communiceert met de andere proeven waar nodig, de broker is dus slechts een tussenstation maar implementeert zelf (bijna) geen functionaliteit. Dit heeft als voordeel dat ook de broker makkelijk vervangen of uitgebreid kan worden, zonder de hele werking van de escape room in gevaar te brengen.
+De communicatie verloopt steeds via MQTT, behalve dan enkele interne communicaties. Elke proef communiceert met de andere proeven waar nodig, de broker is dus slechts een tussenstation maar implementeert zelf (bijna) geen functionaliteit. Dit heeft als voordeel dat ook de broker makkelijk vervangen of uitgebreid kan worden, zonder de hele werking van de escape room in gevaar te brengen. Verdere uitleg omtrent communicatie bevindt zich [hier](https://project-es-20-21.github.io/General/docs/framework.html#communicatie).
 
 ## FAQ's
 

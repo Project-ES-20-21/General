@@ -11,18 +11,18 @@ has_children: true
 ## Inhoud
 
 - [Touchlock](#Touchlock)
-    - [Algemeen](#Algemeen)
-    - [Blokschema](#Blokschema)
-    - [Communicatie](#Communicatie)
-    - [Opstelling](#Opstelling)
-    - [Error handling](#Error handling)
+    - [Algemeen](#algemeen)
+    - [Blokschema](#blokschema)
+    - [Communicatie](#communicatie)
+    - [Opstelling](#opstelling)
+    - [Error handling](#error-handling)
 
 - [Timer](#Timer)
-    - [Algemeen](#Algemeen)
-    - [Blokschema](#Blokschema)
-    - [Communicatie](#Communicatie)
-    - [Opstelling](#Opstelling)
-    - [Error handling](#Error handling)
+    - [Algemeen](#algemeen-1)
+    - [Blokschema](#blokschema-1)
+    - [Communicatie](#communicatie-1)
+    - [Opstelling](#opstelling-1)
+    - [Error handling](#error-handling-1)
 
 
 ## Touchlock
@@ -32,12 +32,14 @@ De touchlock bestaat uit een touchscreen met een 4-digit cijferslot dat toegang 
 
 De bedoeling van de interface op de touchscreen is dat deze vrij intuïtief is, zonder extra uitleg zou alles duidelijk moeten zijn. Het is wel zo dat men pas kan weten dat er maar 3 pogingen zijn na de eerste foute poging. Bij 3 foute pogingen zal het slot ook openen maar dan wel met de boodschap 'GAME OVER' op het scherm.
 
-De touchscreen zelf zal niet responsief zijn tot alle nodige info doorgestuurd is via MQTT en de wifi kan afgesloten worden op de ESP32. Dit is een gevolg van het feit dat voor touchscreen functionaliteit nagenoeg alle pins van de ESP32 beschikbaar moeten zijn, sommige moeten zelf doorverbonden worden. De wifi functionaliteit gebruikt een aantal van deze pins als register, een fout signaal kan bijvoorbeeld het SSID of wachtwoord voor de verbonden router resetten. Aangezien dit gedrag in zekere zin handig is zien we dit als een feature en omzeilen we de beperkingen van de ESP32 door de code in 2 fases op te delen; met wifi en zonder wifi. 
+De touchscreen zelf zal niet responsief zijn tot alle nodige info doorgestuurd is via MQTT en de wifi kan afgesloten worden op de ESP32. Dit is een gevolg van het feit dat voor touchscreen functionaliteit nagenoeg alle pins van de ESP32 beschikbaar in gebruik zijn, sommige moeten zelfs doorverbonden worden (15+35, 32+36, 33+34). De wifi functionaliteit lijkt een aantal van deze pins als register te gebruiken, een fout signaal kan bijvoorbeeld het SSID of wachtwoord voor de verbonden router resetten volgens sommige bronnen. Concensus over de reden van dit probleem is er dus helaas niet, geen enkele bron zegt hetzelfde en de producent zelf geeft zelfs geen problemen aan bij gebruik van de wifi functionaliteit. Alles wijst echter op een ontwerp fout waardoor bepaalde pins verstoord worden bij wifi functionaliteit. Alle speculatie terzijde, GPIO pin 15 is een ADC pin die touch functionaliteit ondersteunt, en zal dus een inkomend of uitgaand signaal altijd onmiddelijk hoog of laag maken. Wanneer de wifi werkzaam is lijkt het erop dat pin 15 steeds hoog komt te staan. De touchscreen blijft dus zolang de wifi aanstaat in *write* modus en registreert de touch signalen niet. Aangezien dit gedrag in zekere zin handig is zien we dit als een feature en omzeilen we de beperkingen van de ESP32 door de code in 2 fases op te delen; met wifi en zonder wifi. 
 
 Door dit gedrag van de ESP32 is er wel geen manier om het slot vanop afstand te openen eens de wifi uitgeschakeld is. Om hier eventuele problemen op te lossen voorzien we simpelweg code '0000' als noodoplossing moest iemand in de kamer zelf in paniek raken. Als de wifi nog aan staat kan er simpelweg van buitenaf een signaal gestuurd worden om het compartiment met de sleutel te openen.
 
 ### Blokschema
-![Blokschema](Kluis_Algemeen.png)
+![Blokschema](Capture.PNG)
+
+Voor een schaalbare afbeelding van ditzelfde schema klik [hier](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Alohomora/pcb_schermv2.svg).
 
 ### Communicatie
 Alle communicatie verloopt via de broker. De touchlock ontvangt in principe alleen maar data en verzendt zelf slechts 1 keer naar een kanaal van de timer, behalve dan voor debug doeleinden zal meer gebruik worden gemaakt van publish functies. De gebruikte channels zijn:
@@ -70,8 +72,9 @@ We gaan dan het circuit na met behulp van een multimeter en controleren of hier 
 De timer heeft als functie de spelers duidelijk te maken hoeveel tijd hen nog resteert om te ontsnappen uit de escaperoom. Ze vinden deze ergens op een duidelijke plaats in de kamer en zullen zelf moeten ondervinden dat ze binnen de tijd aangeduid door de timer moeten ontsnappen. De timer is opgebouwd uit een klein doosje waarop een zeven segment display te zien is. Vanaf het spel in werking treed, zal deze beginnen aftellen vanaf een ingestelde tijd (standaard 60 minuten). Wanneer de kluis binnen de tijd kan worden geopend zal de timer stoppen met aftellen en kunnen de spelers controleren hoelang ze er juist over hebben gedaan om te ontsnappen. Wanneer de tijd om is, zijn ze er niet ingeslaagd om de puzzel op tijd op te lossen en zal de timer via MQTT de kluis openen zodat de spelers de kamer kunnen verlaten er wordt voor de duidelijkheid "GAME OVER" op het display weergegeven.
 
 ### Blokschema
-![Blokschema](Timer_Algemeen.png)
+![Blokschema](blokschema.png)
 
+Voor een schaalbare afbeelding van ditzelfde schema klik [hier](https://github.com/Project-ES-20-21/General/blob/gh-pages/docs/Alohomora/pcb.svg).
 ### Communicatie
 Alle communicatie van de timer verloopt via de broker, zelf is niet veel interactie nodig met de timer en andere delen in de escape room. Voor de minimale werking van de timer maken we gebruik van de volgende kanalen:
 - esp32/timer/control: wordt gebruikt om de timer te laten resetten, starten met aftellen, stoppen met aftellen, opnieuw verbinding maken met de broker.
@@ -95,7 +98,10 @@ Wanneer de timer niet meer aftelt wanneer dit toch de bedoeling is kan men:
 - Nakijken of de timer verbonden is met de broker. Indien deze verbonden is handmatig de timer starten. Dit kan door gebruik te maken van de GUI.
 Indien de display niet meer oplicht:
 - Controleren of de powerbank het circuit nog voedt.
-- Nakijken of de PCB naar behoren werkt (geen oververhitting, geen componenten die missen,..)
+- Nakijken of de PCB naar behoren werkt (geen oververhitting, geen componenten die missen,..).
+
+## Verdere info
+Voor een uitgebreidere uitleg zie [hardware](hardware.md) en [software](software.md)
 
 
 

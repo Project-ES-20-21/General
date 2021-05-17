@@ -9,8 +9,8 @@ nav_order: 2
 
 
 # PCB
-De files van ons volledige PCB ontwerp binnen Kicad kunnen via volgende link gevonden worden:
-![](https://github.com/Ontsmettinator3000/PCB)
+De files van ons volledige PCB ontwerp binnen Kicad kunnen via [volgende link](https://github.com/Ontsmettinator3000/PCB) gevonden worden:
+
 
 ## 3D render PCB
 
@@ -23,11 +23,11 @@ De files van ons volledige PCB ontwerp binnen Kicad kunnen via volgende link gev
 
 # Componenten
 ## Voeding
-De PCB wordt gevoed door een powerbank verbonden via een micro-usb poort. Hierdoor krijgt de PCB een 5 volt spanningsniveau waarmee de versterker en pomp gevoed worden. De ESP-32, het lcd-scherm, de infrarood sensor en de NFC-module worden gevoed door 3.3 volt. Hierdoor werd een AMS1117-3.3 LDO gebruikt die het 5 volt niveau naar 3.3 volt verlaagt. We kozen voor een powerbank als voeding omdat deze het gewenste 5volt niveau geeft. Een powerbank heeft ook een grote capaciteit waardoor deze niet vaak opgeladen moet worden. Verder is deze ook gebruiksvriendelijk in het opladen en makkelijk te vervangen.
+De PCB wordt gevoed door een powerbank verbonden via een micro-usb poort. Hierdoor krijgt de PCB een 5 volt spanningsniveau waarmee de versterker en pomp gevoed worden. De ESP-32, het lcd-scherm, de infrarood sensor en de NFC-module worden gevoed door 3.3 volt. Hierdoor werd een AMS1117-3.3 LDO gebruikt die het 5 volt niveau naar 3.3 volt verlaagt. We kozen voor een powerbank als voeding omdat deze het gewenste 5volt niveau geeft. Een powerbank heeft ook een grote capaciteit waardoor deze niet vaak opgeladen moet worden. Verder is deze ook gebruiksvriendelijk in het opladen en makkelijk te vervangen. Naast de micro-USB connector werd een schakelaar bevestigd om de mogelijkheid te geven om de pcb volledig uit te schakelen.
 
 ## Programmer
 
-Om de ESP32 microcontroller te programmeren is een program header aanwezig die verbonden is met de TX en RX poorten van de ESP32. Deze zijn respectievelijk de transmitter en receiver bij seriële communicatie. Via een een USB naar Serial UART-bridge kan verbinding gemaakt worden. Het gebruik van seriele connectie werd gekozen boven het programmeren via micro usb omdat het programma de mogelijkheid heeft om OTA geprogrammeerd te worden. De aanwezigheid van een complexere verbinding via micro usb waar de usb naar seriele omzetting op de PCB zou moeten gebeuren was dus te complex om maar één keer te gebruiken.
+Om de ESP32 microcontroller te programmeren is een program header aanwezig die verbonden is met de TX en RX poorten van de ESP32. Deze zijn respectievelijk de transmitter en receiver bij seriële communicatie. Via een een USB naar Serial UART-bridge kan verbinding gemaakt worden. Het gebruik van seriele connectie werd gekozen boven het programmeren via micro usb omdat het programma de mogelijkheid heeft om OTA geprogrammeerd te worden. De aanwezigheid van een complexere verbinding via micro usb waar de usb naar seriele omzetting op de PCB zou moeten gebeuren was dus te complex om maar één keer te gebruiken. Op de PCB is ook een led aanwezig die gebruikt werd om de functionaliteit van de pcb te testen bij solderen. Deze led werd verder ook gebruikt om de verschillende foutcode visueel door te geven.
 
 ## NFC sensor
 
@@ -35,15 +35,15 @@ Als modus van identificatie wordt er gebruik gemaakt van een RFID NFC-lezer. Spe
 
 ## Pomp
 
-Om het ontsmettingsmiddel te pompen maken we gebruik van een verticale onderwaterpomp die met 5V gevoed wordt. De pomp wordt aangestuurd door een Mosfet. Deze werd wel op een abnormale manier uitgevoerd aangezien de mosfet naar de ground schakelt. De Pomp wordt door een PWM-signaal aangestuurd zodat de juiste hoeveelheid ontsmettingsmiddel kan verkregen worden. Ten slotte werd er ook een flyback diode toegevoegd om eventuele inverse stromen tegen te houden.
+Om het ontsmettingsmiddel te pompen maken we gebruik van een verticale onderwaterpomp die met 5V gevoed wordt. De pomp wordt aangestuurd door een Mosfet wat op een abnormale manier werd uitgevoerd aangezien de mosfet naar de massa schakelt. De Pomp wordt voor een bepaalde tijdsduur ingeschakeld zodat de juiste hoeveelheid ontsmettingsmiddel kan verkregen worden. Ten slotte werd er ook een flyback diode toegevoegd om eventuele inverse stromen tegen te houden.
 
 ## Hand sensor
 
-Als hands-free sensor om ontsmetting te dispensen wordt gebruik gemaakt van een infrarood breakbeam sensor. Deze sensor gebruikt een IR-zender en receiver. Wanneer de verbinding tussen de twee wordt verbroken zal er een signaal worden verzonden. Door de zender en receiver parallel naast elkaar te plaatsen kan de sensor ook als afstandssensor gebruikt worden. Wanneer een object het IR licht weerkaatst tot de receiver zal er ook een signaal gegeven worden. Aan de uitgang werd een pull-up weerstand toegevoegd voor correcte werking. Door de simpele uitvoering van deze IR-sensor werd deze verkozen boven een ultrasone afstandssensor.
+Als hands-free sensor maken we gebruik van een infrarood breakbeam sensor. Deze sensor gebruikt een IR-zender en receiver. Wanneer de verbinding tussen de twee wordt verbroken zal er een signaal worden verzonden. Door de zender en receiver parallel naast elkaar te plaatsen kan de sensor ook als afstandssensor gebruikt worden. Wanneer een object het IR licht weerkaatst tot de receiver zal er ook een signaal gegeven worden. Aan de uitgang werd een pull-up weerstand toegevoegd voor correcte werking. Door de simpele uitvoering van deze IR-sensor werd deze verkozen boven een ultrasone afstandssensor.
 
 ## LCD scherm
 
-Om visuele instructies te geven aan de gebruiker wordt gebruik gemaakt van een TFT-LCD scherm. Deze werkt via SPI, hier wordt een full duplex verbinding gemaakt. Er worden bij SPI vier verbindingen gebruikt. MOSI stuurt data van master naar slave terwijl MISO het omgekeerde doet. CS, chip select, bepaalt met welke slave gecommuniceerd wordt. Tenslotte is er ook nog een seriele klok nodig. Er is ook een enable ingang die gebruikt wordt om het scherm uit te schakelen wanneer het niet nodig is om er iets op te zien. Dit zorgt voor een kleiner verbruik.
+Om visuele instructies te geven aan de gebruiker wordt gebruik gemaakt van een TFT-LCD scherm. Deze communiceert via SPI, hierbij wordt een full duplex verbinding gemaakt. Er worden bij SPI vier verbindingen gebruikt. MOSI stuurt data van master naar slave terwijl MISO het omgekeerde doet. CS, chip select, bepaalt met welke slave gecommuniceerd wordt. Tenslotte is er ook nog een seriële klok nodig. Er is ook een enable ingang die gebruikt wordt om het scherm uit te schakelen wanneer het niet nodig is om er iets op te zien. Dit zorgt voor een kleiner verbruik.
 
 ## Versterker
 
