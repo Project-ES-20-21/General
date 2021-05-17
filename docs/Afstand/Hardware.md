@@ -8,13 +8,13 @@ nav_order: 1
 ## Hardware
 #### Gebruikte componenten:
 | Component                       | type            | gebruik|
-| ESP32-WROOM-32UE 4MB FLASH      | micro processor  |verzenden BLE signalen, RSSI metingen, controleren van veilige afstand, communicatie met broker|
-| AMS1117-3.3                     | LDO                  |conversie van inputspanning naar een stabiele 3.3V voeding  |
-| Conrad Components 93038c213a    | buzzer               |    piept wanneer de speler te dicht bij een andere speler staat  |
-|MOLEX 105017-1001                | micro-usb            | voeding vanuit een 5V powerbank/oplader|
-|diverse modellen                  |printkroonsteentje    | voeding vanuit een 9V batterij         |
-|On Shine Enterprise Surface Mount Right Angle Switch | bistabiele schakelaar| keuzeschakelaar voor voeding uit usb versus uit batterij |
-|A24-HABUF-P5I-ND                 | omnidirictionele antenne| verzenden en ontvangen van wifi en ble signalen|
+| ESP32-WROOM-32UE 4MB FLASH      | micro processor  | verzenden BLE signalen, RSSI metingen, controleren van veilige afstand, communicatie met broker|
+| AMS1117-3.3                     | LDO                  | conversie van inputspanning naar een stabiele 3.3V voeding  |
+| Conrad Components 93038c213a    | buzzer               | piept wanneer de speler te dicht bij een andere speler staat  |
+| MOLEX 105017-1001                | micro-usb            | voeding vanuit een 5V powerbank/oplader|
+| diverse modellen                  | printkroonsteentje    | voeding vanuit een 9V batterij |
+| On Shine Enterprise Surface Mount Right Angle Switch | bistabiele schakelaar| keuzeschakelaar voor voeding uit usb versus uit batterij |
+| A24-HABUF-P5I-ND                 | omnidirictionele antenne| verzenden en ontvangen van wifi en ble signalen|
 ##### ESP32-WROOM-32UE 4MB FLASH
 De ESP32 is een MCU met geïntegreegde wifi -en bluetooth capaciteiten ontworpen door Espressif Systems. De ESP32 heeft veel geïntegreerde features en is vooral gefocust op IoT-applicaties. In dit project voert de ESP32 alle taken uit: hij verzendt de BLE signalen, meet de RSSI-waardes van binnenkomende BLE-signalen, controleert deze waarden en verzorgt communicatie met de rest van de escape room aan de hand van mqtt.
 ##### Voeding
