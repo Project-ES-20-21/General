@@ -7,7 +7,15 @@ nav_order: 1
 ---
 
 # Software
-
+- [Setup en main loop](#setup-en-main-loop)
+- [Config](#config)
+- [IR sensor](#ir-sensor)
+- [Scherm](#scherm)
+- [Login](#login)
+- [Monitor](#monitor)
+- [MQTT](#mqtt)
+- [NFC](#nfc)
+- [Speaker](#speaker)
 
 Het gehele project wordt bestuurd via een ESP32 module. Deze module kan geprogrammeerd worden via Arduino flavoured C en C++. Alle geschreven software is beschikbaar in de [algemene repository](https://github.com/Ontsmettinator3000/main) van onze [organisatie](https://github.com/Ontsmettinator3000). Bij de start van de ontwikkeling kozen we er voor om het geheel "modulair" maken. Hierbij splitsten we de verschillende onderdelen op in aparte klasses. Dit deden we om de main loop leesbaar en overzichtelijk te maken. Ook is het hierdoor makkelijk om dingen uit te breiden of te overbruggen bij foutieve werking.
 
@@ -17,6 +25,8 @@ Het gehele project wordt bestuurd via een ESP32 module. Deze module kan geprogra
 Zoals elk Arduino-programma, zal ook onze code lopen vanuit een loop. Hierbij zal eenmaal de setupmethode overlopen worden alvorens de loop te starten. In de setup zullen we de verschillende onderdelen juist configureren. Zo zullen we de wifi en MQTT verbinding instellen, alsook enkele pinModes definiëren. Ook de OTA connectie wordt hier ingesteld.
 
 De main loop is een vertaling van de [algemene flowchart](index.md#Blokschema) in code. Eerst en vooral zullen we loop functies hebben voor verschillende klasses. Deze zullen zeer frequent opgeroepen worden. Vaak zullen deze functies bepaalde informatie ophalen of dingen updaten. Hierna zullen we eerste test doen. Merk op dat in deze fase alle andere onderdelen uitgeschakeld zijn door de setup. Indien een alarm ontvangen is, zullen we het scherm updaten en de NFC handler inschakelen. We bevinden ons nu in fase twee van het proces. Hierbij zal een gescande kaart de login functie oproepen. Deze zal testen of de tag al dan niet correct is en eventueel reeds geregistreerd. Als dit onderdeel doorlopen is, rest er nog enkel de alcohol te laten lopen. Dit zal gebeuren nadat de scanner een hand geregistreerd heeft via de scanner klasse. Indien deze cyclus doorlopen is voor iedere besmette speler, zal een OK signaal verzonden worden naar de broker.
+
+![Flowchart code](Afbeeldingen/flowchart_code.png)
 
 Doorheen de code mag er geen gebruik gemaakt worden van blocking code, deze zal namelijk zorgen voor een vertraagde/foute OTA. Het gebruik van millis() bij tijdsmetingen is dus vereist. Ook zal de code niet blokkeren bij een fout in de setup. Er zal dus steeds vanuit de setup naar de loop gegaan worden, onafhankelijk of deze voorafgaande setup succesvol was. Hierdoor is programmeren via WiFi op elk moment mogelijk.
 
@@ -124,6 +134,7 @@ Indien men extra functionaliteit wilt toevoegen, kan in de `println()` methode a
 
 ## MQTT
 De communicatie van het gehele systeem gebeurt via MQTT. Dit protocol werkt volgens het publish-subscribe principe. Hierbij wordt een broker gebruikt die dienst doet als centrale server.
+#### Functies
 ##### setup()
 Basis functie die connectie met Wifi en MQTT server maakt. Voor de connectie met het internet maakt deze gebruik van `setupWifi()`. De MQTT verbinding zal dan weer gebeuren via `reconnect()` Ook zal de callback functie gekoppeld worden aan de MQTT verbinding. Indien deze setup geslaagd is, zal het IP-adres van de ESP32 op het daarvoor voorziene MQTT kanaal gepost worden. Hierdoor is het eenvoudiger om te programmeren via OTA. Dit bericht is retained, het meest recente IP-adres zal dus altijd zichtbaar zijn.
 ##### setupWifi()
