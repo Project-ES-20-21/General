@@ -10,7 +10,7 @@ nav_order: 2
 
 ## Speaker
 ### 3D 
-De documentatie van de printplaat via volgende [link](https://github.com/BachMorse/Speaker_PCB).Een 3D render van de printplaat ziet er als volgt uit:
+De documentatie van de printplaat kan via volgende [link](https://github.com/BachMorse/Speaker_PCB) geraadpleegd worden. Een 3D render van de printplaat ziet er als volgt uit:
 
 ![](https://github.com/BachMorse/Documentatie-speaker/blob/master/PCB%20voorkant.png)
 ![](https://github.com/BachMorse/Documentatie-speaker/blob/master/PCB%20achterkant.png)
@@ -24,7 +24,7 @@ Voor het voeden van deze gehele schakeling wordt er gebruik gemaakt van een powe
 ![](https://github.com/BachMorse/Documentatie-speaker/blob/master/USB.png)
 ### Versterker
 Voor het afspelen van audiofragmenten via een luidspreker is er een versterking nodig. Aan de hand van de IC LM386 wordt deze eindversterking gerealiseerd.
-Deze versterker is ideaal voor schakelingen die op een lage voltage functioneren.
+Deze versterker is ideaal voor schakelingen die op een laag voltage functioneren.
 ![](https://github.com/BachMorse/Documentatie-speaker/blob/master/versterker.png)
 ### 
 ## Micro
