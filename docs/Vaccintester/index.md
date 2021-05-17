@@ -17,6 +17,7 @@ Dit is de uitleg horende bij de vaccintester uit de escape room.
 - [Budget](#budget)
 - [Error handling](#Error_handling)
 - [Gantt chart](#gantt-chart)
+- [Elementen](#elementen)
 
 ## Algemene uitleg
 
@@ -29,6 +30,10 @@ doorgestuurd naar de ledstrip en kunnen deze dus gemengd worden door bijvoorbeel
 Wanneer men zeker is van de kleur, kan men op de knop aan de ledstrip drukken om het kleur op de ledstrip te plaatsen en te laten controleren. Wanneer de juiste kleur gevormd is zal de ledstrip groen pinken en kan de volgende kleur van de sequentie gevormd worden. Wanneer een foutieve kleur aangemaakt is zal de ledstrip rood pinken en moet men opnieuw bij de eerste kleur van de sequentie beginnen. Wanneer uiteindelijke alle kleuren juist gevormd zijn zal de ledstrip opeenvolgend een aantal keer blauw pinken en een aantal keer wit pinken, wat het laatste getal van de code voorstelt. Wanneer de ledstrip vier maal blauw pinkt en daarna vier keer wit, is het getal dus gelijk aan vier. Dit getal wordt dan ook via de broker naar Alohomora verstuurd.
 
 De puzzel zou moeten opgelost kunnen worden in 10-15 minuten.
+
+## Elementen
+![Alles_samen](allesSamen.jpg)
+
 ## Flowcharts
 ### Vaccintester
 ![Flowchart_vaccintester](Flowchart_general.PNG)
