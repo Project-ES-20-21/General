@@ -23,8 +23,8 @@ Voor het voeden van deze gehele schakeling wordt er gebruik gemaakt van een powe
 #### USB
 ![](https://github.com/BachMorse/Documentatie-speaker/blob/master/USB.png)
 ### Versterker
-Voor het afspelen van audiofragmenten via een luidspreker is er een versterking nodig. Aan de hand van de IC LM386 wordt deze eindversterking gerealiseerd.
-Deze versterker is ideaal voor schakelingen die op een laag voltage functioneren.
+Voor het afspelen van de rinkeltoon is er een versterking nodig (Pin 25 schema). Er wordt hiervoor gebruik gemaakt van een LM386 (IC). Deze schakeling wordt geïmplementeerd op de PCB. Om de versterking van deze versterker te regelen wordt er nog een potentiometer voor geplaatst. De 'beep' tonen afkomstig van de morse worden afgespeeld via de tweede luidspreker. Hierbij maken we gebruik van een laag-ohmige luidspreker, deze luidspreker vergt geen versterker. Zoals reeds vermeldt werden beide audio fragmenten eerst via dezelfde luidspreker afgespeeld. Later werd dan beslist om dit op te splitsen zodat het volume van de twee niet meer afhankelijk waren van elkaar. Er zijn dus geen pinheaders voor de luidspreker die in de telefoon zit voorzien. Dit kan echter makkelijk opgelost worden door de luidspreker rechtstreeks aan de esp te solderen.
+
 ![](https://github.com/BachMorse/Documentatie-speaker/blob/master/versterker.png)
 ### 
 ## Micro
