@@ -38,7 +38,7 @@ Een goede omnidirectionele antenne is cruciaal voor een correcte RSSI meting in 
 #### PCB
 
 ##### Schema van de PCB
-![schema van PCB](schema.JPG)
+![schema van PCB](schema_pretty.png)
 
 ##### Bovenaanzicht van de PCB
 ![bovenaanzicht van PCB](bovenaanzicht.png)
