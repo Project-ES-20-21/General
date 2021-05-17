@@ -9,7 +9,7 @@ nav_order: 2
 
 
 # PCB
-De files van ons volledige PCB ontwerp binnen Kicad kunnen via [volgende link] (https://github.com/Ontsmettinator3000/PCB)gevonden worden:
+De files van ons volledige PCB ontwerp binnen Kicad kunnen via [volgende link](https://github.com/Ontsmettinator3000/PCB) gevonden worden:
 
 
 ## 3D render PCB
