@@ -56,10 +56,10 @@ We plaatsen een motionsensor aan een kettlebell en deze wordt dan gebruikt om de
 Als de spelers een oefening juist uitvoeren, laadt de batterij op en stijgt het balkje op de display. De batterij mag niet leeg zijn indien men andere puzzels wenst uit te voeren. Als de spelers een volledige oefeningenreeks correct uitvoeren, wordt een getal vrijgegeven van het digitaal cijferslot en gaat de telefoon van morsecode af. Als de spelers een incorrecte beweging uitvoeren daalt het balkje. Doorheen het spel wordt er energie verbruikt en krimpt het balkje dus. Eenmaal de batterij helemaal leeg is, wordt dit met de andere puzzels gedeeld via de broker. 
 
 ### Morsecode
+Zodra de fitnesstracker puzzel opgelost is zal er een telefoon beginnen rinkelen. Wanneer de spelers van de escape room deze telefoon hebben kunnen lokaliseren kan deze opgenomen worden door op de bijhorende knop te drukken. Eenmaal de knop ingedrukt is geweest wordt de telefoon beschouwd als opgenomen. 
+De telefoon zal dan een morse code afspelen. Deze morse code zal beginnen met een lage toon om zo aan te geven dat de morse code van start gaat. Aan de andere kant van de kamer moet deze code worden nagefloten in de micro.
+Wanneer de juiste morse sequentie wordt nagefloten zal er een cijfer verschijnen op de display, wat handig zal uitkomen voor de oplossing van het cijferslot, en zullen de virologen aan de hand van een tip (ook op display) verder kunnen met de volgende proef; 5G.
 
-In een telefoon zal er een morse code afspelen. Deze morse code zal beginnen met een hoge toon die aangeeft wat het begin is. Aan de andere kant van de kamer moet deze code worden nageklopt.
-Wanneer het juist werd nageklopt zal er een cijfer tevoorschijn komen, en zullen de virologen verder kunnen met de 5G-proef. De plaats van de afstandsbediening/batterijen zal getoond worden op een display.
-Wanneer de virologen de handen moeten ontsmetten, mag de opdracht niet verder gaan. De morse code zal dus stoppen en daarna pas opnieuw starten wanneer de handen ontsmet zijn.
 
 ### 5G
 
