@@ -38,5 +38,4 @@ Een andere factor die fout kan veroorzaken is het achtergrondgeluid. Om dit tege
 
 ## Bronnen
 ESP32, analoog naar digitaal: https://randomnerdtutorials.com/esp32-adc-analog-read-arduino-ide/
-
 I2C communicatie: https://www.circuitbasics.com/basics-of-the-i2c-communication-protocol/
