@@ -17,7 +17,7 @@ We stellen het wachtwoord in en het ssid, via de variabelen password en ssid. He
 We stellen per speler een grenswaarde in, als de RSSI waarde kleiner is dan deze waarde dan is er overtreding. Er worden ook 4 tellers ("teller0", "teller1", "teller2" en "teller3") aangemaakt en 4 buffers ("buffer0", "buffer1", "buffer2" en "buffer3"). De grootte van de buffers wordt ook meegegeven in de size variabele. De send_to_broker, die ingesteld wordt op true, geeft aan of speler een overtreding hebben begaan en zich nog moeten ontsmetten, als deze op true staat dan betekent het dat de spelers hun handen hebben ontsmet sinds de vorige overtreding.
 
 ### Piep 
-We stellen een wachttijd in, een boolean die aangeeft of de buzzer aan het piepen is en het begintijdstip wanneer de buzzer begint met piepen wordt ook bijgehouden. De boolean "beginPiep" geeft aan of de buzzer moet beginnen met piepen. 
+We stellen een wachttijd in, een boolean die aangeeft of de buzzer aan het piepen is en het begintijdstip wanneer de buzzer begint met piepen wordt ook bijgehouden. De boolean "beginPiep" geeft aan of de buzzer moet beginnen met piepen. De wachttijd wordt gelijk gesteld aan 180000 milliseconden, dus als een speler zijn handen heeft ontsmet dan kan hij/zij 3 minuten geen overtreding begaan.
 
 
 ## Setup
