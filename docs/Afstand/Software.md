@@ -136,10 +136,11 @@ Deze callback zorgt voor de verwerking van de resultaten van de BLE scan. Eerst 
 class AdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks{
   
   void onResult(BLEAdvertisedDevice advertisedDevice){
-    
-    ...
+      beginPiep = false;
+      
+      ...
   
-  piepNonBlocking();
+      piepNonBlocking();
   }
   
 }
@@ -200,6 +201,7 @@ void callback(char* topic, byte* message, unsigned int length) {
                     beginPiep = true;
                     send_to_broker = false;
                     piepNonBlocking();
+                    beginPiep = false;
                 }
             }
         }
