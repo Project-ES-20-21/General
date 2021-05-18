@@ -11,13 +11,13 @@ nav_order: 2
 ![flowchart](bachproef_flowchart_afbeelding.png)
 ## Variabelen
 ### Wi-Fi en MQTT
-We stellen het wachtwoord in en het ssid, via de variabelen ssid en password. Het ip-adres van de MQTT-server wordt meegegeven via de variabele mqtt_server. We gebruiken de WiFiClient bibliotheek voor Wi-Fi en PubSubClient voor MQTT. Uit deze bibliotheken maken we twee objecten aan Afstand_(spelernummer) en client(Afstand_(spelernummer).
+We stellen het wachtwoord in en het ssid, via de variabelen password en ssid. Het ip-adres van de MQTT-server wordt meegegeven via de variabele mqtt_server. We gebruiken de WiFiClient bibliotheek voor Wi-Fi en PubSubClient bibliotheek voor MQTT. Uit elke bibliotheek maken we één object aan Afstand_(spelernummer) uit WiFiClient en client(Afstand_(spelernummer) uit PubSubClient.
 
 ### BLE en buffer
-We stellen per speler een grenswaarde in, als de RSSI waarde kleiner is dan deze waarde dan is er overtreding. Er worden ook 4 tellers aangemaakt en 4 buffers. De grootte van de buffers wordt ook meegegeven in de size variabele. De send_to_broker, die ingesteld wordt op true, geeft aan of speler een overtreding hebben begaan en zich nog moeten ontsmetten, als deze op true staat dan betekent het dat de spelers hun handen hebben ontsmet sinds de vorige overtreding.
+We stellen per speler een grenswaarde in, als de RSSI waarde kleiner is dan deze waarde dan is er overtreding. Er worden ook 4 tellers ("teller0", "teller1", "teller2" en "teller3") aangemaakt en 4 buffers ("buffer0", "buffer1", "buffer2" en "buffer3"). De grootte van de buffers wordt ook meegegeven in de size variabele. De send_to_broker, die ingesteld wordt op true, geeft aan of speler een overtreding hebben begaan en zich nog moeten ontsmetten, als deze op true staat dan betekent het dat de spelers hun handen hebben ontsmet sinds de vorige overtreding.
 
 ### Piep 
-We stellen een wachttijd in, een boolean die aangeeft of de buzzer aan het piepen is, 
+We stellen een wachttijd in, een boolean die aangeeft of de buzzer aan het piepen is en het begintijdstip wanneer de buzzer begint met piepen wordt ook bijgehouden. De boolean "beginPiep" geeft aan of de buzzer moet beginnen met piepen. 
 
 
 ## Setup
@@ -25,7 +25,7 @@ In de setup methode die eenmaal wordt uitgevoerd, zorgen we ervoor dat alles kla
 ### Wi-Fi
 Als eerste wordt de Wi-Fi verbinding opgesteld, hiervoor wordt de methode setup_wifi() gebruikt. In deze methode probeert de ESP32 te verbinden met het Wi-Fi netwerk dat wordt meegegeven in de variabele ssid met het paswoord in de variabele password. Vervolgens wordt gecontroleerd of de ESP32 verbonden is of niet. Zolang de status van de Wi-Fi niet verbonden is zullen er "." geprint worden terwijl er gewacht wordt. 
 ### MQTT
-Nadat de ESP32 verbonden is met het netwerk, wordt de MQTT client opgesteld. Er wordt wel nog geen verbinden gemaakt met de MQTT server. Dit gebeurt pas in de loop methode. De callback functie wordt ook toegewezen aan de client om de MQTT ontvangen berichten te verwerken.
+Nadat de ESP32 verbonden is met het netwerk, wordt de MQTT client opgesteld. Er wordt wel nog geen verbinding gemaakt met de MQTT server. Dit gebeurt pas in de loop methode. De callback functie wordt ook toegewezen aan de client om de MQTT ontvangen berichten te verwerken.
 ### BLE
 Vervolgens wordt in de setup() methode alles ingesteld om BLE signalen te verzenden en ontvangen. We maken nieuwe scan aan. Aan deze scan linken we via de setAdvertisedDeviceCallbacks methode een object van de klasse AdvertisedDeviceCallBack met de methode in die de resultaten van de scan continu verwerkt. We zetten de boolean wantDuplicates op true, we willen heel de tijd resultaten ontvangen van dezelfde apparaten, zodat we continu de afstand kunnen bepalen. Er worden een scantijd van 99 milliseconden ingesteld met een pauze van 1ms tussen de scans door. Hoe meer vermogen de BLE signalen hebben des te better de verwerking van de resultaten, daarom wordt het scan_type ingesteld op active via de methode setActiveScan(true) van de BLEScan klasse. Bij het uitzenden van signalen willen we dat de ESP32 een naam heeft, dit werd ingesteld bij de initialisatie van het bleCast object. Via de methode bleCast.begin() worden een aantal parameters ingesteld. 
 ### Buffers
@@ -53,6 +53,7 @@ De MQTT callback functie wordt in de loop opgeroepen via client.loop(). Als er e
 Als een bericht verstuurd is naar ons controle dan moet gecontroleerd worden of het bericht  "1","2" of "3" is. Als er een "0" binnenkomt moet de ESP32 herstart worden, bij "1" wordt de werking stopgezet. Bij "2" mag de werking verdergaan, de boolean send_to_broker wordt op true gezet en de timers worden opnieuw ingesteld, een twee betekent dus dat de handen van de overtreders ontsmet zijn.
 
 Als een bericht verstuurd is naar het interne piepkanaal van de ESP, dan moet het alarm afgaan als de cooldown is verstreken.
+
 
 
 
