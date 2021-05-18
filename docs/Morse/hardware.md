@@ -29,18 +29,18 @@ De outputpinnen van de ESP32 kunnen maximum 3.3V doorgeven. Om voldoende sterke 
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/schakeling_levelshifters.JPG)
 
 ### Display
-Voor de display gebruiken we I2C communcatie. Deze communicatie is gebaseerd op een master-slave principe. Dit principe laat toe om meerdere masters en meerdere slaven met elkaar te laten communiceren. Elke slave moet softwarematig geïdentificeerd worden. Wanneer data vanuit de master wordt gestuurd naar de slave, zal elke slave controleren of het adres waarnaar verstuurd wordt overeekomt met het eigen adres. In dit project is maar één master (ESP32) en één slave (display) nodig.
+Voor de display gebruiken we I2C communcatie. Deze communicatie is gebaseerd op een master-slave principe. Dit principe laat toe om meerdere masters en meerdere slaven met elkaar te laten communiceren. Elke slave moet softwarematig geïdentificeerd worden. Wanneer data vanuit de master wordt gestuurd naar de slave, zal elke slave controleren of het adres waarnaar verstuurd wordt overeenkomt met het eigen adres. In dit project is maar één master (ESP32) en één slave (display) nodig.
 
 De SCL-pin wordt gebruikt om de kloksignaal communiceren van de master naar de slave. SDA communicatie (data-communicatie) is bidirectioneel. Langs deze lijn wordt data bit per bit gecommuniceerd.
 
-I2C is synchroon, de bitoutput wordt dus synchroon, volgens het kloksignaal over SCL, doorgegeven. De data wordt doorgegeven in messages. Deze messages worden opgedeeld in een vaste lengte van acht bits, genaamd frames. De messages bevatten ook start en stop condities, read/write bits, acknowledge/NACK tussen bits... 
+I2C is synchroon, de bitoutput wordt dus synchroon, volgens het kloksignaal over SCL doorgegeven. De data wordt doorgegeven in berichten. Deze berichten worden opgedeeld in een vaste lengte van acht bits, genaamd frames. De messages bevatten ook start en stop condities, read/write bits, acknowledge/NACK tussen bits... 
 De read/write bit wordt aan het einde van de frame toegevoegd, het laat aan de slave weten of het data wil lezen of schrijven. 
 
 ### Pin headers
 De verschillende pin headers zorgen voor de aansluiting van de externe componenten. We gebruiken vrouwtjes zodat de pinnen niet kunnen plooien als de PCB verplaatst wordt. 
 * De display maakt gebruik van I2C communicatie. Hiervoor maken we gebruik van de SDA- en SCL-poorten. De SCL-poort zorgt voor de transmissie van het kloksignaal. Via de SDA-poort sturen we data van en naar de ESP32, vanuit de display. Deze twee poorten zijn active low. Daarom werden pull-up weerstanden van 4k7 voorzien op het display zelf (ze dienen dus niet toegevoegd te worden op de zelfgemaakte display).
 * De program header wordt, naast Tx en Rx kanalen, voorzien van een voeding. Deze aansluiting kan gebruikt worden wanneer de micro-USB nog niet werd gesoldeerd op de PCB-plaat. Verder hebben deze twee pinnen geen functie.
-* Ook voorzien we pinheaders voor een button, deze button is niet enorm stabiel, het debounced bij het indrukken en loslaten, dit wordt softwarematig opgelost.
+* Ook voorzien we pinheaders voor een button, deze button is niet enorm stabiel; bouncing bij het indrukken en loslaten. Dit wordt softwarematig opgelost.
 * De laatste pinheader zal zorgen voor de connectie tussen de microfoon en de ESP32. De microfoon wordt voorzien van een potentiometer. Hoe lager de weerstand van de potentiometer, hoe gevoeliger de mcirofoon zal zijn.
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/schakeling_headers.JPG)
 
@@ -53,13 +53,13 @@ De documentatie van de printplaat kan via volgende [link](https://github.com/Bac
 ### ESP32
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie-speaker/master/schema%20ESP32.png)
 ### Voeding
-Voor het voeden van deze gehele schakeling wordt er gebruik gemaakt van een power bank van 5V, het aansluiten van deze powerbank gebeurt via een micro usb poort. Deze 5V wordt gebruikt om de versterker (LM386), intern op de schakeling, rechtstreeks te voeden. Voor de esp32 zelf volstaat een spanning van 3.3V. Dit wordt omgezet aan de hand van een DC spanningsregelaar (LDO). De schakeling kan dan uiteindelijk geprogrammeerd worden met behulp van een uart-bridge en de voorziene pinheaders.
+Voor het voeden van deze gehele schakeling wordt er gebruik gemaakt van een power bank van 5V, het aansluiten van deze powerbank gebeurt via een micro usb poort. Deze 5V wordt gebruikt om de versterker (LM386), intern op de schakeling, rechtstreeks te voeden. Voor de ESP32 zelf volstaat een spanning van 3.3V. Dit wordt omgezet aan de hand van een DC spanningsregelaar (LDO). De schakeling kan dan uiteindelijk geprogrammeerd worden met behulp van een uart-bridge en de voorziene pinheaders.
 #### Low Drop-out Regulator (LDO)
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie-speaker/master/LDO.png)
 #### USB
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie-speaker/master/USB.png)
 ### Versterker
-Voor het afspelen van de rinkeltoon is er een versterking nodig (Pin 25 schema). Er wordt hiervoor gebruik gemaakt van een LM386 (IC). Deze schakeling wordt geïmplementeerd op de PCB. Om de versterking van deze versterker te regelen wordt er nog een potentiometer geplaatst. De 'beep' tonen afkomstig van de morse worden afgespeeld via de tweede luidspreker. Hierbij maken we gebruik van een laag-ohmige luidspreker, deze luidspreker vergt geen versterker aangezien de morse code slechts hoorbaar hoeft te zijn vanaf enkele centimeters. Zoals reeds vermeldt werden beide audio fragmenten eerst via dezelfde luidspreker afgespeeld. Later werd dan beslist om dit op te splitsen zodat het volume van de twee niet meer afhankelijk waren van elkaar. Er zijn dus geen pinheaders voor de luidspreker die in de telefoon zit voorzien. Dit werd opgelost door de luidspreker rechtstreeks aan de esp te solderen.
+Voor het afspelen van de rinkeltoon is er een versterking nodig (Pin 25 schema). Er wordt hiervoor gebruik gemaakt van een LM386 (IC). Deze schakeling wordt geïmplementeerd op de PCB. Om de versterking van deze versterker te regelen wordt er nog een potentiometer geplaatst. De 'beep' tonen afkomstig van de morse worden afgespeeld via de tweede luidspreker. Hierbij maken we gebruik van een laag-ohmige luidspreker. Deze luidspreker vergt geen versterker aangezien de morse code slechts hoorbaar hoeft te zijn vanaf enkele centimeters. Zoals reeds vermeldt werden beide audio fragmenten eerst via dezelfde luidspreker afgespeeld. Later werd dan beslist om dit op te splitsen zodat het volume van de twee niet meer afhankelijk waren van elkaar. Er zijn dus geen pinheaders voor de luidspreker die in de telefoon zit voorzien. Dit werd opgelost door de luidspreker rechtstreeks aan de ESP te solderen.
 
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie-speaker/master/versterker.png)
  
