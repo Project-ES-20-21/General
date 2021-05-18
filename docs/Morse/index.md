@@ -33,7 +33,7 @@ Zoals te zien op het blokschema wacht onze volledige puzzel op een signaal van d
 De speaker wordt geïmplementeerd in een 3D-geprinte telefoon. De verdere hardware en voeding (powerbank) voor deze telefoon wordt weggestoken in een box die werd gelasercut. We voorzien in deze behuizing ook plaats voor een button.
 Voor de microfoon maakten we ook gebruik van de lasercutter. In deze behuizing voorzien we plaats voor de button, de display en de microfoon. Voor de 5V voeding van beide delen, is een powerbank nodig.
 De plaats van onze onderdelen is niet echt van belang, aangezien het kleine beweegbare onderdelen zijn. Door de 2 onderdelen (speaker en micro) ver uit elkaar te zetten, en vast te maken, wordt de puzzel wel moeilijker. 
-Verdere info over de casing 
+Verdere info over de casing is [hier](casing.md) te vinden.
 
 ## Error handling
 Wanneer er zich een fout voordoet tijdens bij het uitvoeren kan alles simpel gereset worden door het bericht '0' te versturen over het control kanaal (esp32/morse/control).
