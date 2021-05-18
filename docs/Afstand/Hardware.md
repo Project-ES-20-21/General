@@ -18,7 +18,7 @@ nav_order: 1
 | A24-HABUF-P5I-ND                 | omnidirictionele antenne | verzenden en ontvangen van wifi en ble signalen |
 
 ##### ESP32-WROOM-32UE 4MB FLASH
-De ESP32 is een MCU met geïntegreegde wifi -en bluetooth capaciteiten ontworpen door Espressif Systems. De ESP32 heeft veel geïntegreerde features en is vooral gefocust op IoT-applicaties. In dit project voert de ESP32 alle taken uit: hij verzendt de BLE signalen, meet de RSSI-waardes van binnenkomende BLE-signalen, controleert deze waarden en verzorgt communicatie met de rest van de escape room aan de hand van mqtt.
+De ESP32 is een MCU met geïntegreegde wifi -en bluetooth capaciteiten ontworpen door Espressif Systems. De ESP32 heeft veel geïntegreerde features en is vooral gefocust op IoT-applicaties. In dit project voert de ESP32 alle taken uit: hij verzendt de BLE signalen, meet de RSSI-waardes van binnenkomende BLE-signalen, controleert deze waarden en verzorgt communicatie met de rest van de escape room aan de hand van mqtt. Ook belangrijk is dat deze ESP32 versie een ipex-aansluiting heeft om een externe antenne te kunnen aansluiten. Deze externe antenne is cruciaal voor een nauwkeurige meting van de RSSI-waardes.
 
 ##### Voeding
 * Toegestane spanning aan USB poort of batterij: 5V - 12V 
