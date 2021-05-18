@@ -29,7 +29,7 @@ Een dubbele piep wil zeggen dat de serie juist of fout werd uitgevoerd. Welke va
 ## Communicatie
 Alle communicatie verloopt via de broker. De gebruikte channels zijn:
 - "esp32/fitness/nmrOef" om het nummer van de oefeningenreeks door te geven
-- "esp32/fitness/control" wordt gebruikt om alles te resetten (“0”), te stoppen (“1”) en te starten(“2”), batterij leeg (“3”) en batterij niet leeg (“4”).
+- "esp32/+/control" wordt gebruikt om alles te resetten (“0”), te stoppen (“1”) en te starten(“2”), batterij leeg (“3”) en batterij niet leeg (“4”).
 - "esp32/fitness/OKmessage" wordt gebruikt om van de kettlebell naar de LCD te laten weten of de oefening juist is of niet.
 - "esp32/fitness/LCDmessage" stuurt door in welke toestand de esp aan de kettlebell zich bevindt.
 - "esp32/fitness/telefoon" zal gebruikt worden om aan morse te laten weten dat de telefoon mag afgaan.
