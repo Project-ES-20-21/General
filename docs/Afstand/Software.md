@@ -13,8 +13,8 @@ Link naar de [algemene repository](https://github.com/blijf-weg/Afstand_BLE.git)
 - [Setup](#Setup)
 - [Loop](#Loop)
 - [BLE Callback](#BLE-Callback)
-- [piepNonBlocking](#piepNonBlocking())
-- [stuurAlarm()](#StuurAlarm())
+- [piepNonBlocking](#piepNonBlocking)
+- [stuurAlarm](#StuurAlarm)
 - [MQTT](#MQTT)
 ## Flowchart
 ![flowchart](bachproef_flowchart_afbeelding.png)
@@ -154,7 +154,7 @@ class AdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks{
 }
 ```
 
-## piepNonBlocking()
+## piepNonBlocking
 In deze functie staan twee if statements. De ene if kijkt of het alarm moet afgaan en de buzzer moet geactiveerd worden, de andere kijkt of de buzzer aan staat en of deze uitgezet mag worden. 
 De voorwaarden voordat een ESP32 module mag beginnen met piepen (`buzzerPin` instellen op hoog/"1") is dat de `buzzerPin` laag/"0" staat (er is nog geen gepiep) en dat er een overtreding is gebeurd die lang genoeg na de vorige overtreding is gebeurd. Als er aan deze voorwaarden worden voldaan dan wordt de buzzerPin hoog gezet, wordt de timer ,die bijhoudt hoelang het geleden de module is beginnen met piepen, ingesteld op de huidige tijd en worden via de methode `stuurAlarm()` de andere onderdelen van de escaperoom gealarmeerd. 
 De buzzer zal vijf seconden afgaan, er wordt dus gekeken of de huidige tijd (via `millis()`) min het "beginTijdstip" groter is dan 5000 milliseconden.
@@ -168,7 +168,7 @@ void piepNonBlocking(){
   } 
 }
 ```
-## stuurAlarm()
+## stuurAlarm
 Deze methode zorgt ervoor dat de andere onderdelen van de escaperoom op de hoogte worden gesteld van de overtreding door een "1" te sturen naar hun controle kanaal. Als de "1" goed verwerkt wordt zouden de puzzels niet verder kunnen worden opgelost tot de handen ontsmet zijn.  Er wordt ook een "1" gestuurd naar ons eigen controle kanaal. Omdat we niet willen dat ,terwijl de twee huidige overtreders hun handen ontsmetten, de andere speler ook in de buurt moeten komen om hun handen ook te moeten ontsmetten. De twee andere spelers kunnen dus geen overtreding begaan terwijl de andere spelers hun handen ontsmetten. 
 
 ```c
