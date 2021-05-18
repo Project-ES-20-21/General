@@ -29,7 +29,7 @@ De outputpinnen van de ESP32 kunnen maximum 3.3V doorgeven. Om voldoende sterke 
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/schakeling_levelshifters.JPG)
 
 ### Display
-Voor de display gebruiken we I2C communcatie. Deze communicatie is gebaseerd op een master-slave principe. Dit principe laat toe om meerdere masters en meerdere slaven met elkaar te laten communiceren. Elke slave moet softwarematig geïdentificeerd worden. Wanneer data vanuit de master wordt gestuurd naar de slave, zal elke slave controleren of het adres waarnaar verstuurd, wordt overeekomt met het eigen adres. In dit project is maar één master (ESP32) en één slave (display) nodig.
+Voor de display gebruiken we I2C communcatie. Deze communicatie is gebaseerd op een master-slave principe. Dit principe laat toe om meerdere masters en meerdere slaven met elkaar te laten communiceren. Elke slave moet softwarematig geïdentificeerd worden. Wanneer data vanuit de master wordt gestuurd naar de slave, zal elke slave controleren of het adres waarnaar verstuurd wordt overeekomt met het eigen adres. In dit project is maar één master (ESP32) en één slave (display) nodig.
 
 De SCL-pin wordt gebruikt om de kloksignaal communiceren van de master naar de slave. SDA communicatie (data-communicatie) is bidirectioneel. Langs deze lijn wordt data bit per bit gecommuniceerd.
 
