@@ -36,7 +36,7 @@ De plaats van onze onderdelen is niet echt van belang, aangezien het kleine bewe
 Verdere info over de casing is [hier](casing.md) te vinden.
 
 ## Error handling
-Wanneer er zich een fout voordoet tijdens bij het uitvoeren kan alles simpel gereset worden door het bericht '0' te versturen over het control kanaal (esp32/morse/control).
+Wanneer er zich een fout voordoet tijdens het uitvoeren kan alles simpel gereset worden door het bericht '0' te versturen over het control kanaal (esp32/morse/control).
 De esp wordt dan gereset gebruik makend van de  `ESP.restart()` methode. 
 Wanneer tijdens het afspelen van de morse een reset wordt gegeven kan het zijn dat de morse de laatst gespeelde toon blijft aanhouden. Dit zou dan kunnen opgelost worden door een nieuwe reset op te geven.
 
