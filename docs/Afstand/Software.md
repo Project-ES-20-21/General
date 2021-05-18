@@ -32,10 +32,16 @@ De ESP32 moet constant verbonden zijn met de MQTT server. Als dit niet het geval
 ## BLE Callback
 Deze callback zorgt voor de verwerking van de resultaten van de BLE scan. Eerst wordt de naam van de verzender van het ontvangen signaal vergeleken met een aantal string zodat we zeker zijn van welke andere ESP32 het signaal komt. De RSSI waarde van het signaal wordt in de buffer gestoken en een teller wordt verhoogd. Als de teller gelijk is aan de buffer grootte, wat betekent dat elke waarde vernieuwd is ten opzichte van de vorige keer dat de teller gelijk was aan de buffer grootte, er zijn dus buffer grootte aantal nieuwe RSSI waarden gemeten, dan kunnen de resultaten uit de buffer verwerkt worden. De teller wordt terug op nul gezet. Als de send_to_broker variabele true is, de wachttijd van de vorige overtreding gedaan is en er wordt een overtreding begaan, het gemiddelde van de buffer is dus kleiner dan de opgestelde grenswaarde, dan moet het alarm afgaan. De send_to_broker parameter is een variabele die weergeeft of dat de personen zich hebben ontsmet sinds de vorige fout. Er is een overtreding gededecteerd, er moet dus een melding gestuurd worden naar de ontsmettingsgroep met daarin de id's van de overtreders. BeginPiep wordt op true gezet.Op het einde van de callback functie word een non blockingPiep methode opgeroepen. Als beginPiep op true staat zal deze functie het alarm laten afgaan.
 
-## NonBlockingPiep
+## piepNonBlocking()
 In deze functie staan twee if statements. De ene if kijkt of het alarm moet afgaan en de buzzer moet geactiveerd worden, de andere kijkt of de buzzer aan staat en of deze uitgezet mag worden. De voorwaarden voordat een ESP32 module mag beginnen met piepen (buzzerPin hoog) is dat de buzzerPin laag staat (er is nog geen gepiep) en dat er een overtreding is gebeurd die lang genoeg na de vorige overtreding is gebeurd. Als er aan deze voorwaarden worden voldaan dan wordt de buzzerPin hoog gezet, wordt de timer die bijhoudt hoelang het geleden is dat er een nieuwe piep was ingesteld op de huidige tijd en worden via de methode stuurAlarm() de andere onderdelen van de escaperoom gealarmeerd.
-## Alarm
-Deze methode zorgt ervoor dat de andere onderdelen van de escaperoom op de hoogte worden gesteld van de overtreding door een '1' te sturen naar hun controle kanaal.
+## stuurAlarm()
+Deze methode zorgt ervoor dat de andere onderdelen van de escaperoom op de hoogte worden gesteld van de overtreding door een '1' te sturen naar hun controle kanaal. 
+## MQTT
+De MQTT callback functie wordt in de loop opgeroepen via client.loop(). Als er een bericht is op een kanaal waarop gesubscribed is dan zal de callback dit bericht verwerken. Eerst wordt gekeken op welk kanaal het bericht is. 
+
+Als een bericht verstuurd is naar ons controle dan moet gecontroleerd worden of het bericht  "1","2" of "3" is. Als er een "0" binnenkomt moet de ESP32 herstart worden, bij "1" wordt de werking stopgezet. Bij "2" mag de werking verdergaan, de boolean send_to_broker wordt op true gezet en de timers worden opnieuw ingesteld, een twee betekent dus dat de handen van de overtreders ontsmet zijn.
+
+Als een bericht verstuurd is naar het interne piepkanaal van de ESP, dan moet het alarm afgaan als de cooldown is verstreken.
 
 
 
