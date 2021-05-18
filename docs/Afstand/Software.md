@@ -79,7 +79,7 @@ Nadat de ESP32 verbonden is met het netwerk, wordt de MQTT client opgesteld. Er 
     client.setCallback(callback);
 ```
 ### BLE
-Vervolgens wordt in de setup() methode alles ingesteld om BLE signalen te verzenden en ontvangen. We maken nieuwe scan aan. Aan deze scan linken we via de setAdvertisedDeviceCallbacks methode een object van de klasse AdvertisedDeviceCallBack met de methode in die de resultaten van de scan continu verwerkt. We zetten de boolean wantDuplicates op true, we willen heel de tijd resultaten ontvangen van dezelfde apparaten, zodat we continu de afstand kunnen bepalen. Er worden een scantijd van 99 milliseconden ingesteld met een pauze van 1ms tussen de scans door. Hoe meer vermogen de BLE signalen hebben des te better de verwerking van de resultaten, daarom wordt het scan_type ingesteld op active via de methode setActiveScan(true) van de BLEScan klasse. Bij het uitzenden van signalen willen we dat de ESP32 een naam heeft, dit werd ingesteld bij de initialisatie van het bleCast object. Via de methode bleCast.begin() worden een aantal parameters ingesteld. Het vermogen van de signalen wordt ook manueel nog eens ingesteld door "esp_ble_tx_power_set(ESP_BLE_PWR_TYPE_ADV,ESP_PWR_LVL_P9)" te doen.
+Vervolgens wordt in de setup() methode alles ingesteld om BLE signalen te verzenden en ontvangen. We maken nieuwe scan aan. Aan deze scan linken we via de setAdvertisedDeviceCallbacks methode een object van de klasse AdvertisedDeviceCallBack met de methode in die de resultaten van de scan continu verwerkt. We zetten de boolean wantDuplicates op true, we willen heel de tijd resultaten ontvangen van dezelfde apparaten, zodat we continu de afstand kunnen bepalen. Er worden een scantijd van 99 milliseconden ingesteld met een pauze van 1ms tussen de scans door. Hoe meer vermogen de BLE signalen hebben des te better de verwerking van de resultaten, daarom wordt het scan_type ingesteld op active via de methode setActiveScan(true) van de BLEScan klasse. Bij het uitzenden van signalen willen we dat de ESP32 een naam heeft, dit werd ingesteld bij de initialisatie van het bleCast object. Via de methode bleCast.begin() worden een aantal parameters ingesteld. Het vermogen van de signalen wordt ook manueel nog eens ingesteld door `esp_ble_tx_power_set(ESP_BLE_PWR_TYPE_ADV,ESP_PWR_LVL_P9)` te doen.
 ```c
     BLEDevice::init("RSSI scan");
     pBLEScan = BLEDevice::getScan(); 
@@ -93,7 +93,7 @@ Vervolgens wordt in de setup() methode alles ingesteld om BLE signalen te verzen
     }
 ```
 ### Buffers
-Omdat er veel waarden worden gemeten op korte tijd met uitschieters die niet gewenst zijn wordt een circulaire buffers gebruikt zodat het gemiddelde van de buffer kan worden genomen. De buffers worden geinitialiseerd in de setup via de methode initBuffers(size), met size als instelbare variabele. 
+Omdat er veel waarden worden gemeten op korte tijd met uitschieters die niet gewenst zijn wordt een circulaire buffers gebruikt zodat het gemiddelde van de buffer kan worden genomen. De buffers worden geinitialiseerd in de setup via de methode initBuffers(size), met size als instelbare variabele. Er worden RSSI waarden gemeten t.o.v drie andere modules, er zijn dus drie andere buffers nodig. Omdat de code telkens naar vier verschillend ESP's geüpload worden, worden er direct vier buffers aangemaakt.  
 ```c
     initBuffers(size);
 ```
