@@ -65,7 +65,7 @@ Voor het afspelen van de rinkeltoon is er een versterking nodig (Pin 25 schema).
  
 ## Overzicht 
 ### Speaker
-![](https://github.com/BachMorse/Documentatie-speaker/blob/master/Overzicht.png)
+![](https://raw.githubusercontent.com/BachMorse/Documentatie-speaker/master/Overzicht.png)
 
 ### Micro
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/schakeling_algemeen.JPG)
