@@ -8,6 +8,14 @@ nav_order: 2
 
 # Software
 Link naar de [algemene repository](https://github.com/blijf-weg/Afstand_BLE.git) waar alle code die hier besproken wordt instaat.
+- [Flowchart](##Flowchart)
+- [Variabelen](##Variabelen)
+- [Setup](##Setup)
+- [Loop](##Loop)
+- [BLE Callback](##BLECallback)
+- [piepNonBlocking](##piepNonBlocking())
+- [stuurAlarm()](##StuurAlarm())
+- [MQTT](##MQTT)
 ## Flowchart
 ![flowchart](bachproef_flowchart_afbeelding.png)
 ## Variabelen
