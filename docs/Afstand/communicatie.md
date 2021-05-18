@@ -26,3 +26,6 @@ Zo wordt ervoor gezorgd dat speler 2 ook zeker begint met piepen.
    Langs het kanaal "esp32/ontsmetten/id" laat de module Afstand_0 weten welke spelers te dicht bij elkaar staan aan de ontsmettingspomp.
    Dit gebeurt aan de hand van id's gaande van 1 voor de centrale    module tot vier. Het overtredende koppel wordt dan doorgestuurd al een combinatie van de twee id's.
    Bijvoorbeel wanneer Afstand_0 te dicht komt bij Afstand_1, wordt "12" doorgstuurd.
+3. Alarm <br>
+   Als het alarm afgaat moeten de andere groepen verwittigd worden, dit gebeurt door naar elke groep een "1" te sturen op hun controle kanaal (bijvoorbeeld: "esp/morse/control").
+   Er wordt ook een "1" gestuurd naar ons eigen controle kanaal. Als het alarm afgaat willen we niet dat de andere spelers ook naar de ontsmettingspomp komen, vier spelers bij        elkaar is niet goed. Daarom zorgen we ervoor dat de andere spelers geen overtreding kunnen maken, gedurende de periode dat de andere spelers hun handen ontsmetten. 
