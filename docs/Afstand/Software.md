@@ -9,6 +9,17 @@ nav_order: 2
 # Software
 ## Flowchart
 ![flowchart](bachproef_flowchart_afbeelding.png)
+## Variabelen
+### Wi-Fi en MQTT
+We stellen het wachtwoord in en het ssid, via de variabelen ssid en password. Het ip-adres van de MQTT-server wordt meegegeven via de variabele mqtt_server. We gebruiken de WiFiClient bibliotheek voor Wi-Fi en PubSubClient voor MQTT. Uit deze bibliotheken maken we twee objecten aan Afstand_(spelernummer) en client(Afstand_(spelernummer).
+
+### BLE en buffer
+We stellen per speler een grenswaarde in, als de RSSI waarde kleiner is dan deze waarde dan is er overtreding. Er worden ook 4 tellers aangemaakt en 4 buffers. De grootte van de buffers wordt ook meegegeven in de size variabele. De send_to_broker, die ingesteld wordt op true, geeft aan of speler een overtreding hebben begaan en zich nog moeten ontsmetten, als deze op true staat dan betekent het dat de spelers hun handen hebben ontsmet sinds de vorige overtreding.
+
+### Piep 
+We stellen een wachttijd in, een boolean die aangeeft of de buzzer aan het piepen is, 
+
+
 ## Setup
 In de setup methode die eenmaal wordt uitgevoerd, zorgen we ervoor dat alles klaar staat om vervolgens RSSI signalen uit te sturen, te ontvangen en te verwerken. 
 ### Wi-Fi
