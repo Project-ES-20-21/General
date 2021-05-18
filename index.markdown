@@ -17,7 +17,6 @@ Dit is de algemene beschrijving van de escape room. De documentatie en afspraken
   - [Concept](#concept)
     - [Flow chart](#flow-chart)
     - [Verhaallijn](#verhaallijn)
-  - [Useful links](#useful-links)
   - [Onderdelen](#onderdelen)
     - [Fitnesstracker](#fitnesstracker)
     - [Morsecode](#morsecode)
@@ -48,14 +47,6 @@ Een goed vaccin moet ook getest worden. Dit klinisch onderzoek wordt gedaan een 
 
 De wetenschappers proberen de anti vaxxers te stoppen door één van hun geruchten te ontkrachten namelijk “ 5G veroorzaakt Corona”. Om de mensen terug aan hun zijde te krijgen sturen de wetenschappers een onbemande missie naar het punt met het meeste straling. De anti vaxxers proberen de wetenschappers te stoppen door de besturing te hacken. Als de wetenschappers de missie voltooid hebben krijgen ze hulp uit onverwachte hoek. Die hun een sleutel geeft die hun kan helpen bij het ontwikkelen van een vaccin.
 
-
-## Useful links
-
-- [Algemeen verhaal (docs)](https://docs.google.com/document/d/1nqI-Fae9yPfaeAiZALzwLIhWo5K9UasbyvZQgVbRSb0/edit)
-- [Markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-- VS code plugins
-  - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) (automatische inhoud enz.)
-  - [Markdown Preview Github Styling](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles) (preview zoals op github, _ctrl/cmd + shift + v_ voor preview)
 
 ## Onderdelen
 
