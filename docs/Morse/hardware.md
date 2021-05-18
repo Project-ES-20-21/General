@@ -12,7 +12,7 @@ nav_order: 2
 ### 3D 
 De documentatie van de printplaat kan via volgende [link](https://github.com/BachMorse/Speaker_PCB) geraadpleegd worden. Een 3D render van de printplaat ziet er als volgt uit:
 
-![](https://github.com/BachMorse/Documentatie-speaker/blob/master/PCB%20voorkant.png)
+![](https://github.com/BachMorse/Documentatie-speaker/blob/master/PCB%20voorkant.png, raw=True)
 ![](https://github.com/BachMorse/Documentatie-speaker/blob/master/PCB%20achterkant.png)
 ### ESP32
 ![](https://github.com/BachMorse/Documentatie-speaker/blob/master/schema%20ESP32.png)
@@ -26,7 +26,7 @@ Voor het voeden van deze gehele schakeling wordt er gebruik gemaakt van een powe
 Voor het afspelen van de rinkeltoon is er een versterking nodig (Pin 25 schema). Er wordt hiervoor gebruik gemaakt van een LM386 (IC). Deze schakeling wordt geïmplementeerd op de PCB. Om de versterking van deze versterker te regelen wordt er nog een potentiometer geplaatst. De 'beep' tonen afkomstig van de morse worden afgespeeld via de tweede luidspreker. Hierbij maken we gebruik van een laag-ohmige luidspreker, deze luidspreker vergt geen versterker aangezien de morse code slechts hoorbaar hoeft te zijn vanaf enkele centimeters. Zoals reeds vermeldt werden beide audio fragmenten eerst via dezelfde luidspreker afgespeeld. Later werd dan beslist om dit op te splitsen zodat het volume van de twee niet meer afhankelijk waren van elkaar. Er zijn dus geen pinheaders voor de luidspreker die in de telefoon zit voorzien. Dit werd opgelost door de luidspreker rechtstreeks aan de esp te solderen.
 
 ![](https://github.com/BachMorse/Documentatie-speaker/blob/master/versterker.png)
-### 
+ 
 ## Micro
 De documentatie van de printplaat kan [hier](https://github.com/BachMorse/Micro_PCB) gevonden worden. De printplaat ziet eruit als volgt:
 
@@ -61,4 +61,4 @@ De verschillende pin headers zorgen voor de aansluiting van de externe component
 ![](https://github.com/BachMorse/Documentatie-speaker/blob/master/Overzicht.png)
 
 ### Micro
-![]()
+![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/schakeling_algemeen.JPG)
