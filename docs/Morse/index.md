@@ -36,11 +36,7 @@ Eén van dem mogelijke errors zijn debouncing van de button. In principe is dit 
 
 Een andere factor die fout kan veroorzaken is het achtergrondgeluid. Om dit tegen te gaan, werkten we met een button die ingedrukt moet worden tijdens het fluiten. Eenmaal de deze knop ingedrukt is staat de microfoon klaar om signalen te op te nemen. Als het relatief stil is op de achtergrond, heeft de microfoon geen moeite om achtergrondgeluid te onderscheiden van het gefluit. 
 
-
-
-
-
-
-
 ## Bronnen
-https://randomnerdtutorials.com/esp32-adc-analog-read-arduino-ide/
+ESP32, analoog naar digitaal: https://randomnerdtutorials.com/esp32-adc-analog-read-arduino-ide/
+
+I2C communicatie: https://www.circuitbasics.com/basics-of-the-i2c-communication-protocol/
