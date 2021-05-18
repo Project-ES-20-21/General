@@ -10,7 +10,7 @@ nav_order: 2
 Voor het project wordt gebruik gemaakt van een ESP32-chip. 
 
 ## void setup()
-Zoals elk Arduino programma zal de code beginnen vanaf `setup()`-methode. Deze methode wordt 1 keer gerunt, het bevat informatie voor de opstart van het programma. Variabelen, pin modes, wifi-instellingen ... worden hier geïnitialiseerd. 
+Zoals elk Arduino programma zal de code beginnen bij de `setup()`-methode. Deze methode wordt eenmaal doorlopen, het bevat informatie voor de opstart van het programma. Variabelen, pin modes, wifi-instellingen ... worden hier geïnitialiseerd. 
 
 Eerst en vooral verhogen we hier de baud rate. Voor ons project verhogen we het maximum aantal symbolen per seconde naar 115200. De ROM bootloader van de ESP32 communiceert namelijk met deze snelheid. Wanneer we de baud rate niet zouden aanpassen, kan de inkomende data niet correct gelezen worden door de UART.
 
@@ -18,10 +18,10 @@ In beide onderdelen wordt ook een debounce tijd voorzien voor de button, hiervoo
 
 Om te kunnen werken met de broker via MQTT, moet ook een wifi-setup() doorlopen worden. Aangezien deze methode wordt opgeroepen in de setup()-methode, wordt `setup_wifi()` dus 1 keer uitgevoerd. 
 
-Verder wordt ook de MQTT-server en MQTT-poort geïnitialiseerd via de methode `client.setServer(MQTT_SERVER, MQTT_PORT)`. Dit is nodig om informatie ("messages") te krijgen van het juiste IP-adres en via de juiste poort, default is deze poort 1883.
+Verder wordt ook de MQTT-server en MQTT-poort geïnitialiseerd via de methode `client.setServer(MQTT_SERVER, MQTT_PORT)`. Dit is nodig om informatie ("messages") te krijgen van het juiste IP-adres en de juiste poort.
 
 ## void setup_wifi()
-In deze setup gebeuren de wifi-instellingen. Via de methoden `WiFi.begin(SSID, PWD)` wordt de Service Set IDentifier meegegeven (dit is de naam voor een bepaald netwerk met een IP-adres), én het bijhorende paswoord van dit WiFi-signaal. 
+In deze setup gebeuren de wifi-instellingen. Via de methode `WiFi.begin(SSID, PWD)` wordt de Service Set IDentifier meegegeven (dit is de naam voor een bepaald netwerk met een IP-adres), én het bijhorende paswoord van dit WiFi-signaal. 
 Ter controle vragen we aan het einde van de methode het IP-adres waarmee werd verbonden via de methode `WiFi.localIP()`.
 
 Na deze setups kan het programma beginnen aan de loop()-methode. Deze methode zal telkens opnieuw herhaald worden. Het eerste dat wordt gedaan, is nakijken of er verbonden is met de MQTT-server. Als dit (nog) niet het geval is, zal via `reconnect()` (opnieuw) worden geconnecteerd met de MQTT-server. Deze methode zal blijven doorlopen worden zolang er niet geconnecteerd werd. Wanneer er connectie gelegd werd, zal de client ook onmiddellijk subscriben op kanalen waarvan het informatie wil ontvangen. 
@@ -32,7 +32,7 @@ Zodra deze connectie op punt staat, kan de rest van de code worden uitgevoerd. H
 Volgende paragraaf bespreekt `void loop()` van de speaker.
 
 De loop functie wordt continu doorlopen zolang er geen reset, pauze, of ander interrupt commando wordt gegeven.
-Er wordt eerst gezorgd dat er een wifi en mqtt connectie gemaakt is met de broker. Nadat dit gebeurd is kan wordt de `playRinkeltoon()` opgeroepen die een rinkeltoon laat afspelen zolang de knop niet ingedrukt is geweest. Eenmaal de knop ingedrukt is wordt er overgegaan naar de tweede luidspreker die in de telefoon zit, de methode `playMorse()` wordt opgeroepen.
+Er wordt eerst gezorgd dat er een wifi en MQTT connectie gemaakt is met de broker. Nadat dit gebeurd is wordt de `playRinkeltoon()` opgeroepen die een rinkeltoon laat afspelen zolang de knop niet ingedrukt is geweest. Eenmaal de knop ingedrukt is wordt er overgegaan naar de tweede luidspreker die in de telefoon zit. De methode `playMorse()` wordt opgeroepen.
 
 ### button.loop()
 Deze functie wordt opgeroepen bij de start van de `void.loop()`. De knop is dan actief en er wordt waargenomen wanneer de knop ingedrukt wordt.
@@ -42,7 +42,7 @@ Wanneer het "BEL" signaal van de fitnesstracker puzzel binnenkomt start de luids
 Het WAV-bestand wordt eerst bewerkt met audacity; samplefrequentie verlagen, lengte audiofragment inkorten,... Zo wordt er een overflow voorkomen aangezien WAV-bestanden veel ruimte innemen. Nadien wordt dat bewerkte audio bestand in HxD gebracht (een Hex. editor). Hier wordt het audio bestand omgezet naar hex en kan het dan gekopieerd worden naar een C-array. Het bestand wordt als 'SoundData.h' onder include toegevoegd. Volgende [link](https://www.xtronical.com/basics/audio/dacs-for-sound/playing-wav-files/) kan hierbij helpen.
 
 ### playMorse()
-Zodra de knop ingedrukt eenmaal ingedruk is geweest (`button.isPressed()`) wordt de `playMorse()` methode opgeroepen. In deze methode wordt de willekeurige aangemaakte morse code afgespeeld. Voordat de willekeurige morse code wordt afgespeeld, zal deze als string worden aangemaakt via de methode `getKar()`. De aangemaakte string wordt opgeslaan in `String st`. Deze wordt in `playMorse()` overlopen aan de hand van een for-lus die voor elk karakter in de string zijn bijhorende methode oproept. De methode `Morse()` is hier een tussenpersoon voor. Elk letter heeft zijn eigen methode; bv. indien het karakter 'b' in de string zit wordt de methode `getB()` opgeroepen waarin gedefinieerd staat wat de vertaling van 'b' is in morse. Voor deze vertaling wordt er gebruik gemaakt van de methodes `punt()` en `streep()`. De morse zelf wordt voorafgegaan door een laagfrequente toon om aan te geven dat het afspelen van start gaat. 
+Zodra de knop ingedrukt is geweest (`button.isPressed()`) wordt de `playMorse()` methode opgeroepen. In deze methode wordt de willekeurige aangemaakte morse code afgespeeld. Voordat de willekeurige morse code wordt afgespeeld, zal deze als string worden aangemaakt via de methode `getKar()`. De aangemaakte string wordt opgeslaan in `String st`. Deze wordt in `playMorse()` overlopen aan de hand van een for-lus die voor elk karakter in de string zijn bijhorende methode oproept. De methode `Morse()` is hier een tussenpersoon voor. Elk letter heeft zijn eigen methode; bv. indien het karakter 'b' in de string zit wordt de methode `getB()` opgeroepen waarin gedefinieerd staat wat de vertaling van 'b' is in morse. Voor deze vertaling wordt er gebruik gemaakt van de methodes `punt()` en `streep()`. De morse zelf wordt voorafgegaan door een laagfrequente toon om aan te geven dat het afspelen van start gaat. 
 
 #### punt() & streep()
 Beide methodes maken gebruik van de functie `tone()` waarin de pin, lengte en frequentie als argumenten kunnen worden opgegeven.
@@ -63,7 +63,7 @@ Via `button.loop()` zal er continu gekeken worden wat er gebeurt met de signalen
 Wanneer de button ingedrukt blijft (dus wanneer zijn waarde 0 is, de button is namelijk active HIGH), zal de volgende code van `void loop()` worden uitgevoerd.
 
 ### analogRead()
-Het eerste wat gebeurt is detecteren van de analoge waarde uit de microfoon, via `analogRead()`. Wanneer we deze waarde weergeven in de terminal, ligt het tussen 0 (stil) en 4095 (max gedetecteerde waarde, bij een relatief luide omgeving). Hoe luider de omgeving, hoe groter de uitgeprinte digitale waarde. We zien digitale waarden verschijnen, omdat de ESP32 het analoge signaal dat ontvangen wordt van de microfoon omzet naar een digitale waarde. De maximale analoge waarde die de microfoon kan doorgeven is 3.3V, dit wordt omgezet naar de maximale digitale waarde. Deze digitale waarde is afhankelijk van de resolutie. De resolutie van de analoge pinnen is 12 bit. 3.3V wordt daarom omgezet naar 4095 (=111111111111).
+Het eerste wat gebeurt is het detecteren van de analoge waarde uit de microfoon, via `analogRead()`. Wanneer we deze waarde weergeven in de terminal, ligt het tussen 0 (stil) en 4095 (max gedetecteerde waarde, bij een relatief luide omgeving). Hoe luider de omgeving, hoe groter de uitgeprinte digitale waarde. We zien digitale waarden verschijnen, omdat de ESP32 het analoge signaal dat ontvangen wordt van de microfoon omzet naar een digitale waarde. De maximale analoge waarde die de microfoon kan doorgeven is 3.3V, dit wordt omgezet naar de maximale digitale waarde. Deze digitale waarde is afhankelijk van de resolutie. De resolutie van de analoge pinnen is 12 bit. 3.3V wordt daarom omgezet naar 4095 (=111111111111).
 Via de potentiometer kan de gevoeligheid van de microfoon worden aangepast. 4095 kan dus overeen komen met verschillende decibelwaarden, afhankelijk van de weerstand van de potentiometer. De potentiometer werd nu zó ingesteld dat 4095 wordt gedetecteerd als men fluit op een afstand van 5 cm van de speaker.
 
 ### som(array)
