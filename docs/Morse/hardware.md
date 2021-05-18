@@ -29,9 +29,12 @@ De outputpinnen van de ESP32 kunnen maximum 3.3V doorgeven. Om voldoende sterke 
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/schakeling_levelshifters.JPG)
 
 ### Display
-Voor de display gebruiken we I2C communcatie. Deze communicatie is gebaseerd op een master-slave principe. De SCL-pin wordt gebruikt om de kloksignaal communiceren van de master naar de slave. SDA communicatie (data-communicatie) is bidirectioneel. Langs deze lijn wordt data bit per bit gecommuniceerd.
+Voor de display gebruiken we I2C communcatie. Deze communicatie is gebaseerd op een master-slave principe. Dit principe laat toe om meerdere masters en meerdere slaven met elkaar te laten communiceren. Elke slaaf moet softwarematig geïdentificeerd worden. Wanneer data vanuit de master wordt gestuurd naar de slaaf, zal elke slaaf controleren of het adres waarnaar verstuurd, wordt overeekomt met het eigen adres. In dit project is maar 1 master (ESP32) en 1 slaaf (display) nodig.
 
-I2C is synchroon, de bitoutput wordt dus synchroon, volgens het kloksignaal over SCL, doorgegeven. De data wordt doorgegeven in messages. Deze messages worden opgedeeld in _frames_
+De SCL-pin wordt gebruikt om de kloksignaal communiceren van de master naar de slave. SDA communicatie (data-communicatie) is bidirectioneel. Langs deze lijn wordt data bit per bit gecommuniceerd.
+
+I2C is synchroon, de bitoutput wordt dus synchroon, volgens het kloksignaal over SCL, doorgegeven. De data wordt doorgegeven in messages. Deze messages worden opgedeeld in een vaste lengte van 8 bits, genaamd frames. De messages bevatten ook start en stop condities, reas/write bits, acknowledge/NACK tussen bits ... .
+De read/write bit wordt aan het einde van de frame toegevoegd, het laat aan de slaaf weten of het data wilt lezen of schrijven. 
 
 ### Pin headers
 De verschillende pin headers zorgen voor de aansluiting van de externe componenten. We gebruiken vrouwtjes zodat de pinnen niet kunnen plooien als de PCB verplaatst wordt. 
@@ -48,7 +51,7 @@ De documentatie van de printplaat kan via volgende [link](https://github.com/Bac
 ![](https://github.com/BachMorse/Documentatie-speaker/blob/master/PCB%20voorkant.png?raw=true)
 ![](https://github.com/BachMorse/Documentatie-speaker/blob/master/PCB%20achterkant.png?raw=true)
 ### ESP32
-![](https://github.com/BachMorse/Documentatie-speaker/blob/master/schema%20ESP32.png/raw=true)
+![](https://raw.githubusercontent.com/BachMorse/Documentatie-speaker/master/schema%20ESP32.png)
 ### Voeding
 Voor het voeden van deze gehele schakeling wordt er gebruik gemaakt van een power bank van 5V, het aansluiten van deze powerbank gebeurt via een micro usb poort. Deze 5V wordt gebruikt om de versterker (LM386), intern op de schakeling, rechtstreeks te voeden. Voor de esp32 zelf volstaat een spanning van 3.3V. Dit wordt omgezet aan de hand van een DC spanningsregelaar (LDO). De schakeling kan dan uiteindelijk geprogrammeerd worden met behulp van een uart-bridge en de voorziene pinheaders.
 #### Low Drop-out Regulator (LDO)
