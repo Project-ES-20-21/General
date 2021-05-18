@@ -10,11 +10,13 @@ nav_order: 2
 ## Flowchart
 ![flowchart](bachproef_flowchart_afbeelding.png)
 ## Variabelen
-### Wi-Fi en MQTT
-We stellen het wachtwoord in en het ssid, via de variabelen password en ssid. Het ip-adres van de MQTT-server wordt meegegeven via de variabele mqtt_server. We gebruiken de WiFiClient bibliotheek voor Wi-Fi en PubSubClient bibliotheek voor MQTT. Uit elke bibliotheek maken we één object aan Afstand_(spelernummer) uit WiFiClient en client(Afstand_(spelernummer) uit PubSubClient.
 
 ### BLE en buffer
-We stellen per speler een grenswaarde in, als de RSSI waarde kleiner is dan deze waarde dan is er overtreding. Er worden ook 4 tellers ("teller0", "teller1", "teller2" en "teller3") aangemaakt en 4 buffers ("buffer0", "buffer1", "buffer2" en "buffer3"). De grootte van de buffers wordt ook meegegeven in de size variabele. De send_to_broker, die ingesteld wordt op true, geeft aan of speler een overtreding hebben begaan en zich nog moeten ontsmetten, als deze op true staat dan betekent het dat de spelers hun handen hebben ontsmet sinds de vorige overtreding.
+We stellen per speler een grenswaarde in, als de RSSI waarde kleiner is dan deze waarde dan is er overtreding. Er worden ook vier tellers ("teller0", "teller1", "teller2" en "teller3") aangemaakt en vier buffers ("buffer0", "buffer1", "buffer2" en "buffer3"). De grootte van de buffers wordt ook meegegeven in de "size" variabele. De "send_to_broker" boolean, die ingesteld wordt op true, geeft aan of een spelers een overtreding hebben begaan en zich nog moeten ontsmetten, als deze op true staat dan betekent het dat de spelers hun handen hebben ontsmet sinds de vorige overtreding. De "buzzerPin" is pin 15. Er wordt ook een object uit de BLEScan library aangemaakt, "\*pBleScan" en een object uit de BLECast klasse "bleCast(esp_naam)". 
+
+### Wi-Fi en MQTT
+We stellen het wachtwoord in en het ssid, via de variabelen "password" en "ssid". Het ip-adres van de MQTT-server wordt meegegeven via de variabele mqtt_server. We gebruiken de WiFiClient bibliotheek voor Wi-Fi en PubSubClient bibliotheek voor MQTT. Uit elke bibliotheek maken we een object aan. Het WifiClient "Afstand_X" object en het PubSubClient "client(Afstand_X)" object.
+
 
 ### Piep 
 We stellen een wachttijd in, een boolean die aangeeft of de buzzer aan het piepen is en het begintijdstip wanneer de buzzer begint met piepen wordt ook bijgehouden. De boolean "beginPiep" geeft aan of de buzzer moet beginnen met piepen. De wachttijd wordt gelijk gesteld aan 180000 milliseconden, dus als een speler zijn handen heeft ontsmet dan kan hij/zij 3 minuten geen overtreding begaan.
