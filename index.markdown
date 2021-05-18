@@ -71,9 +71,9 @@ De digit die nodig is voor het slot (Alohamora) zal kunnen afgeleid worden aan d
 
 ### Vaccintester
 
-Het enige wat ons nog kan redden van corona is het vormen van een vaccin. Wetenschappers zitten dag in dag uit opgesloten in een lab, zoekende naar iets wat deze stille moordenaar kan bestrijden. Hoe voelen die wetenschappers zich gedurende deze periode? Dit alles kan ervaart worden in deze puzzel.
+Het enige wat ons nog kan redden van corona is het vormen van een vaccin. Wetenschappers zitten dag in dag uit opgesloten in een lab, zoekende naar iets wat deze stille moordenaar kan bestrijden. Hoe voelen die wetenschappers zich gedurende deze periode? Dit alles kan ervaard worden in deze puzzel.
 
-Ze zitten opgesloten in een lab en pas als ze een werkend vaccin gevonden hebben kunnen ze het lab verlaten. Maar hoe wordt dit vaccin gemaakt? Het vaccin wordt gemaakt aan de hand van een recept dat enkel beschikbaar is voor de bevoegde wetenschappers. Om dat recept te volgen moeten stoffen in verschillende gemengd worden. Als het vaccin geproduceerd is wordt het laatste cijfer van het cijferslot verkregen en kunnen de wetenschappers eindelijk het lab verlaten en hun normale leven weer opnemen! 
+Ze zitten opgesloten in een lab en pas als ze een werkend vaccin gevonden hebben kunnen ze het lab verlaten. Maar hoe wordt dit vaccin gemaakt? Het vaccin wordt gemaakt aan de hand van een recept dat enkel beschikbaar is voor de bevoegde wetenschappers. Om dat recept te volgen moeten stoffen in verschillende kleuren gemengd worden. Als het vaccin geproduceerd is wordt het laatste cijfer van het cijferslot verkregen en kunnen de wetenschappers eindelijk het lab verlaten en hun normale leven weer opnemen! 
 
 ### Alohamora
 
