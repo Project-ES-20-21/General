@@ -27,10 +27,16 @@ Voor de microfoon maakten we ook gebruik van de lasercutter. In deze behuizing v
 De plaats van onze onderdelen is niet echt van belang, aangezien het kleine beweegbare onderdelen zijn. Door de 2 onderdelen (speaker en micro) ver uit elkaar te zetten, en vast te maken, wordt de puzzel wel moeilijker. 
 Verdere info over de casing 
 
-## Mogelijke errors
-Mogelijke errors zijn debouncing van de button. In principe is dit geen probleem als de speler niet al te snel na het indrukken begint te fluiten. Ook zal het LCD-scherm blijven staan wanneer de juiste code wordt nagefloten. Het bouncen van de button heeft daarom geen effect op de zichtbaarheid van het Alohomoracijfer en de tip voor de volgende puzzel.
+## Error handling
+Wanneer er zich een fout voordoet tijdens bij het uitvoeren kan alles simpel gereset worden door het bericht '0' te versturen over het control kanaal (esp32/morse/control).
+De esp wordt dan gereset gebruik makend van de  `ESP.restart()` methode. 
+Wanneer tijdens het afspelen van de morse een reset wordt gegeven kan het zijn dat de morse de laatst gespeelde toon blijft aanhouden. Dit zou dan kunnen opgelost worden door een nieuwe reset op te geven.
 
-Een andere factor die fout kan veroorzaken is het achtergrondgeluid. Om dit tegen te gaan, werkten we met een button die ingedrukt moet worden tijdens het fluiten. Zo weet de microfoon dat het ontvangen geluid gefluit zal zijn. Als het relatief stil is op de achtergrond, heeft de microfoon geen moeite om achtergrondgeluid te onderscheiden van het gefluit. 
+Eén van dem mogelijke errors zijn debouncing van de button. In principe is dit geen probleem als de speler niet al te snel na het indrukken begint te fluiten. Ook zal het LCD-scherm blijven staan wanneer de juiste code wordt nagefloten. Het bouncen van de button heeft daarom geen effect op de zichtbaarheid van het Alohomoracijfer en de tip voor de volgende puzzel.
+
+Een andere factor die fout kan veroorzaken is het achtergrondgeluid. Om dit tegen te gaan, werkten we met een button die ingedrukt moet worden tijdens het fluiten. Eenmaal de deze knop ingedrukt is staat de microfoon klaar om signalen te op te nemen. Als het relatief stil is op de achtergrond, heeft de microfoon geen moeite om achtergrondgeluid te onderscheiden van het gefluit. 
+
+
 
 
 
