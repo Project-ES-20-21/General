@@ -18,7 +18,7 @@ De bedoeling van onze puzzel is om een uitgezonden morse code na te fluiten aan 
 Om aan de spelers te laten weten wat er juist moet gebeuren zal er een blad naast de micro liggen waarop, deels in morse, de uitleg staat.
 
 ## Blokschema
-Zoals te zien op het blokschema wacht onze volledige puzzel op een signaal van de vorige puzzel. Vanaf dan wordt onze puzzel opgestart. Signalen tussen de microfoon en de speaker worden vanaf dan verstuurd over de broker. 
+Zoals te zien op het [blokschema](C:\Users\sarah\Documents\KUL\BACHELORPROEF\Documentatie) wacht onze volledige puzzel op een signaal van de vorige puzzel. Vanaf dan wordt onze puzzel opgestart. Signalen tussen de microfoon en de speaker worden vanaf dan verstuurd over de broker. 
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/BlokschemaMorse.JPG)
 
 ## Opstelling
