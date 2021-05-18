@@ -147,6 +147,16 @@ class AdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks{
 
 ## piepNonBlocking()
 In deze functie staan twee if statements. De ene if kijkt of het alarm moet afgaan en de buzzer moet geactiveerd worden, de andere kijkt of de buzzer aan staat en of deze uitgezet mag worden. De voorwaarden voordat een ESP32 module mag beginnen met piepen (buzzerPin hoog) is dat de buzzerPin laag staat (er is nog geen gepiep) en dat er een overtreding is gebeurd die lang genoeg na de vorige overtreding is gebeurd. Als er aan deze voorwaarden worden voldaan dan wordt de buzzerPin hoog gezet, wordt de timer die bijhoudt hoelang het geleden is dat er een nieuwe piep was ingesteld op de huidige tijd en worden via de methode stuurAlarm() de andere onderdelen van de escaperoom gealarmeerd.
+```c
+void piepNonBlocking(){  
+  if (!piepActief && beginPiep){
+  ...
+  }
+  else if (millis() - beginTijdstip > 5000 && piepActief){
+  ...
+  } 
+}
+```
 ## stuurAlarm()
 Deze methode zorgt ervoor dat de andere onderdelen van de escaperoom op de hoogte worden gesteld van de overtreding door een '1' te sturen naar hun controle kanaal. Als de '1' goed verwerkt wordt zouden de puzzels niet verder kunnen worden opgelost tot de handen ontsmet zijn. 
 ## MQTT
@@ -154,7 +164,7 @@ De MQTT callback functie wordt in de loop opgeroepen via client.loop(). Als er e
 
 Als een bericht verstuurd is naar ons controle dan moet gecontroleerd worden of het bericht  "1","2" of "3" is. Als er een "0" binnenkomt moet de ESP32 herstart worden, bij "1" wordt de werking stopgezet. Bij "2" mag de werking verdergaan, de boolean send_to_broker wordt op true gezet en de timers worden opnieuw ingesteld, een twee betekent dus dat de handen van de overtreders ontsmet zijn.
 
-Als een bericht verstuurd is naar het interne piepkanaal van de ESP, dan moet het alarm afgaan als de cooldown is verstreken.
+Als een bericht verstuurd is naar het interne piepkanaal van de ESP, dan moet het alarm afgaan ,als de cooldown is verstreken.
 
 
 
