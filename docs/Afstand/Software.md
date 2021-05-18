@@ -10,9 +10,29 @@ nav_order: 2
 ## Flowchart
 ![flowchart](bachproef_flowchart_afbeelding.png)
 ## Variabelen
-
+Nog voor we overgaan naar de bespreking van de belangrijke methoden, de setup en de loop die eigen zijn aan elk arduinoprogramma worden enkele variabelen uitgelegd. 
 ### BLE en buffer
 We stellen per speler een grenswaarde in, als de RSSI waarde kleiner is dan deze waarde dan is er overtreding. Er worden ook vier tellers ("teller0", "teller1", "teller2" en "teller3") aangemaakt en vier buffers ("buffer0", "buffer1", "buffer2" en "buffer3"). De grootte van de buffers wordt ook meegegeven in de "size" variabele. De "send_to_broker" boolean, die ingesteld wordt op true, geeft aan of een spelers een overtreding hebben begaan en zich nog moeten ontsmetten, als deze op true staat dan betekent het dat de spelers hun handen hebben ontsmet sinds de vorige overtreding. De "buzzerPin" is pin 15. Er wordt ook een object uit de BLEScan library aangemaakt, "\*pBleScan" en een object uit de BLECast klasse "bleCast(esp_naam)". 
+'''c
+double waarde0 = -32;
+double waarde1 = -32;
+double waarde2 = -32;
+double waarde3 = -32;
+
+int teller0 = 0;
+int teller1 = 0;
+int teller2=0;
+int teller3=0;
+
+CircBuffer buffer0;
+CircBuffer buffer1;
+CircBuffer buffer2;
+CircBuffer buffer3;
+
+int size = 20;
+
+bool send_to_broker = true;
+'''
 
 ### Wi-Fi en MQTT
 We stellen het wachtwoord in en het ssid, via de variabelen "password" en "ssid". Het ip-adres van de MQTT-server wordt meegegeven via de variabele mqtt_server. We gebruiken de WiFiClient bibliotheek voor Wi-Fi en PubSubClient bibliotheek voor MQTT. Uit elke bibliotheek maken we een object aan. Het WifiClient "Afstand_X" object en het PubSubClient "client(Afstand_X)" object.
