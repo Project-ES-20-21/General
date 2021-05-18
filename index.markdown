@@ -82,7 +82,7 @@ In alle voorgaande proeven zijn er in totaal 4 cijfers verkregen, deze vormen in
 ### ‘t Is beter op anderhalve meter
 
 De onderzoekers moeten voorkomen dat ze zelf ten prooi vallen van het virus. Ze moeten dus veilig werken door steeds 1,5 meter afstand van elkaar te houden. Dit wordt geïmplementeerd door aan elke onderzoeker een mobiele node mee te geven die continu controleert of de onderzoekers niet te dicht bij elkaar komen te staan.
-Wanneer dit systeem een te dichte afstand detecteert, zal er een duidelijk alarmsignaal afgaan en zullen alle onderzoekers zich moeten gaan ontsmetten. Alle opdrachten worden direct gepauzeerd totdat elke onderzoeker zijn/haar handen heeft ontsmet. Daarna kan er verder worden gewerkt. 
+Wanneer dit systeem een te dichte afstand detecteert, zal er een duidelijk alarmsignaal afgaan en zullen de onderzoekers die te dicht bij elkaar zijn gekomen zich moeten gaan ontsmetten. Alle opdrachten worden direct gepauzeerd totdat de onderzoekers hun handen hebben ontsmet. Daarna kan er verder worden gewerkt. 
 
 ### Ontsmetting
 
