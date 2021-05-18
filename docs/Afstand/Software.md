@@ -7,7 +7,7 @@ nav_order: 2
 ---
 
 # Software
-Link naar de code: [algemen repository] https://github.com/blijf-weg/Afstand_BLE.git
+Link naar de code: [algemen repository] (https://github.com/blijf-weg/Afstand_BLE.git)
 ## Flowchart
 ![flowchart](bachproef_flowchart_afbeelding.png)
 ## Variabelen
