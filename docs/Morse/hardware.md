@@ -12,10 +12,10 @@ nav_order: 2
 ### 3D 
 De documentatie van de printplaat kan via volgende [link](https://github.com/BachMorse/Speaker_PCB) geraadpleegd worden. Een 3D render van de printplaat ziet er als volgt uit:
 
-![](https://github.com/BachMorse/Documentatie-speaker/blob/master/PCB%20voorkant.png, raw=True)
-![](https://github.com/BachMorse/Documentatie-speaker/blob/master/PCB%20achterkant.png)
+![](https://github.com/BachMorse/Documentatie-speaker/blob/master/PCB%20voorkant.pngraw=true)
+![](https://github.com/BachMorse/Documentatie-speaker/blob/master/PCB%20achterkant.pngraw=true)
 ### ESP32
-![](https://github.com/BachMorse/Documentatie-speaker/blob/master/schema%20ESP32.png)
+![](https://github.com/BachMorse/Documentatie-speaker/blob/master/schema%20ESP32.pngraw=true)
 ### Voeding
 Voor het voeden van deze gehele schakeling wordt er gebruik gemaakt van een power bank van 5V, het aansluiten van deze powerbank gebeurt via een micro usb poort. Deze 5V wordt gebruikt om de versterker (LM386), intern op de schakeling, rechtstreeks te voeden. Voor de esp32 zelf volstaat een spanning van 3.3V. Dit wordt omgezet aan de hand van een DC spanningsregelaar (LDO). De schakeling kan dan uiteindelijk geprogrammeerd worden met behulp van een uart-bridge en de voorziene pinheaders.
 #### Low Drop-out Regulator (LDO)
@@ -47,6 +47,9 @@ Zoals te zien op de schakeling, heeft de micro-USB meerdere mogelijke pinnen. De
 ### Levelshifters
 De outputpinnen van de ESP32 kunnen maximum 3.3V doorgeven. Om voldoende sterke signalen te geven aan de 2 displaypinnen (SDA en SCL), moeten dus levelshifters worden voorzien. Deze levelshifters zullen 3.3V vanuit de ESP32 omzetten naar 5V voor de display. 
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/schakeling_levelshifters.JPG)
+
+### Display
+Voor de display gebruiken we I2C communcatie. Deze communicatie is gebaseerd op 
 
 ### Pin headers
 De verschillende pin headers zorgen voor de aansluiting van de externe componenten. We gebruiken vrouwtjes zodat de pinnen niet kunnen plooien als de PCB verplaatst wordt. 
