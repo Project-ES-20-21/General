@@ -43,7 +43,7 @@ Het is eind 2020. België gaat voor de tweede keer in lockdown. Vele mensen zijn
 
 Echter is niet iedereen zo enthousiast. Een groep anti vaxxers heeft het labo gesaboteerd door de stroom af te sluiten. Hierdoor is de ontwikkeling stil gevallen. Het is aan jullie om de productie herop te starten en het perfecte recept te vinden. Slagen jullie erin om dit binnen de tijd te doen?
 
-Een goed vaccin moet ook getest worden. Dit klinisch onderzoek wordt gedaan een groep van onderzoekers, zij zijn het kloppende hart van dit labo. Door de sabotage is hier ook de communicatie weg gevallen. Ontvang de geheime boodschap en breng deze over naar het testteam zodat het klinisch onderzoek kan verder gaan.
+Een goed vaccin moet ook getest worden. Dit klinisch onderzoek wordt gedaan door een groep van onderzoekers, zij zijn het kloppende hart van dit labo. Door de sabotage is hier ook de communicatie weg gevallen. Ontvang de geheime boodschap en breng deze over naar het testteam zodat het klinisch onderzoek kan verder gaan.
 
 De wetenschappers proberen de anti vaxxers te stoppen door één van hun geruchten te ontkrachten namelijk “ 5G veroorzaakt Corona”. Om de mensen terug aan hun zijde te krijgen sturen de wetenschappers een onbemande missie naar het punt met het meeste straling. De anti vaxxers proberen de wetenschappers te stoppen door de besturing te hacken. Als de wetenschappers de missie voltooid hebben krijgen ze hulp uit onverwachte hoek. Die hun een sleutel geeft die hun kan helpen bij het ontwikkelen van een vaccin.
 
@@ -53,10 +53,10 @@ De wetenschappers proberen de anti vaxxers te stoppen door één van hun gerucht
 ### Fitnesstracker
 
 We plaatsen een motionsensor aan een kettlebell en deze wordt dan gebruikt om de oefeningen te tracken. Ergens in de kamer wordt een boek of poster voorzien met nummers op met daarbij een reeks van bijhorende oefeningen. Hieruit kunnen de spelers afleiden welke serie van oefeningen ze moeten uitvoeren. 
-Als de spelers een oefening juist uitvoeren, laadt de batterij op en stijgt het balkje op de display. De batterij mag niet leeg zijn indien men andere puzzels wenst uit te voeren. Als de spelers een volledige oefeningenreeks correct uitvoeren, wordt een getal vrijgegeven van het digitaal cijferslot en gaat de telefoon van morsecode af. Als de spelers een incorrecte beweging uitvoeren daalt het balkje. Doorheen het spel wordt er energie verbruikt en krimpt het balkje dus. Eenmaal de batterij helemaal leeg is, wordt dit met de andere puzzels gedeeld via de broker. 
+Als de spelers een oefening juist uitvoeren, laadt de batterij op en stijgt het balkje op het display. De batterij mag niet leeg zijn indien men andere puzzels wenst uit te voeren. Als de spelers een volledige oefeningenreeks correct uitvoeren, wordt een getal vrijgegeven van het digitaal cijferslot en gaat de telefoon van morsecode af. Als de spelers een incorrecte beweging uitvoeren daalt het balkje. Doorheen het spel wordt er energie verbruikt en krimpt het balkje dus. Eenmaal de batterij helemaal leeg is, wordt dit met de andere puzzels gedeeld via de broker. 
 
 ### Morsecode
-Zodra de fitnesstracker puzzel opgelost is zal er een telefoon beginnen rinkelen. Wanneer de spelers van de escape room deze telefoon hebben kunnen lokaliseren kan deze opgenomen worden door op de bijhorende knop te drukken. Eenmaal de knop ingedrukt is geweest wordt de telefoon beschouwd als opgenomen. 
+Zodra de fitnesstracker puzzel opgelost is zal er een telefoon beginnen rinkelen. Wanneer de spelers van de escape room deze telefoon hebben, kunnen lokaliseren kan deze opgenomen worden door op de bijhorende knop te drukken. Eenmaal de knop ingedrukt is geweest wordt de telefoon beschouwd als opgenomen. 
 De telefoon zal dan een morse code afspelen. Deze morse code zal beginnen met een lage toon om zo aan te geven dat de morse code van start gaat. Aan de andere kant van de kamer moet deze code worden nagefloten in de micro.
 Wanneer de juiste morse sequentie wordt nagefloten zal er een cijfer verschijnen op de display, wat handig zal uitkomen voor de oplossing van het cijferslot, en zullen de virologen aan de hand van een tip (ook op display) verder kunnen met de volgende proef; 5G.
 
@@ -65,7 +65,7 @@ Wanneer de juiste morse sequentie wordt nagefloten zal er een cijfer verschijnen
 
 Wanneer de morsecode puzzel voltooid is, zal er een signaal verstuurd worden over de broker waardoor de afstand tot de stralingslocatie zal weergegeven worden (aan de hand van een led-bar) en deze kan gevonden worden. De auto is bestuurbaar met een afstandsbediening die communiceert over een frequentie van 433MHz. De besturing wisselt na een bepaalde tijd: de knop die eerst rechts was, kan nu bijvoorbeeld rechtdoor worden.
 Ergens in de ruimte zal een ESP32 verstopt zijn, dit is dus de stralingslocatie. De afstand tussen die locatie en de auto zal aan de hand van de sterkte van een wifi signaal gemeten worden en zal weergegeven worden op de led-bar. De auto en de led-bar communiceren via esp now. Als de auto dicht genoeg is (en dus alle ledjes branden) en er op de drukknop gedrukt wordt, zal er een kluis(in de auto) openen met de RFID-tag waarmee de volgende puzzel, de vaccintester, kan gestart worden.
-Als de auto wordt opgenomen (dit wordt bepaald aan de hand van een afstandssensor aan de onderkant van het wagentje) zal er een buzzer afgaan en wordt de auto, bij wijze van straf, onbestuurbaar, en zal de led-bar niet meer werken. Tevens zal er ook een buzzer weerklinken.  Dit is eveneens dezelfde werkwijze die wordt toegepast als de handen ontsmet moeten worden. Afgezien van de buzzer.
+Als de auto wordt opgenomen (dit wordt bepaald aan de hand van een afstandssensor aan de onderkant van het wagentje) zal er een buzzer afgaan en wordt de auto, bij wijze van straf, onbestuurbaar en zal de led-bar niet meer werken. Tevens zal er ook een buzzer weerklinken.  Dit is eveneens dezelfde werkwijze die wordt toegepast als de handen ontsmet moeten worden. Afgezien van de buzzer.
 De digit die nodig is voor het slot (Alohamora) zal kunnen afgeleid worden aan de hand van een kaart die in de ruimte aanwezig is: de coördinaten van de stralingslocatie op deze kaart zal overeenkomen met het juiste cijfer.
 
 
@@ -86,10 +86,10 @@ Wanneer dit systeem een te dichte afstand detecteert, zal er een duidelijk alarm
 
 ### Ontsmetting
 
-Zodat de Onderzoekers verder kunnen werken wanneer ze te dicht bij mekaar zijn gekomen moeten ze hun handen ontsmetten. Werk kan dus maar verdergaan wanneer dit gebeurd is.
+Zodat de Onderzoekers verder kunnen werken wanneer ze te dicht bij mekaar zijn gekomen, moeten ze hun handen ontsmetten. Werk kan dus maar verdergaan wanneer dit gebeurd is.
 Via een slimme ontsmettingsdispenser moet er dus bijgehouden worden of alle onderzoekers hun handen ontsmet hebben en of elke individuele onderzoeker dit gedaan heeft. Dit wordt gedaan via een nfc badge die elke onderzoeker moet scannen om ontsmetting te krijgen. De dispenser werkt volledig zonder fysiek contact aangezien deze via een afstandssensor werkt.
 
-Wanneer elke individuele onderzoeker zijn handen ontsmet heeft is het weer veilig om verder te werken waardoor de andere puzzels terug hervat kunnen worden.
+Wanneer elke individuele onderzoeker de handen ontsmet heeft is het weer veilig om verder te werken waardoor de andere puzzels terug hervat kunnen worden.
 
 ## Centraal systeem
 
@@ -110,4 +110,4 @@ De communicatie verloopt steeds via MQTT, behalve dan enkele interne communicati
 
 ### Wat als een puzzel niet werkt?
 
-Aan de hand van een user interface (gemaakt met behulp van Node-RED) kan op een lokale webpagina, elke proef apart of alle proeven samen, bestuurd worden via MQTT berichten. Via een smartphone kan dus bijvoorbeeld alles gemanipuleerd worden. Zo kunnen bijvoorbeeld missende digits alsnog doorgegeven worden, elk deel kan gereset worden,... Bij voorkeur is de escape room volledig op te lossen met de aanwezige elektronica en waar nodig met een tip.
+Aan de hand van een user interface (gemaakt met behulp van Node-RED) kan op een lokale webpagina, elke proef apart of alle proeven samen, bestuurd worden via MQTT berichten. Via een smartphone kan dus bijvoorbeeld alles gemanipuleerd worden. Zo kunnen bijvoorbeeld missende digits alsnog doorgegeven worden, elk deel kan gereset worden... Bij voorkeur is de escape room volledig op te lossen met de aanwezige elektronica en waar nodig met een tip.
