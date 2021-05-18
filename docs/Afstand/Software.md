@@ -9,7 +9,7 @@ nav_order: 2
 # Software
 Link naar de [algemene repository](https://github.com/blijf-weg/Afstand_BLE.git) waar alle code die hier besproken wordt instaat.
 
-- [Flowchart](#Flowchart)
+- [Flowchart](#flowchart)
 - [Variabelen](#Variabelen)
 - [Setup](#Setup)
 - [Loop](#Loop)
