@@ -73,6 +73,6 @@ Ten slotte wordt wanneer de hele sequentie correct is nagemaakt een random getal
 | esp32/vaccin/button2 | ##      | nummer van kleur 2     |        | X         |
 | esp32/vaccin/button1 | ##      | nummer van kleur 1     |        | X         |
 | esp32/vaccin/kast    | ##      | sequentie van de kast  |        | X         |
-| esp32/vaccin/number  | ##      | random nummer codeslot | X      |           |
+| esp32/alohomora/code4  | ##      | random nummer codeslot | X      |           |
 
 
