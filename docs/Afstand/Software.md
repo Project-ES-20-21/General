@@ -146,7 +146,9 @@ class AdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks{
 ```
 
 ## piepNonBlocking()
-In deze functie staan twee if statements. De ene if kijkt of het alarm moet afgaan en de buzzer moet geactiveerd worden, de andere kijkt of de buzzer aan staat en of deze uitgezet mag worden. De voorwaarden voordat een ESP32 module mag beginnen met piepen (buzzerPin hoog) is dat de buzzerPin laag staat (er is nog geen gepiep) en dat er een overtreding is gebeurd die lang genoeg na de vorige overtreding is gebeurd. Als er aan deze voorwaarden worden voldaan dan wordt de buzzerPin hoog gezet, wordt de timer die bijhoudt hoelang het geleden is dat er een nieuwe piep was ingesteld op de huidige tijd en worden via de methode stuurAlarm() de andere onderdelen van de escaperoom gealarmeerd.
+In deze functie staan twee if statements. De ene if kijkt of het alarm moet afgaan en de buzzer moet geactiveerd worden, de andere kijkt of de buzzer aan staat en of deze uitgezet mag worden. 
+De voorwaarden voordat een ESP32 module mag beginnen met piepen (`buzzerPin` instellen op hoog/"1") is dat de `buzzerPin` laag/"0" staat (er is nog geen gepiep) en dat er een overtreding is gebeurd die lang genoeg na de vorige overtreding is gebeurd. Als er aan deze voorwaarden worden voldaan dan wordt de buzzerPin hoog gezet, wordt de timer ,die bijhoudt hoelang het geleden de module is beginnen met piepen, ingesteld op de huidige tijd en worden via de methode `stuurAlarm()` de andere onderdelen van de escaperoom gealarmeerd. 
+De buzzer zal vijf seconden afgaan, er wordt dus gekeken of de huidige tijd (via `millis()`) min het "beginTijdstip" groter is dan 5000 milliseconden.
 ```c
 void piepNonBlocking(){  
   if (!piepActief && beginPiep){
@@ -158,14 +160,52 @@ void piepNonBlocking(){
 }
 ```
 ## stuurAlarm()
-Deze methode zorgt ervoor dat de andere onderdelen van de escaperoom op de hoogte worden gesteld van de overtreding door een '1' te sturen naar hun controle kanaal. Als de '1' goed verwerkt wordt zouden de puzzels niet verder kunnen worden opgelost tot de handen ontsmet zijn. 
+Deze methode zorgt ervoor dat de andere onderdelen van de escaperoom op de hoogte worden gesteld van de overtreding door een "1" te sturen naar hun controle kanaal. Als de "1" goed verwerkt wordt zouden de puzzels niet verder kunnen worden opgelost tot de handen ontsmet zijn.  Er wordt ook een "1" gestuurd naar ons eigen controle kanaal. Omdat we niet willen dat ,terwijl de twee huidige overtreders hun handen ontsmetten, de andere speler ook in de buurt moeten komen om hun handen ook te moeten ontsmetten. De twee andere spelers kunnen dus geen overtreding begaan terwijl de andere spelers hun handen ontsmetten. 
+
+```c
+void stuurAlarm(){
+    if (send_to_broker){
+        client.publish("esp32/afstand/control", "1");
+        client.publish("esp32/ontsmetten/control","1");
+        client.publish("esp32/vaccin/control","1");
+        client.publish("esp32/5g/control","1");
+        client.publish("esp32/morse/control","1");
+        client.publish("esp32/fitness/control","1");        
+    }
+}
+```
 ## MQTT
-De MQTT callback functie wordt in de loop opgeroepen via client.loop(). Als er een bericht is op een kanaal waarop gesubscribed is dan zal de callback dit bericht verwerken. Eerst wordt gekeken op welk kanaal het bericht is. 
+De MQTT callback functie wordt in de loop opgeroepen via `client.loop()`. Als er een bericht is op een kanaal waarop gesubscribed is dan zal de callback dit bericht verwerken. Eerst wordt gekeken op welk kanaal het bericht is. 
 
-Als een bericht verstuurd is naar ons controle dan moet gecontroleerd worden of het bericht  "1","2" of "3" is. Als er een "0" binnenkomt moet de ESP32 herstart worden, bij "1" wordt de werking stopgezet. Bij "2" mag de werking verdergaan, de boolean send_to_broker wordt op true gezet en de timers worden opnieuw ingesteld, een twee betekent dus dat de handen van de overtreders ontsmet zijn.
+Als een bericht verstuurd is naar ons controle kanaal (`esp32/afstand/control`) dan moet gecontroleerd worden of het bericht  "0","1" of "2" is. Als er een "0" binnenkomt moet de ESP32 herstart worden, bij "1" wordt de werking stopgezet door `send_to_broker` op "false" te zetten. Bij "2" mag de werking verdergaan, de boolean `send_to_broker` wordt op "true" gezet en de `cooldown` timer wordt opnieuw ingesteld, een twee betekent dus dat de handen van de overtreders ontsmet zijn.
 
-Als een bericht verstuurd is naar het interne piepkanaal van de ESP, dan moet het alarm afgaan ,als de cooldown is verstreken.
+Als een bericht verstuurd is naar het interne piepkanaal van de ESP dan moet het alarm afgaan ,als de cooldown is verstreken. De huidige overtreders gaan hun handen ontsmetten. Er moeten dus geen nieuwe overtredingen van deze spelers (en andere spelers) gedectecteerd worden, `send_to_broker` moet dus op "false" gezet worden. De buzzer moet beginnen met piepen voor vijf seconden, `beginPiep` wordt dus op "true" gezet.
 
+```c
+void callback(char* topic, byte* message, unsigned int length) {
+    char test = (char)message[0];
+    if (strcmp(topic, "esp32/afstand/control") == 0){
+            if ('0' == test)
+            ESP.restart();
+        else if('2' == test){
+            send_to_broker = true;
+            cooldown = millis();
+        }
+        else if ('1' == test)
+            send_to_broker = false;
+    else {
+        if (strcmp(topic, piepkanaal) == 0){
+            if(strcmp(topic,piepkanaal) == 0){
+                if(test == '1'){
+                    beginPiep = true;
+                    send_to_broker = false;
+                    piepNonBlocking();
+                }
+            }
+        }
+    }
+}
+```
 
 
 
