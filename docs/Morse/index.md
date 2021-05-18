@@ -8,6 +8,14 @@ has_children: true
 
 # Morse
 
+## Inhoud
+
+- [Doel en verhaal](#doel-en-verhaal)
+- [Blokschema](#blokschema)
+- [Opstelling](#opstelling)
+- [Error Handling](#error-handling)
+- [Bronnen](#bronnen)
+
 ## Doel en verhaal
 Wanneer er voldoende energie werd opgewekt bij de vorige puzzel [fitnesstracker](https://github.com/Project-ES-20-21/General/tree/gh-pages/docs/Fitnesstracker), wordt ook meteen duidelijk dat de Russen via morse code belangrijke informatie doorsturen. Deze informatie kan ook gebruikt worden bij de klinische testen van ónze virologen. Deze klinische testen vinden zogezegd plaats in een ruimte naast de escape room. Daarom moeten ze de morse informatie doorgeven aan de onderzoekers van de klinische testen.
 
