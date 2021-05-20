@@ -85,7 +85,7 @@ De methode `vergelijk_fout()` vergelijkt het gefloten deeltje met het overeenkom
 Via de methode `lcd.setCursor(0, 1)` zetten we de cursor van het display op rij 1, kolom 0. Vanaf dat er 1 fout werd gefloten, zal dit te zien zijn op het scherm. Verder wordt de display ook gebruikt om te tonen wat de spelers fluiten. Een punt wordt weergegeven met '.', een streep met '_'. Om het resultaat te tonen zal de display ook gebruikt worden. 
 
 ## Communicatie
-Al het voorgaande zal enkel worden uitgevoerd wanneer er geen pauze- of resetsignaal werd ontvangen. Om deze berichten te ontvangen, moeten de devices gesubscribed zijn op de kanalen waarvan het berichten wil ontvangen. Dit gebeurt net nadat er connectie wordt gelegd met de broker in de methode `reconnect()`. Verder is er ook steeds een `callback()`-functie voorzien, die opgeroepen wordt vanaf er een bericht ontvangen wordt op één van de gesupscribde kanalen. Afhankelijk van het kanaal en de "message" wordt een andere actie uitgevoerd.
+Al het voorgaande zal enkel worden uitgevoerd wanneer er geen pauze- of resetsignaal werd ontvangen. Om deze berichten te ontvangen, moeten de devices gesubscribed zijn op de kanalen waarvan het berichten wil ontvangen. Dit gebeurt net nadat er connectie wordt gelegd met de broker in de methode `reconnect()`. Verder is er ook steeds een `callback()`-functie voorzien, die opgeroepen wordt vanaf er een bericht ontvangen wordt op één van de gesubscribde kanalen. Afhankelijk van het kanaal en de "message" wordt een andere actie uitgevoerd.
 
 Over de broker kunnen verschillende berichten worden verstuurd. Wel is belangrijk dat deze berichten steeds van het type `char` zijn. Integers kunnen namelijk niet worden verstuurd over alle kanalen.
 
