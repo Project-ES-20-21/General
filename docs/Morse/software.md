@@ -46,7 +46,7 @@ Zodra de knop ingedrukt is geweest (`button.isPressed()`) wordt de `playMorse()`
 
 #### punt() & streep()
 Beide methodes maken gebruik van de functie `tone()` waarin de pin, lengte en frequentie als argumenten kunnen worden opgegeven.
-Voor een kort signaal wordt de `punt()` methode opgeroepen, voor een lang signaal, dat zo'n tien maal langer is, `streep()` wordt opgeroepen.
+Voor een kort signaal wordt de `punt()`-methode opgeroepen, voor een lang signaal, dat zo'n tien maal langer is, wordt `streep()` opgeroepen.
 
 ## void loop() - Micro
 De volgende delen bespreekt `void loop()` van de microfoon.
@@ -98,5 +98,5 @@ Pauzesignalen zorgen ervoor dat de speaker stopt met het uitzenden van de morses
 ### Overige communicatie
 * Het kanaal "esp32/fitness/telefoon" wordt gebruikt om onze puzzel een startsignaal te geven. De telefoon zal beginnen rinkelen en de display van de microfoon zal oplichten. Hierdoor is het duidelijk dat er voldoende energie is om beide onderdelen te laten werken. Het bericht is afkomstig van de fitnenesstracker.
 * De morse-sequentie die wordt aangemaakt bij de speaker, wordt via het kanaal "esp32/morse/intern" doorgestuurd. Bij de morse code wordt het karakter omgezet naar een integer, zodat correct kan worden vergeleken. 
-* Wanneer onze puzzel gedaan is, zal vanuit de microfoon het bericht "einde_morse" over het kanaal "esp32/morse/output" worden gestuurd, om aan de volgende puzzel te laten weten dat het mag starten. Ook zal er laat de micro aan de speaker weten dat het morse signaal niet meer moet worden herhaald. Dit gebeurt over het kanaal "esp32/morse/intern".
+* Wanneer onze puzzel gedaan is, zal vanuit de microfoon het bericht "einde_morse" over het kanaal "esp32/morse/output" worden gestuurd, om aan de volgende puzzel te laten weten dat het mag starten. Ook laat de micro aan de speaker weten dat het morse signaal niet meer moet worden herhaald. Dit gebeurt over het kanaal "esp32/morse/intern".
 * Aangezien het cijfer voor de alohomorapuzzel varieert, moet ook dit over een kanaal worden doorgestuurd. Er wordt gecommuniceerd over het kanaal "esp32/alohomora/code2".
