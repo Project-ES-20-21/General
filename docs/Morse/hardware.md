@@ -21,7 +21,7 @@ Het centrale element in ons project is een ESP32. Verschillende pinnen voorzien 
 
 ### Low Drop-Out regulator
 Zoals gezegd wordt de ESP32 gevoed met een spanning van 3.3V. De display daarentegen moet gevoed worden met 5V. Om 5V te geven aan de elementen die het nodig hebben, maken we dus gebruik van een micro-USB en een powerbank om de volledige PCB-plaat te kunnen voeden. De micro-USB wordt rechtstreeks gekoppeld met de display. Voor de andere elementen die gebruik maken van 3.3V wordt een LDO (Low Drop-Out regulator) voorzien. Via een interne transistor, een MOSFET en twee weerstanden, zet een LDO 5V om naar 3.3V.
-Zoals te zien op de schakeling, heeft de micro-USB meerdere mogelijke pinnen. Deze zouden kunnen gebruikt worden voor verzenden (Tx) en ontvangen (Rx) van data. Voor het programmeren van de ESP wordt er opnieuw gebruik gemaakt van de uart bridge en zijn voorziene pinheaders.
+Zoals te zien op de schakeling, heeft de micro-USB meerdere mogelijke pinnen. Deze zouden kunnen gebruikt worden voor verzenden (Tx) en ontvangen (Rx) van data. Voor het programmeren van de ESP wordt er opnieuw gebruik gemaakt van de UART bridge en zijn voorziene pinheaders.
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie/master/schakeling_2voeding.JPG)
 
 ### Levelshifters
@@ -31,7 +31,7 @@ De outputpinnen van de ESP32 kunnen maximum 3.3V doorgeven. Om voldoende sterke 
 ### Display
 Voor de display gebruiken we I2C communcatie. Deze communicatie is gebaseerd op een master-slave principe. Dit principe laat toe om meerdere masters en meerdere slaven met elkaar te laten communiceren. Elke slave moet softwarematig geïdentificeerd worden. Wanneer data vanuit de master wordt gestuurd naar de slave, zal elke slave controleren of het adres waarnaar verstuurd wordt overeenkomt met het eigen adres. In dit project is maar één master (ESP32) en één slave (display) nodig.
 
-De SCL-pin wordt gebruikt om de kloksignaal communiceren van de master naar de slave. SDA communicatie (data-communicatie) is bidirectioneel. Langs deze lijn wordt data bit per bit gecommuniceerd.
+De SCL-pin wordt gebruikt om het kloksignaal te communiceren van de master naar de slave. SDA communicatie (data-communicatie) is bidirectioneel. Langs deze lijn wordt data bit per bit gecommuniceerd.
 
 I2C is synchroon, de bitoutput wordt dus synchroon, volgens het kloksignaal over SCL doorgegeven. De data wordt doorgegeven in berichten. Deze berichten worden opgedeeld in een vaste lengte van acht bits, genaamd frames. De messages bevatten ook start en stop condities, read/write bits, acknowledge/NACK tussen bits... 
 De read/write bit wordt aan het einde van de frame toegevoegd, het laat aan de slave weten of het data wil lezen of schrijven. 
@@ -53,7 +53,7 @@ De documentatie van de printplaat kan via volgende [link](https://github.com/Bac
 ### ESP32
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie-speaker/master/schema%20ESP32.png)
 ### Voeding
-Voor het voeden van deze gehele schakeling wordt er gebruik gemaakt van een power bank van 5V, het aansluiten van deze powerbank gebeurt via een micro usb poort. Deze 5V wordt gebruikt om de versterker (LM386), intern op de schakeling, rechtstreeks te voeden. Voor de ESP32 zelf volstaat een spanning van 3.3V. Dit wordt omgezet aan de hand van een DC spanningsregelaar (LDO). De schakeling kan dan uiteindelijk geprogrammeerd worden met behulp van een uart-bridge en de voorziene pinheaders.
+Voor het voeden van deze gehele schakeling wordt er gebruik gemaakt van een power bank van 5V, het aansluiten van deze powerbank gebeurt via een micro usb poort. Deze 5V wordt gebruikt om de versterker (LM386), intern op de schakeling, rechtstreeks te voeden. Voor de ESP32 zelf volstaat een spanning van 3.3V. Dit wordt omgezet aan de hand van een DC spanningsregelaar (LDO). De schakeling kan dan uiteindelijk geprogrammeerd worden met behulp van een UART-bridge en de voorziene pinheaders.
 #### Low Drop-out Regulator (LDO)
 ![](https://raw.githubusercontent.com/BachMorse/Documentatie-speaker/master/LDO.png)
 #### USB
